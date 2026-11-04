@@ -1,0 +1,12 @@
+{
+  "track": 2,
+  "confirmed": true,
+  "submitted_utc": "2026-11-04T23:39:21.650483+00:00",
+  "http_status": 200,
+  "response_url": "https://docs.google.com/forms/d/e/1FAIpQLSekBx0IFs7Q_TVMu67UXNrh0S7FID6yIFGRyN1n6u4Xh2QAkw/formResponse",
+  "response_sha256": "051487bef41b683e00233c9e6e76bb71de2c0ec8d8e234cac9d0d678df8cfda1",
+  "report_url": "https://github.com/isyed/v2d-technical-reports/raw/refs/heads/main/track2/report.pdf",
+  "container_handoff": "https://github.com/isyed/v2d-technical-reports/tree/main/track2/container\nContainer upload and validation pending; the same page will be updated with download URLs, checksums and verification results.",
+  "container_actual_upload_complete": false,
+  "confirmation_text": "Your response has been recorded."
+}
