@@ -1,0 +1,142 @@
+\ifdefined\XeTeXversion\else\pdfoutput=1\fi
+\documentclass[10pt]{nvidiaextabstract}
+\usepackage{xurl}
+\ifdefined\XeTeXversion\microtypesetup{tracking=false}\fi
+\venue{From Human Videos to Dexterous Robot Capability (CoRL 2026)}
+\submissionID{longbot -- Track 1}
+\title{Auditable Monocular Human--Object Reconstruction\\with Evidence-Constrained Repairs}
+\shorttitle{longbot: V2D Track 1}
+\author[1]{Ismail Syed}
+\affil[1]{University of Texas at Austin / \href{https://www.longhorizon.bot}{www.longhorizon.bot}}
+\begin{abstract}
+We reconstruct human geometry, object meshes and continuous object motion from
+30 monocular V2D demonstrations using pretrained visual models, optimization
+and targeted repairs. Across thirteen submitted variants, the retained T1-11
+candidate reduces object Chamfer distance from 25.60394 to 24.21106 cm and object
+acceleration error from 1.74271 to 0.49967 cm/frame$^2$ relative to our initial
+submission. Human geometry improves slightly, while penetration worsens.
+We contribute an auditable sequence of positive and negative experiments,
+source-constrained repair mechanisms and reusable interfaces. The results
+support cautious geometric/temporal correction, not universal improvement
+from additional optimization or a different pretrained body estimator.
+\end{abstract}
+\begin{document}
+\maketitle
+\section{Introduction}
+Monocular human--object reconstruction must resolve identity, geometry, scale,
+occlusion and motion from ambiguous observations. V2D Track 1~\cite{v2d}
+evaluates both reconstruction accuracy and physical plausibility against
+withheld multi-view estimates. The output comprises MHR human parameters,
+object geometry and per-frame object poses, exported on the required scored
+frame grid. Track 1 and Track 2 episode indices describe different sequences;
+our Track 1 reconstruction does not use Track 2 assets or trajectories.
+
+We build on a CARI4D-style workflow~\cite{cari4d} and evaluate targeted
+changes against an immutable retained baseline. Our contribution is the
+repair, validation and provenance workflow, rather than a new pretrained
+vision model. This report designates the complete T1-11 file; later T1-12 and
+T1-13 trials did not justify replacing it.
+
+\section{Approach}
+\textbf{Initialization and refinement.}
+The reconstruction stack combines SAM2 segmentation~\cite{sam2}, monocular
+depth, SAM 3D body/object estimates~\cite{sam3d}, object registration/tracking
+and joint human--object refinement. We investigated CoCoNet and the released
+iterative refinement path; later diagnostic pipelines also used MoGe-2 and
+FoundationPose. Their experiments are distinguished from components that
+actually produced the retained submission. Human parameters, triangle meshes,
+object rotations/translations and positive object scale are exported with
+explicit coordinate conventions and timestamps.
+
+\textbf{Targeted repairs.}
+We investigated geometry scale/proportion, orientation ambiguity, temporal
+noise, support consistency and person/object selection. Candidate transforms
+are bounded by source-image evidence and preserve unmodified intervals.
+Object-family experiments test shape-appropriate hypotheses instead of
+applying the same correction to all objects. Accepted changes are layered on
+the retained baseline with per-episode identity and provenance checks.
+Occluded frames retain a continuous trajectory as required by evaluation,
+but inferred motion is not treated as an independently observed pose.
+
+\textbf{Evaluation discipline.}
+The challenge's first-frame human Sim(3) alignment affects both human and
+object evaluation. Changing human scale or placement can therefore alter
+object scores even when object coordinates are unchanged. We compare human,
+object and physical-plausibility metrics jointly. Visual silhouette agreement,
+source depth diagnostics and official scores are separate evidence streams.
+Image-gated repair hypotheses are generated without hidden reference inputs;
+submission selection uses observed benchmark scores and may overfit this small
+set. Rejected hypotheses and producing source snapshots remain available.
+
+\section{Experiments \& Results}
+We submitted thirteen complete variants spanning initialization/refinement,
+geometry and temporal corrections, object-family repairs and alternative
+human estimates. Table~\ref{tab:results} gives exact scores of the initial and
+retained 30-episode files. All metrics are lower-is-better. Chamfer distances
+and penetration are in centimetres; acceleration discrepancies are in
+cm/frame$^2$ under the metric's discrete-frame convention.
+
+\begin{table}[t]
+\centering\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrr}
+\toprule
+Metric & Initial T1-01 & Retained T1-11\\
+\midrule
+CD-H & 15.53707 & 15.47123\\
+CD-O & 25.60394 & 24.21106\\
+ACC-H & 1.38088 & .27484\\
+ACC-O & 1.74271 & .49967\\
+PEN & .00430 & .00485\\
+\bottomrule
+\end{tabular}
+\caption{Kaggle scores of two exact files. The retained file covers all 30
+episodes and 9,877 scored frames. These are not independent-seed averages.}
+\label{tab:results}
+\end{table}
+
+The retained result reduces CD-O by 5.44\% and ACC-O by 71.33\%.
+CD-H changes little and PEN becomes worse: smoothing and improved pose
+agreement do not ensure better contacts. An early geometry/temporal variant
+reduced acceleration error but worsened CD-O to 32.65560 cm; selective
+rollback recovered object accuracy. Subsequent object-family work decreased
+CD-O from 24.82940 through 24.31892 to 24.21106 cm. The final retained
+iron-family change affects Episode 8 while preserving all human values and
+unselected object values. Later desk/proportion submissions yield CD-O
+24.45089 and 24.21206 cm and remain diagnostic alternatives.
+
+\textbf{Negative studies.}
+More refinement was not uniformly beneficial, motivating bounded comparisons
+and checkpoint reuse. Alternative human pipelines were tested, including
+FlowHMR~\cite{flowhmr} and GVHMR diagnostics. A wrong-person FlowHMR case
+improved held-out silhouette IoU from 0.3303 to 0.7222 after selection repair,
+but remained below the retained baseline's 0.8029. Across the all-30 image
+screen, mean baseline IoU was 0.7855 versus 0.7085 for the corrected official
+FlowHMR branch. Representation-conversion error, camera-depth ambiguities
+and body identity must be evaluated separately; a successful conversion
+check is not ground-truth reconstruction accuracy. These unselected studies
+are documented but are not claimed as contributors to the retained score.
+
+\section{Conclusion}
+Evidence-constrained, object-specific corrections improve the aggregate
+reconstruction, but accuracy, temporal fidelity and contact plausibility can
+conflict. \textbf{Economic viability} is addressed through pretrained components,
+selective recomputation and checkpointed experiments on a laptop/L4 budget;
+total production cost savings have not been measured.
+The \textbf{data flywheel} stores diagnosed failures, verified repairs and
+regression cases for reuse, while acknowledging continued manual review.
+\textbf{Complexity reduction} comes from explicit geometry/time/coordinate
+contracts and modular reconstruction/repair interfaces rather than new capture
+hardware. \textbf{Innovation} is treating repairs as testable hypotheses with
+rollback and preserving negative results instead of assuming every refinement
+or model replacement improves reconstruction.
+
+Future work should prioritize metric-depth observability, contact and
+cross-sequence validation. This is a challenge-scale study, not a demonstrated
+autonomous production system. Code and provenance:
+\url{https://github.com/isyed/v2d-reconstruction}; reusable modules:
+\url{https://github.com/isyed/real2sim2real}. Exact submission IDs and the
+producing commit accompany the report; packaged-output verification and
+raw-video reruns are reported separately.
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

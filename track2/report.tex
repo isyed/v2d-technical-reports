@@ -1,0 +1,132 @@
+\ifdefined\XeTeXversion\else\pdfoutput=1\fi
+\documentclass[10pt]{nvidiaextabstract}
+\usepackage{xurl}
+\ifdefined\XeTeXversion\microtypesetup{tracking=false}\fi
+\venue{From Human Videos to Dexterous Robot Capability (CoRL 2026)}
+\submissionID{longbot -- Track 2}
+\title{Evidence-Constrained Reconstruction Repair\\and Residual Humanoid Grounding}
+\shorttitle{longbot: V2D Track 2}
+\author[1]{Ismail Syed}
+\affil[1]{University of Texas at Austin / \href{https://www.longhorizon.bot}{www.longhorizon.bot}}
+\begin{abstract}
+We present our V2D Track 2 system across clean, corrupted and RGB-reconstructed
+human--object references. A common G1 pipeline combines retargeting, frozen
+SONIC body control, phase/proximity hand closing and optional episode-specific
+FlashSAC residual actors. Repairs are admitted using source evidence, object
+settling and unassisted physical evaluation. Selected 30-episode submissions
+achieve AUC 0.32917, 0.25073 and 0.19051 in Tiers 1--3, respectively. Both
+success rates reach 4/30 in Tier 1 and 1/30 in Tier 2, but remain zero in Tier 3.
+Our contribution is a reusable, auditable repair-to-control workflow and an
+empirical account of where better visual tracking fails to produce manipulation.
+\end{abstract}
+\begin{document}
+\maketitle
+\section{Introduction}
+Human demonstrations offer inexpensive supervision, but geometric uncertainty,
+morphology differences and physical contact complicate transfer to a robot.
+V2D~\cite{v2d} separates these effects using clean references (Tier 1), synthetically
+corrupted references (Tier 2) and participant reconstructions (Tier 3).
+All tiers are evaluated against clean object trajectories. We keep tier-specific
+references and learned actors separate; we do not transfer clean-trained
+episode actors into the noisy tiers.
+
+We build on SONIC~\cite{sonic} and FlashCHORD/FlashSAC~\cite{flashchord,flashsac}.
+Our work develops reconstruction repair, scene admission and controlled policy
+selection rather than a new foundation model. The selected files are Tier 1
+Submission 7, Tier 2 Submission 2 and Tier 3 Submission 4.
+
+\section{Approach}
+\textbf{Reconstruct and repair.}
+Tier 3 uses a CARI4D-style initialization~\cite{cari4d}: SAM2 masks,
+MoGe-2 depth, SAM 3D body/object estimates and FoundationPose object tracking.
+We repair incorrect object identity, incomplete masks, metric inconsistencies,
+occlusion recovery, rotation jumps and support geometry. Visible-frame anchors
+and bounded temporal fitting preserve accepted intervals and test joins.
+Image overlap alone cannot establish depth, contact or physical validity.
+Hidden intervals retain explicit uncertainty. The permitted first clean frame
+is used for alignment; later clean trajectories are reserved for evaluation,
+not reconstruction or actor observations. Episode-specific proposals and manual
+visual review remain part of this system.
+
+\textbf{Retarget and control.}
+MHR-to-SOMA conversion and constrained inverse kinematics generate G1 reference
+motion. A portable scene includes reconstructed geometry, support, inertia and
+collision assets. Frozen SONIC controls the body. Each hand closes gradually
+during its reference contact phase, gated by actual palm proximity to a target
+attached to the current object pose. Targets obey rate and joint limits.
+Optional residual actors add bounded body and finger corrections; zero residual
+does not mean zero finger targets. Each sequence has its own policy assignment.
+
+\textbf{Train and admit.}
+FlashSAC learns off-policy from bounded replay in parallel simulation. Rewards
+combine body, palm and object tracking, contact guidance and regularization;
+orientation and broader approach shaping are explicit experiment variants.
+Curricula mix starts at frame zero with starts partway through the reference.
+Early runs removed artificial object assistance around 6M transitions; recent
+pilots taper it to zero by 10M. All reported evaluations start at frame zero
+without assistance. Source checks, isolated object settling and repeated
+rollouts precede candidate admission. A checkpoint is not selected solely
+because training reward or training duration increases.
+
+\section{Experiments \& Results}
+We used a 24 GB RTX 5090 laptop and bounded L4 cloud jobs. Local GPU clocks were
+capped at 1500 MHz; L4 power at 60 W. Recent jobs pause at 82 degrees C, resume at
+74 degrees C and stop at 83 degrees C. Table~\ref{tab:results} reports exact Kaggle
+scores for complete files, not cherry-picked repeats. AUC and success rates
+are higher-is-better; MPPE is lower-is-better in centimetres.
+\begin{table}[t]
+\centering\small\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llrrrr}
+\toprule
+Tier & File & AUC & SP-SR & MP-SR & MPPE\\
+\midrule
+1 & Initial & .21646 & .00000 & .00000 & 56.78341\\
+1 & Selected S7 & .32917 & .13333 & .13333 & 39.21800\\
+2 & Initial & .22281 & .00000 & .00000 & 59.14549\\
+2 & Selected S2 & .25073 & .03333 & .03333 & 55.10178\\
+3 & Initial & .13370 & .00000 & .00000 & 70.87785\\
+3 & Selected S4 & .19051 & .00000 & .00000 & 59.96399\\
+\bottomrule
+\end{tabular}
+\caption{Each file covers all 30 episodes. Tier differences include both input
+quality and policy selection; this is not a controlled noise ablation.}
+\label{tab:results}
+\end{table}
+
+Tier 1 gains success from residual learning and broader episode selection.
+Tier 2's selected Episode 0 actor passes both success criteria in five
+confirmation rollouts. Tier 3 S4 replaces only Episodes 20 and 26 with repaired
+frozen policies, retaining the other 28 designated trajectories on the same
+evaluator build. Its selected set includes six previously learned residual
+actors, but no episode passes the task-success criteria.
+
+Negative results constrain interpretation. Episode 26's new 15M approach actor
+extends upright survival from 9.79 to 18.51 seconds and improves reaching, yet
+raises clean-target MPPE from approximately 7.96 to 9.45 cm. We retain the
+repaired frozen controller. New Episode 20/7 actors can also lose to retained
+policies despite better reference-relative diagnostics. Quieter object rest
+can improve AUC without grasping; we do not describe these gains as successful
+manipulation. Repeated rollouts measure execution variability, not variation
+across independently trained seeds.
+
+\section{Conclusion}
+Conservative repairs and selective residual learning improve object tracking,
+while sustained contact and task timing remain the main limitations. Our
+\textbf{economic viability} contribution is reuse of pretrained models,
+checkpointed bounded jobs and rejected-candidate early stopping; we have no
+audited end-to-end cost reduction claim. The \textbf{data flywheel} records
+failure evidence, accepted repairs and regression checks in reusable modules,
+although diagnosis still requires human review. \textbf{Complexity reduction}
+comes from explicit geometry/policy contracts and four separable modules:
+reconstruction, repair, retargeting and controller training.
+\textbf{Innovation} is testing visual and physical validity separately and
+retaining simpler controllers when learning regresses. These are demonstrated
+research mechanisms, not claims of autonomous production deployment.
+
+Code: \url{https://github.com/isyed/v2d-grounding}; reusable modules:
+\url{https://github.com/isyed/real2sim2real}. Exact producing commits, submission
+IDs and reproduction status accompany this report. No real-robot evaluation
+or generalization beyond the challenge episodes is claimed.
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}
