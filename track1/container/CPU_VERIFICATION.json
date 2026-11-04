@@ -1,0 +1,11 @@
+{
+  "checked_at_utc": "2026-11-04T23:47:36.051520+00:00",
+  "execution_context": "Host CPU checks against staged container trees; no Docker runtime or GPU reproduction has run.",
+  "track1": {
+    "pass": 6,
+    "fail": 0,
+    "stored_output_repack_matches": true
+  },
+  "images_built": false,
+  "archives_uploaded": false
+}

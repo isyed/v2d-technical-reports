@@ -1,0 +1,38 @@
+{
+  "checked_at_utc": "2026-11-04T23:47:36.051520+00:00",
+  "execution_context": "Host CPU checks against staged container trees; no Docker runtime or GPU reproduction has run.",
+  "track2": {
+    "tier1": {
+      "pass": 10,
+      "fail": 1,
+      "stored_output_repack_matches": true,
+      "checkpoints_match": 30,
+      "failure": "eval_code_sha256: historical broader hash differs from current official four-module hash",
+      "recorded_hash": "b1f208ba73f17e73dd5a6bc62d0a139b25ebe28e33ff2d84fa49dbf395936b80",
+      "historical_hash_reproduced": true,
+      "current_official_hash": "a3d3dfcc42c98ba76effe0413573cc824953090e3ca02faf580c311aa748a8bb"
+    },
+    "tier2": {
+      "pass": 10,
+      "fail": 1,
+      "stored_output_repack_matches": true,
+      "checkpoints_match": 30,
+      "failure": "eval_code_sha256: historical broader hash differs from current official four-module hash",
+      "recorded_hash": "b1f208ba73f17e73dd5a6bc62d0a139b25ebe28e33ff2d84fa49dbf395936b80",
+      "historical_hash_reproduced": true,
+      "current_official_hash": "a3d3dfcc42c98ba76effe0413573cc824953090e3ca02faf580c311aa748a8bb"
+    },
+    "tier3": {
+      "pass": 10,
+      "fail": 1,
+      "stored_output_repack_matches": true,
+      "checkpoints_match": 30,
+      "failure": "eval_code_sha256: historical broader hash differs from current official four-module hash",
+      "recorded_hash": "c7a561caf4c3e62cbddc5170d00a724ac725767018afe332627a4182b2f04d12",
+      "historical_hash_reproduced": true,
+      "current_official_hash": "fe0acf9309e63136edf292ebd67ed988ccae081827fcb4248e150fa594c51191"
+    }
+  },
+  "images_built": false,
+  "archives_uploaded": false
+}

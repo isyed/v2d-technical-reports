@@ -53,10 +53,14 @@ The newly downloaded official container verifier computes `eval_code_sha256` fro
 | tier2 | `b1f208ba73f17e73dd5a6bc62d0a139b25ebe28e33ff2d84fa49dbf395936b80` | `a3d3dfcc42c98ba76effe0413573cc824953090e3ca02faf580c311aa748a8bb` |
 | tier3 | `c7a561caf4c3e62cbddc5170d00a724ac725767018afe332627a4182b2f04d12` | `fe0acf9309e63136edf292ebd67ed988ccae081827fcb4248e150fa594c51191` |
 
-The original `eval_script_sha256` also matches for every tier. The Tier 3 entry identifies the original `evaluation_build.py` provenance adapter; it is not renamed to masquerade as the upstream evaluator. GPU reproduction and the offline runtime packaging check are not yet complete.
+The original `eval_script_sha256` also matches for every tier. The Tier 3 entry identifies the original `evaluation_build.py` provenance adapter; it is not renamed to masquerade as the upstream evaluator. Host CPU verification of each staged tier directory reports 10 passes and one failure: the disclosed evaluator source-hash contract. Repacking the stored rollouts matches every submitted file. These are not Docker or GPU reproduction tests. See [CPU verification status](CPU_VERIFICATION.json). GPU reproduction and the offline runtime packaging check are not yet complete.
 
 ## Organizer access
 
 The implementation repository is private, with an invitation already issued to `Nvidia-V2D-Challenge`. Large artifacts and pretrained assets will be shared with the organizers without changing third-party licenses. This public page contains only documentation and non-secret provenance.
 
 No final archive digest or download URL is listed until the artifact actually exists.
+
+## Kaggle final-selection check
+
+A subsequent authenticated read-only query using Kaggle’s selected-submission filter returned no explicit selected entries on the relevant boards. The IDs above are the files designated in the recorded Google form; this does not establish that they are manually selected on Kaggle. No Kaggle selections were changed. The designated Track 2 files attain the best available public scores for their tiers, including ties on some success-rate boards.
