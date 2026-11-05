@@ -2,6 +2,9 @@
 
 **Status: container upload and end-to-end validation pending.**
 
+Latest cloud snapshot (November 5, 3:20 p.m. EST): all 12 build steps and layer compression are complete; the direct OCI archive is being written. The heartbeat reports 0.74 GiB written and 166 GiB free. Checkpoint upload and this worker’s validation are still pending.
+
+
 This is the stable handoff page supplied with the technical-report form. It is not yet a downloadable, verified container. Download URLs, image identity, archive SHA-256 and reproduction results will be added here after packaging and verification.
 
 Team: longbot. Contact: syedim@gmail.com.

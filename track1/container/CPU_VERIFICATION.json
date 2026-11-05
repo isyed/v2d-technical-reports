@@ -42,8 +42,8 @@
   "complete_competition_handoff": false,
   "archive_uploaded": false,
   "independent_runtime_builder": {
-    "status": "RUNNING_STARTUP_DIRECT_OCI_EXPORT",
-    "checked_at_utc": "2026-11-05T19:33:54.390619+00:00",
+    "status": "BUILD_STEPS_COMPLETE_WRITING_DIRECT_ARCHIVE",
+    "checked_at_utc": "2026-11-05T20:20:49.851874+00:00",
     "cpu_only": true,
     "campaign_total_cap_usd": 8,
     "includes_all_three_previous_attempts": true,
@@ -52,7 +52,12 @@
     "direct_oci_export": true,
     "checkpoint_before_validation": true,
     "sam3d_environment_fix_locally_verified": true,
-    "raw_video_reproduction_verified": false
+    "raw_video_reproduction_verified": false,
+    "heartbeat_utc": "2026-11-05T20:20:05Z",
+    "image_archive_bytes": 791807488,
+    "free_disk_gib": 166.44,
+    "checkpoint_uploaded": false,
+    "validation_this_worker": "pending archive creation and backup"
   },
   "cloud_retry1": {
     "image_build_completed": true,
