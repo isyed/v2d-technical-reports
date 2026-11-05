@@ -2,7 +2,11 @@
 
 **Status: container upload and end-to-end validation pending.**
 
-This is the stable handoff page supplied with the technical-report form. It is not yet a downloadable, verified container. Download URLs, image identity, archive SHA-256 and reproduction results will be added here after packaging and verification.
+This is the stable handoff page supplied with the technical-report form.
+
+It is not yet a downloadable, verified container.
+
+Download URLs, image identity, archive SHA-256 and reproduction results will be added here after packaging and verification.
 
 Team: longbot.
 
@@ -22,7 +26,11 @@ Exact submitted-file SHA-256: `395e4d7c6f001bcdc4472a92e9d6022c89d791499dfa64d65
 
 ## Verification scope
 
-All four covered profiles now pass the official checks inside Docker with networking disabled and a read-only filesystem: **24 passes, zero failures**. Each retains its original submitted file, producing Git commit and 30 stored reconstructions. A separate manifest is used for each producing commit; the official verifier is unchanged.
+All four covered profiles now pass the official checks inside Docker with networking disabled and a read-only filesystem: **24 passes, zero failures**.
+
+Each retains its original submitted file, producing Git commit and 30 stored reconstructions.
+
+A separate manifest is used for each producing commit; the official verifier is unchanged.
 
 | Profile | Producing commit | Metric-wise best coverage | Relevant Kaggle IDs |
 |---|---|---|---|
@@ -31,20 +39,62 @@ All four covered profiles now pass the official checks inside Docker with networ
 | T1-10 | `1529ad1af98aa4409e8a8d859cc2ee6654f9eca9` | ACC-H | 57547067 |
 | T1-11 | `8eb8b6346f3150edfb84b20c1d039b148697ce7a` | CD-O; designated in the report form | 57605528 |
 
-Packing uses the exact verified Python/NumPy environment separately from the original inference environment. This avoids a module-name collision and mesh-packing differences caused by runtime dependencies. No original submission, commit or verifier was changed.
+Packing uses the exact verified Python/NumPy environment separately from the original inference environment.
 
-These are stored-output checks. Full raw-video model/runtime bundling, the reproduction adapter and sampled GPU reruns remain unfinished. The existing artifact-check image deliberately refuses raw-video reproduction rather than replaying stored outputs. An independent runtime builder is being prepared. See [verification status](CPU_VERIFICATION.json).
+This avoids a module-name collision and mesh-packing differences caused by runtime dependencies.
+
+No original submission, commit or verifier was changed.
+
+These are stored-output checks.
+
+Full raw-video model/runtime bundling, the reproduction adapter and sampled GPU reruns remain unfinished.
+
+The existing artifact-check image deliberately refuses raw-video reproduction rather than replaying stored outputs.
+
+The first cloud attempt timed out while copying the runtime environments and automatically deleted its VM and disk.
+
+An optimized retry is starting on November 5, using direct copies from pinned images, a faster build disk, minute-by-minute progress updates and a three-hour automatic deletion limit.
+
+A successful runtime build will still require a raw-video adapter and sampled GPU reproduction before complete handoff.
+
+See [verification status](CPU_VERIFICATION.json).
 
 ## Organizer access
 
-The implementation repository is private, with an invitation already issued to `Nvidia-V2D-Challenge`. Large artifacts and pretrained assets will be shared with the organizers without changing third-party licenses. This public page contains only documentation and non-secret provenance.
+The implementation repository is private, with an invitation already issued to `Nvidia-V2D-Challenge`.
+
+Large artifacts and pretrained assets will be shared with the organizers without changing third-party licenses.
+
+This public page contains only documentation and non-secret provenance.
 
 No final archive digest or download URL is listed until the artifact actually exists.
 
 ## Kaggle final-selection check
 
-A subsequent authenticated read-only query using Kaggle’s selected-submission filter returned no explicit selected entries on the relevant boards. The IDs above are the files designated in the recorded Google form; this does not establish that they are manually selected on Kaggle. No Kaggle selections were changed. Track 1’s metric-wise best scores come from different historical files. The form designates T1-11 consistently across the five metrics. The current kit permits a separate manifest entry for every file that counts on a metric board. Container coverage must therefore include the metric-wise best files if no manual selection exists; this does not require resubmitting the Google form. A recorded report form does not itself change Kaggle selection.
+A subsequent authenticated read-only query using Kaggle’s selected-submission filter returned no explicit selected entries on the relevant boards.
+
+The IDs above are the files designated in the recorded Google form; this does not establish that they are manually selected on Kaggle.
+
+No Kaggle selections were changed.
+
+Track 1’s metric-wise best scores come from different historical files.
+
+The form designates T1-11 consistently across the five metrics.
+
+The current kit permits a separate manifest entry for every file that counts on a metric board.
+
+Container coverage must therefore include the metric-wise best files if no manual selection exists; this does not require resubmitting the Google form.
+
+A recorded report form does not itself change Kaggle selection.
 
 ## Official kit
 
-The ZIP linked from the official competition page was downloaded again on November 4 at 7:01 p.m. EST. Its SHA-256 is `7e1fdd00b50189191b4f1bf03158607f4f1a7bb5bfb0bf867b14eb06270a77f0`. The checks above use its unmodified verifier. No complete handoff archive or raw-video reproduction result is claimed.
+The ZIP linked from the official competition page was downloaded again on November 4 at 7:01 p.m.
+
+EST.
+
+Its SHA-256 is `7e1fdd00b50189191b4f1bf03158607f4f1a7bb5bfb0bf867b14eb06270a77f0`.
+
+The checks above use its unmodified verifier.
+
+No complete handoff archive or raw-video reproduction result is claimed.
