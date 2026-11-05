@@ -41,5 +41,11 @@
   "raw_video_reproduction_verified": false,
   "complete_competition_handoff": false,
   "archive_uploaded": false,
-  "independent_runtime_builder": "Financial details omitted from public history."
+  "independent_runtime_builder": {
+    "status": "RUNNING",
+    "cpu_only": true,
+    "maximum_hours": 3,
+    "automatic_deletion": true,
+    "raw_video_reproduction_verified": false
+  }
 }
