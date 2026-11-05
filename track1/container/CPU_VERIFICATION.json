@@ -42,11 +42,24 @@
   "complete_competition_handoff": false,
   "archive_uploaded": false,
   "independent_runtime_builder": {
-    "status": "RUNNING",
+    "status": "RUNNING_STARTUP",
     "cpu_only": true,
-    "budget_usd": 8,
-    "maximum_hours": 3,
+    "campaign_total_cap_usd": 8,
+    "includes_both_prior_attempts": true,
+    "maximum_hours_this_worker": 3,
     "automatic_deletion": true,
-    "raw_video_reproduction_verified": false
+    "checkpoint_before_validation": true,
+    "sam3d_environment_fix_locally_verified": true,
+    "raw_video_reproduction_verified": false,
+    "checked_at_utc": "2026-11-05T17:02:53.759759+00:00"
+  },
+  "cloud_retry1": {
+    "image_build_completed": true,
+    "official_artifact_checks_passed": 24,
+    "official_artifact_checks_failed": 0,
+    "sam2_offline_import": "PASS",
+    "sam3d_offline_import": "FAIL: missing original LIDRA_SKIP_INIT=1 setting; fix verified locally",
+    "archive_uploaded": false,
+    "vm_and_disk_deleted_confirmed": true
   }
 }
