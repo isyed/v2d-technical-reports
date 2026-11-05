@@ -1,11 +1,45 @@
 {
-  "checked_at_utc": "2026-11-04T23:47:36.051520+00:00",
-  "execution_context": "Host CPU checks against staged container trees; no Docker runtime or GPU reproduction has run.",
-  "track1": {
-    "pass": 6,
-    "fail": 0,
-    "stored_output_repack_matches": true
+  "checked_at_utc": "2026-11-05T00:38:45.516515+00:00",
+  "execution_context": "Actual Docker, --network none and --read-only; exact isolated Python 3.14 packing environment. Official verifier unchanged.",
+  "profiles": {
+    "t1_02": {
+      "PASS": 6,
+      "FAIL": 0,
+      "WARN": 0,
+      "SKIP": 0
+    },
+    "t1_03": {
+      "PASS": 6,
+      "FAIL": 0,
+      "WARN": 0,
+      "SKIP": 0
+    },
+    "t1_10": {
+      "PASS": 6,
+      "FAIL": 0,
+      "WARN": 0,
+      "SKIP": 0
+    },
+    "t1_11": {
+      "PASS": 6,
+      "FAIL": 0,
+      "WARN": 0,
+      "SKIP": 0
+    }
   },
-  "images_built": false,
-  "archives_uploaded": false
+  "total_pass": 24,
+  "total_fail": 0,
+  "image": {
+    "Id": "sha256:0fbe7e84b293bebdad69e7176a8bfd45a4b60b7e9e1370c71c7515fa01863618",
+    "Created": "2026-11-04T19:27:19.825613032-05:00",
+    "Size": 16941693290,
+    "RepoTags": [
+      "longbot-v2d-track1:artifact-check-20261104"
+    ]
+  },
+  "stored_output_repack_matches": true,
+  "raw_video_reproduction_verified": false,
+  "complete_competition_handoff": false,
+  "archive_uploaded": false,
+  "independent_runtime_builder": "Approved $8 cap; payload upload in progress; VM not yet launched."
 }

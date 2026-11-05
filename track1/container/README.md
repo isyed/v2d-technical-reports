@@ -22,7 +22,18 @@ Exact submitted-file SHA-256: `395e4d7c6f001bcdc4472a92e9d6022c89d791499dfa64d65
 
 ## Verification scope
 
-The exact submitted Parquet and producing commit are preserved. Host CPU verification of the staged directory passes all six checks, including repacking all 30 stored episode reconstructions with the retained Episode 8 update to match the submitted file. This is stored-output verification, not raw-video reproduction. Fresh raw-video reconstruction, model bundling, the Docker runtime check and sampled GPU reruns remain incomplete. See [CPU verification status](CPU_VERIFICATION.json).
+All four covered profiles now pass the official checks inside Docker with networking disabled and a read-only filesystem: **24 passes, zero failures**. Each retains its original submitted file, producing Git commit and 30 stored reconstructions. A separate manifest is used for each producing commit; the official verifier is unchanged.
+
+| Profile | Producing commit | Metric-wise best coverage | Relevant Kaggle IDs |
+|---|---|---|---|
+| T1-02 | `9337b8d1550a69aeaca9c498f5e8a3ce8ab0544a` | CD-H (tied), ACC-O, PEN | 57412915, 57412927, 57412931 |
+| T1-03 | `4054ffdf78b1ab0658c8e949d216089bd9a138d6` | CD-H (tied) | 57416248 |
+| T1-10 | `1529ad1af98aa4409e8a8d859cc2ee6654f9eca9` | ACC-H | 57547067 |
+| T1-11 | `8eb8b6346f3150edfb84b20c1d039b148697ce7a` | CD-O; designated in the report form | 57605528 |
+
+Packing uses the exact verified Python/NumPy environment separately from the original inference environment. This avoids a module-name collision and mesh-packing differences caused by runtime dependencies. No original submission, commit or verifier was changed.
+
+These are stored-output checks. Full raw-video model/runtime bundling, the reproduction adapter and sampled GPU reruns remain unfinished. The existing artifact-check image deliberately refuses raw-video reproduction rather than replaying stored outputs. An independent runtime builder is being prepared. See [verification status](CPU_VERIFICATION.json).
 
 ## Organizer access
 
@@ -34,6 +45,6 @@ No final archive digest or download URL is listed until the artifact actually ex
 
 A subsequent authenticated read-only query using Kaggle’s selected-submission filter returned no explicit selected entries on the relevant boards. The IDs above are the files designated in the recorded Google form; this does not establish that they are manually selected on Kaggle. No Kaggle selections were changed. Track 1’s metric-wise best scores come from different historical files. The form designates T1-11 consistently across the five metrics. The current kit permits a separate manifest entry for every file that counts on a metric board. Container coverage must therefore include the metric-wise best files if no manual selection exists; this does not require resubmitting the Google form. A recorded report form does not itself change Kaggle selection.
 
-## Fresh official-kit check, November 4, 2026
+## Official kit
 
-The ZIP linked from the official competition page was downloaded again at 7:01 p.m. EST. It is identical to the earlier download (SHA-256 `7e1fdd00b50189191b4f1bf03158607f4f1a7bb5bfb0bf867b14eb06270a77f0`; server Last-Modified November 2). The untouched fresh verifier was rerun against the staged directories. Track 1 retains six passes and zero failures for the designated T1-11 entry; this does not yet cover the additional metric-wise best files. These are host CPU checks, not completed Docker/GPU reproduction. No completed container archive is available yet.
+The ZIP linked from the official competition page was downloaded again on November 4 at 7:01 p.m. EST. Its SHA-256 is `7e1fdd00b50189191b4f1bf03158607f4f1a7bb5bfb0bf867b14eb06270a77f0`. The checks above use its unmodified verifier. No complete handoff archive or raw-video reproduction result is claimed.
