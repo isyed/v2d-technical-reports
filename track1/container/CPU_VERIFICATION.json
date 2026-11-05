@@ -40,10 +40,10 @@
   "stored_output_repack_matches": true,
   "raw_video_reproduction_verified": false,
   "complete_competition_handoff": false,
-  "archive_uploaded": false,
+  "archive_uploaded": true,
   "independent_runtime_builder": {
-    "status": "BUILD_STEPS_COMPLETE_WRITING_DIRECT_ARCHIVE",
-    "checked_at_utc": "2026-11-05T20:20:49.851874+00:00",
+    "status": "STOPPED_RECEIPT_FORMAT_BUG_ARCHIVE_PRESERVED",
+    "checked_at_utc": "2026-11-05T22:19:06.727118+00:00",
     "cpu_only": true,
     "includes_all_three_previous_attempts": true,
     "maximum_hours_this_worker": 3,
@@ -52,11 +52,13 @@
     "checkpoint_before_validation": true,
     "sam3d_environment_fix_locally_verified": true,
     "raw_video_reproduction_verified": false,
-    "heartbeat_utc": "2026-11-05T20:20:05Z",
-    "image_archive_bytes": 791807488,
+    "heartbeat_utc": "2026-11-05T21:05:48Z",
+    "image_archive_bytes": 49008771072,
     "free_disk_gib": 166.44,
-    "checkpoint_uploaded": false,
-    "validation_this_worker": "pending archive creation and backup"
+    "checkpoint_uploaded": true,
+    "validation_this_worker": "not run; worker stopped during receipt recording",
+    "vm_and_disk_deleted_confirmed": true,
+    "new_worker_started": false
   },
   "cloud_retry1": {
     "image_build_completed": true,
@@ -79,5 +81,7 @@
     "checkpoint_uploaded": false,
     "verification_this_worker": "not run",
     "vm_and_disk_deleted_confirmed": true
-  }
+  },
+  "archive_scope": "Runtime foundation only; independent download hash and runtime checks pending",
+  "archive_status_details": "ARCHIVE_STATUS.json"
 }
