@@ -42,7 +42,7 @@
   "complete_competition_handoff": false,
   "archive_uploaded": false,
   "independent_runtime_builder": {
-    "status": "RUNNING_STARTUP",
+    "status": "STOPPED_EXPORT_TIMEOUT",
     "cpu_only": true,
     "includes_both_prior_attempts": true,
     "maximum_hours_this_worker": 3,
@@ -50,7 +50,14 @@
     "checkpoint_before_validation": true,
     "sam3d_environment_fix_locally_verified": true,
     "raw_video_reproduction_verified": false,
-    "checked_at_utc": "2026-11-05T17:02:53.759759+00:00"
+    "checked_at_utc": "2026-11-05T19:14:39.062663+00:00",
+    "failure_utc": "2026-11-05T18:48:05Z",
+    "failure": "Image checkpoint export exceeded its 30-minute limit",
+    "image_build_completed": true,
+    "checkpoint_uploaded": false,
+    "verification_this_worker": "not run; checkpoint export failed before validation",
+    "vm_and_disk_deleted_confirmed": true,
+    "new_worker_started": false
   },
   "cloud_retry1": {
     "image_build_completed": true,
@@ -60,5 +67,10 @@
     "sam3d_offline_import": "FAIL: missing original LIDRA_SKIP_INIT=1 setting; fix verified locally",
     "archive_uploaded": false,
     "vm_and_disk_deleted_confirmed": true
+  },
+  "direct_export_probe": {
+    "status": "PASS",
+    "scope": "tiny offline OCI export, Docker load and recovered-file content comparison",
+    "full_runtime_tested": false
   }
 }
