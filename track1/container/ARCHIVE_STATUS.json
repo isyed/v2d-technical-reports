@@ -1,0 +1,23 @@
+{
+  "archive_bytes": 49008771072,
+  "archive_sha256": "065c2211b7fc5728b6aab23e8a7999bf47e5785844b88865a404d81d6f1efb0c",
+  "image_manifest_digest": "sha256:29eb6aae33c43ca63fe8d99ccd7411af1cd1fffdc03c057ed9e1dfd951b0818b",
+  "image_config_digest": "sha256:d032a3162a66724385799f455615b911458ce4bd35c6cba8012f728e17494dbb",
+  "archive_format": "OCI image-layout tar with gzip-compressed layers",
+  "upload_confirmed": true,
+  "uploader_sha256_matches_object_custom_fields": true,
+  "independent_download_sha256_verified": false,
+  "runtime_imports_verified": false,
+  "validation_pending": true,
+  "raw_video_reproduction_verified": false,
+  "complete_competition_handoff": false,
+  "recovery_reason": "gcloud normalized JSON uses custom_fields; original receipt check incorrectly expected metadata",
+  "worker_vm_deleted_confirmed": true,
+  "worker_disk_deleted_confirmed": true,
+  "new_worker_started": false,
+  "checked_at_utc": "2026-11-05T22:19:06.727118+00:00",
+  "upload_completed_utc": "2026-11-05T21:05:46Z",
+  "archive_scope": "Runtime foundation: bundled original runtimes, models and stored submissions. Raw-video reproduction adapter is not yet implemented.",
+  "archive_access": "Preserved in private project storage; final organizer-accessible download link pending validation.",
+  "integrity_evidence": "The uploader-computed SHA256 in the saved command matches the finalized object metadata. Upload completed successfully; GCS also records MD5 and CRC32C. Independent download/recomputed SHA256 is still required."
+}

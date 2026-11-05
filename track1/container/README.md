@@ -1,8 +1,8 @@
 # Track 1: final container handoff
 
-**Status: container upload and end-to-end validation pending.**
+**Status: runtime archive uploaded privately; validation and complete handoff pending.**
 
-Latest cloud snapshot (November 5, 3:20 p.m. EST): all 12 build steps and layer compression are complete; the direct OCI archive is being written. The heartbeat reports 0.74 GiB written and 166 GiB free. Checkpoint upload and this worker’s validation are still pending.
+Latest cloud snapshot: the 49.0 GB runtime foundation archive was uploaded on November 5 at 4:05 p.m. EST. The worker stopped on a receipt-parsing bug after upload; the archive is preserved, and the VM and disk are deleted. Independent archive/runtime validation is next.
 
 
 This is the stable handoff page supplied with the technical-report form. It is not yet a downloadable, verified container. Download URLs, image identity, archive SHA-256 and reproduction results will be added here after packaging and verification.
@@ -36,7 +36,11 @@ All four covered profiles now pass the official checks inside Docker with networ
 
 Packing uses the exact verified Python/NumPy environment separately from the original inference environment. This avoids a module-name collision and mesh-packing differences caused by runtime dependencies. No original submission, commit or verifier was changed.
 
-These are stored-output checks. Full raw-video model/runtime bundling, the reproduction adapter and sampled GPU reruns remain unfinished. The existing artifact-check image deliberately refuses raw-video reproduction rather than replaying stored outputs. After the previous daemon-based checkpoint export timed out, direct OCI archive export was tested locally on the existing 15.8 GiB artifact-check image. Export, Docker reload, identical filesystem layers/runtime settings and all 24 official checks passed in about eight minutes. This validates the archive path at that size, not the all-model runtime foundation. A new independent CPU worker started November 5 at 2:31 p.m. EST, using direct archive creation and private backup before Docker loading/validation, the original SAM3D environment setting, and a three-hour automatic deletion limit. The original $8 total campaign ceiling includes all three prior stopped attempts. No final container download is claimed until its archive exists and required reproduction checks are complete. Raw-video reproduction remains unfinished. See [verification status](CPU_VERIFICATION.json) and [direct-export validation](DIRECT_EXPORT_VALIDATION.json).
+These are stored-output checks. The runtime and model bundle has now been built and uploaded to private project storage as a **49,008,771,072-byte OCI image archive**. Its uploader-computed SHA-256 matches the finalized object's custom metadata. This is upload evidence; independent download/hash verification and offline runtime validation of this archive have not run yet.
+
+The worker stopped because the receipt checker expected the raw API's `metadata` field, while `gcloud` reports it as `custom_fields`. The parser is corrected and tested, and a recovered receipt is saved with validation explicitly pending. No new worker is running. The next worker can load and validate the preserved archive without rebuilding it.
+
+The historical raw-video reproduction adapter and sampled GPU reruns remain unfinished. The artifact-check entry point continues to refuse raw-video reproduction until a real pipeline is supplied. Full competition handoff requires those checks and an organizer-accessible final archive link. See [verification status](CPU_VERIFICATION.json), [direct-export validation](DIRECT_EXPORT_VALIDATION.json) and [archive status](ARCHIVE_STATUS.json).
 
 ## Organizer access
 
