@@ -64,3 +64,7 @@ No final archive digest or download URL is listed until the artifact actually ex
 ## Kaggle final-selection check
 
 A subsequent authenticated read-only query using Kaggle’s selected-submission filter returned no explicit selected entries on the relevant boards. The IDs above are the files designated in the recorded Google form; this does not establish that they are manually selected on Kaggle. No Kaggle selections were changed. The designated Track 2 files attain the best available public scores for their tiers, including ties on some success-rate boards.
+
+## Fresh official-kit check, November 4, 2026
+
+The ZIP linked from the official competition page was downloaded again at 7:01 p.m. EST. It is identical to the earlier download (SHA-256 `7e1fdd00b50189191b4f1bf03158607f4f1a7bb5bfb0bf867b14eb06270a77f0`; server Last-Modified November 2). The untouched fresh verifier was rerun against the staged directories. Each Track 2 tier retains ten passes and the same single evaluator code-hash failure. Original broader hashes were recomputed again and still match the submitted values exactly. These are host CPU checks, not completed Docker/GPU reproduction. No completed container archive is available yet.
