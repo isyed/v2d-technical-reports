@@ -41,5 +41,12 @@
   "raw_video_reproduction_verified": false,
   "complete_competition_handoff": false,
   "archive_uploaded": false,
-  "independent_runtime_builder": "Approved $8 cap; payload upload in progress; VM not yet launched."
+  "independent_runtime_builder": {
+    "status": "RUNNING",
+    "cpu_only": true,
+    "budget_usd": 8,
+    "maximum_hours": 3,
+    "automatic_deletion": true,
+    "raw_video_reproduction_verified": false
+  }
 }
