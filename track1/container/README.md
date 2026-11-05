@@ -33,7 +33,7 @@ All four covered profiles now pass the official checks inside Docker with networ
 
 Packing uses the exact verified Python/NumPy environment separately from the original inference environment. This avoids a module-name collision and mesh-packing differences caused by runtime dependencies. No original submission, commit or verifier was changed.
 
-These are stored-output checks. Full raw-video model/runtime bundling, the reproduction adapter and sampled GPU reruns remain unfinished. The existing artifact-check image deliberately refuses raw-video reproduction rather than replaying stored outputs. An independent runtime builder is being prepared. See [verification status](CPU_VERIFICATION.json).
+These are stored-output checks. Full raw-video model/runtime bundling, the reproduction adapter and sampled GPU reruns remain unfinished. The existing artifact-check image deliberately refuses raw-video reproduction rather than replaying stored outputs. The first cloud attempt timed out while copying the runtime environments and automatically deleted its VM and disk. An optimized retry is starting on November 5, using direct copies from pinned images, a faster build disk, minute-by-minute progress updates and a three-hour automatic deletion limit. It reuses the same private inputs within the original $8 total campaign ceiling. A successful runtime build will still require a raw-video adapter and sampled GPU reproduction before complete handoff. See [verification status](CPU_VERIFICATION.json).
 
 ## Organizer access
 
