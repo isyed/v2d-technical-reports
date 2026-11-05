@@ -42,23 +42,17 @@
   "complete_competition_handoff": false,
   "archive_uploaded": false,
   "independent_runtime_builder": {
-    "status": "STOPPED_EXPORT_TIMEOUT",
+    "status": "RUNNING_STARTUP_DIRECT_OCI_EXPORT",
+    "checked_at_utc": "2026-11-05T19:33:54.390619+00:00",
     "cpu_only": true,
     "campaign_total_cap_usd": 8,
-    "includes_both_prior_attempts": true,
+    "includes_all_three_previous_attempts": true,
     "maximum_hours_this_worker": 3,
     "automatic_deletion": true,
+    "direct_oci_export": true,
     "checkpoint_before_validation": true,
     "sam3d_environment_fix_locally_verified": true,
-    "raw_video_reproduction_verified": false,
-    "checked_at_utc": "2026-11-05T19:14:39.062663+00:00",
-    "failure_utc": "2026-11-05T18:48:05Z",
-    "failure": "Image checkpoint export exceeded its 30-minute limit",
-    "image_build_completed": true,
-    "checkpoint_uploaded": false,
-    "verification_this_worker": "not run; checkpoint export failed before validation",
-    "vm_and_disk_deleted_confirmed": true,
-    "new_worker_started": false
+    "raw_video_reproduction_verified": false
   },
   "cloud_retry1": {
     "image_build_completed": true,
@@ -70,8 +64,16 @@
     "vm_and_disk_deleted_confirmed": true
   },
   "direct_export_probe": {
-    "status": "PASS",
-    "scope": "tiny offline OCI export, Docker load and recovered-file content comparison",
-    "full_runtime_tested": false
+    "status": "PASS_FULL_SIZE_ARTIFACT_IMAGE",
+    "scope": "15.8 GiB artifact-check image, direct OCI export/load, identical filesystem layers and runtime settings, all24officialchecks",
+    "all_models_runtime_foundation_tested": false,
+    "details": "DIRECT_EXPORT_VALIDATION.json"
+  },
+  "cloud_retry2": {
+    "image_build_completed": true,
+    "checkpoint_export": "FAIL: exceeded the 30-minute daemon-export deadline",
+    "checkpoint_uploaded": false,
+    "verification_this_worker": "not run",
+    "vm_and_disk_deleted_confirmed": true
   }
 }
