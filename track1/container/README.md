@@ -51,11 +51,15 @@ Full raw-video model/runtime bundling, the reproduction adapter and sampled GPU 
 
 The existing artifact-check image deliberately refuses raw-video reproduction rather than replaying stored outputs.
 
-The first cloud attempt timed out while copying the runtime environments and automatically deleted its VM and disk.
+The optimized cloud retry completed its image build and all 24 official artifact checks, then stopped because its SAM3D process did not inherit the original image’s `LIDRA_SKIP_INIT=1` setting.
 
-An optimized retry is starting on November 5, using direct copies from pinned images, a faster build disk, minute-by-minute progress updates and a three-hour automatic deletion limit.
+That failure and its correction were verified locally; both earlier VMs and disks are deleted.
 
-A successful runtime build will still require a raw-video adapter and sampled GPU reproduction before complete handoff.
+A further bounded CPU worker started on November 5 at 12:00 p.m.
+
+It will checkpoint the built image to private storage before validation, retain minute-by-minute progress and a three-hour deletion limit, and publish a verified build receipt only after all checks pass.
+
+Raw-video reproduction remains unfinished.
 
 See [verification status](CPU_VERIFICATION.json).
 
