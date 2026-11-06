@@ -8,7 +8,7 @@ The separate CPU validation passed on November 5: archive download/SHA-256, OCI 
 
 The cloud tests resolved two issues: the systemd service replacement must sort after NGC's vendor override, and untagged OCI imports should be addressed by their exact manifest digest. The suite now has **15 passing tests**. This verifies startup and CPU container execution; it does not verify GPU inference or fresh-video reproduction.
 
-**The approved L4 pilot is running in `us-central1-c`.** The startup repair passed on the actual GPU VM. At November 5, 10:28 p.m. EST, it is downloading the validated foundation archive; fresh-video inference has not started yet. The independent controller has deleted itself after handoff. The **same $4 total ceiling** includes prior GPU attempts and CPU checks; no new budget or data upload was added. The laptop can be off. Thermal safeguards, backups and three-hour worker deletion remain configured.
+**The L4 pilot is running fresh-video inference in `us-central1-c`.** At November 5, 11:05 p.m. EST, Episode 11 has completed segmentation/mask packing and is running perception/refinement; Episode 29 follows. Archive loading/identity and payload integrity checks passed. Latest temperature: **78°C**, with no thermal pause. No final comparison result is available yet. The independent controller is deleted. The **same $4 total ceiling**, safeguards, backups and three-hour worker deletion remain; the laptop can be off.
 
 
 This is the stable handoff page supplied with the technical-report form. Archive identity and validation status are recorded below; an organizer-accessible download link and complete reproduction evidence remain pending.

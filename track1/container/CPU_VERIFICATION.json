@@ -102,7 +102,7 @@
     "worker_vm_and_disk_deleted_confirmed": true
   },
   "fresh_motion_pilot": {
-    "status": "GPU_WORKER_DOWNLOADING_VALIDATED_FOUNDATION",
+    "status": "FRESH_MOTION_INFERENCE_EPISODE_11",
     "episodes": [
       11,
       29
@@ -114,8 +114,8 @@
     "all_30_episode_support": false,
     "gpu_results_pending": true,
     "independent_controller_running": false,
-    "gpu_inference_started": false,
-    "checked_at_utc": "2026-11-06T03:29:21.310187+00:00",
+    "gpu_inference_started": true,
+    "checked_at_utc": "2026-11-06T04:07:22.025159+00:00",
     "new_reproduction_results": false,
     "retry_prepared": true,
     "replacement_allocation_approval_pending": false,
@@ -139,7 +139,7 @@
     "targeted_repair_tests_passed": 14,
     "systemd_syntax_validation_passed": true,
     "targeted_repair_cloud_test_pending": true,
-    "next_recommendation": "Await archive load and fresh-video comparison results",
+    "next_recommendation": "Await Episode11/29 fresh-output comparisons",
     "further_allocation_launched": true,
     "startup_repair_cloud_validated": true,
     "additional_l4_allocation_prepared": true,
@@ -151,8 +151,16 @@
     "controller_deleted_confirmed": true,
     "worker": "longbot-t1-reproduce-r2-20261106-003644",
     "worker_zone": "us-central1-c",
-    "worker_heartbeat_utc": "2026-11-06T03:28:13Z",
-    "startup_fix_passed_on_gpu_vm": true
+    "worker_heartbeat_utc": "2026-11-06T04:05:34Z",
+    "startup_fix_passed_on_gpu_vm": true,
+    "archive_loaded_and_identity_verified": true,
+    "payload_integrity_verified": true,
+    "current_episode": 11,
+    "current_stage": "fresh_perception_and_refinement",
+    "next_episode": 29,
+    "latest_temperature_c": 78,
+    "thermal_paused": false,
+    "final_reproduction_comparison_available": false
   },
   "cpu_startup_preflight": {
     "status": "PASS",
