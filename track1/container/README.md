@@ -6,31 +6,27 @@ The separate CPU validation passed on November 5: archive download/SHA-256, OCI 
 
 The worker then requested automatic deletion. [Validation receipt](VALIDATION_RECEIPT.json).
 
-The controller was created November 5 at 8:40 p.m.
-
-EST and is publishing capacity requests.
-
-It launches at most one replacement L4, with no laptop dependency, the existing thermal safeguards, backups and automatic deletion.
-
-No new inference result is available yet.
-
-Previous attempt: The controller obtained an L4 in `us-central1-a` on November 5 at 8:02 p.m.
+**Replacement pilot stopped before inference; no worker or controller is currently running.** An L4 was allocated in `us-central1-b` on November 5 at 8:45 p.m.
 
 EST.
 
-At 8:03 p.m., Docker failed to restart after the image-store configuration change.
+Docker startup failed again; the worker/controller and their disks are confirmed deleted.
 
-The worker and controller deleted themselves, and their disks are gone.
+No fresh-video results were produced.
 
-The daemon journal was not captured, so the exact restart error remains undetermined; incompatible legacy storage settings are a suspected cause.
+The replacement diagnostics expose a configuration conflict the prior fix did not cover: the NGC **systemd service command** forces `--storage-driver=overlay2`, separately from `daemon.json`.
 
-A replacement startup repair is prepared: normalize the storage settings while preserving NVIDIA configuration, validate the Docker configuration, verify the image store, and capture daemon logs plus restore the original configuration on failure.
+The targeted repair now handles both locations, preserves NVIDIA runtime and other service options, and restores both original configurations on failure.
 
-All 11 CPU tests and `dockerd --validate` pass; the repair has not been cloud-validated.
+**14 tests and systemd syntax validation pass; cloud validation is pending.**
 
-Its independent controller is now running and reuses the existing archive and payload.
+**Next recommendation:** test startup on a CPU-only VM using the same NGC image before allocating another L4.
 
-Fresh-video reproduction and the complete handoff remain pending.
+No additional VM has been launched.
+
+Further allocation awaits approval.
+
+The verified foundation archive and previously uploaded payload remain reusable.
 
 This is the stable handoff page supplied with the technical-report form.
 
