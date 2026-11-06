@@ -1,7 +1,7 @@
 {
-  "status": "INDEPENDENT_CONTROLLER_RETRYING_L4_CAPACITY",
+  "status": "FRESH_TRACKING_COMPLETED_MATERIAL_NUMERICAL_VARIATION_REMAINS",
   "cpu_tests_passed": 31,
-  "native_offline_entry_points_passed": 13,
+  "native_offline_entry_points_passed": 24,
   "native_offline_entry_points_failed": 0,
   "native_check_scope": "CPU imports and --help only; no model inference or GPU validation.",
   "tracking_nodes_ported": 36,
@@ -200,7 +200,7 @@
   "local_machine_required": false,
   "payload_generation": "1793946133714935",
   "payload_sha256": "5e7fd254ef5286c88ae82803e99c7aeb299e548bed7cb1e0dca2fe7f3e9feb4e",
-  "gpu_inference_completed": false,
+  "gpu_inference_completed": true,
   "gpu_worker_currently_allocated": false,
   "first_capacity_round": {
     "zones": [
@@ -214,5 +214,16 @@
     "provisional_instance_rolled_back": true
   },
   "retry_seconds": 120,
-  "maximum_capacity_retry_seconds": 9000
+  "maximum_capacity_retry_seconds": 9000,
+  "base_episode_paths_prepared": 30,
+  "later_profile_episode_paths_prepared": 19,
+  "unit_tests_passed": 35,
+  "numerical_reproduction_accepted": false,
+  "result_details": "FRESH_TRACKING_PILOT_REVIEW.json",
+  "all_pilot_instances_and_disks_deleted": true,
+  "original_source_archive_bytes": 562881,
+  "original_source_archive_sha256": "b2288a6acccbfca0670d14c5242f4fb694ca5dcf0d9634631a287afb5ac36d66",
+  "original_source_archive_has_neural_weights_or_predictions": false,
+  "archive_backed_bundle_matches_checked_file_identities": 858,
+  "latest_prepared_adapter_commit": "4eddf61"
 }
