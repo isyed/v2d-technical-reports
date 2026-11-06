@@ -1,6 +1,6 @@
 # Track 1: final container handoff
 
-**Status: runtime foundation independently verified; fresh-video reproduction remains pending.**
+**Status: fresh-video pilot completed; numerical/geometry review and the complete handoff remain pending.**
 
 The separate CPU validation passed on November 5: archive download/SHA-256, OCI identity, loaded filesystem/runtime settings, all **24 official checks**, and both SAM2/SAM3D offline imports. The worker then requested automatic deletion. [Validation receipt](VALIDATION_RECEIPT.json).
 
@@ -8,7 +8,13 @@ The separate CPU validation passed on November 5: archive download/SHA-256, OCI 
 
 The cloud tests resolved two issues: the systemd service replacement must sort after NGC's vendor override, and untagged OCI imports should be addressed by their exact manifest digest. The suite now has **15 passing tests**. This verifies startup and CPU container execution; it does not verify GPU inference or fresh-video reproduction.
 
-**The L4 pilot is running fresh-video inference in `us-central1-c`.** At November 5, 11:05 p.m. EST, Episode 11 has completed segmentation/mask packing and is running perception/refinement; Episode 29 follows. Archive loading/identity and payload integrity checks passed. Latest temperature: **78°C**, with no thermal pause. No final comparison result is available yet. The independent controller is deleted. The **same $4 total ceiling**, safeguards, backups and three-hour worker deletion remain; the laptop can be off.
+**The cloud pilot completed both Episodes 11 and 29** on November 6 at 12:07 a.m. EST. Results and logs are backed up; all pilot VMs and disks are confirmed deleted. There is no active cloud job.
+
+Fresh exports match the frame counts, float32 data types and reused object mesh bytes, but are **not bit exact** to the historical submissions. On scoring-frame indices, T1-11's mean object-position differences are **0.15 cm / 0.44 cm** for Episodes 11/29; mean rotation differences are **0.24° / 0.55°**. T1-02's Episode 29 has a larger maximum rotation difference of **12.72°**, requiring review. These are differences from saved outputs, not competition scores. [Pilot review](FRESH_VIDEO_PILOT_REVIEW.json).
+
+The largest raw human-pose delta is a root Euler-angle wrap near 2 pi, rather than a six-radian physical jump. Decoded human geometry and remaining numerical differences still need comparison. GPU thermal logs recorded a maximum **80°C**, a **60 W** limit and no thermal pauses. The total campaign ceiling stayed at $4; actual billed cost is not yet known.
+
+**Next:** review decoded human/object geometry on CPU, investigate T1-02 Episode 29's orientation variation, then finish the remaining 28 episode recipes and the final raw-video entry point before completing container delivery. This pilot reused frozen RGB-derived mesh priors; it did not regenerate object meshes or implement all 30 episodes. No further cloud run has been launched.
 
 
 This is the stable handoff page supplied with the technical-report form. Archive identity and validation status are recorded below; an organizer-accessible download link and complete reproduction evidence remain pending.

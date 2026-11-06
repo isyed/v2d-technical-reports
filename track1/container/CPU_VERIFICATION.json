@@ -102,7 +102,7 @@
     "worker_vm_and_disk_deleted_confirmed": true
   },
   "fresh_motion_pilot": {
-    "status": "FRESH_MOTION_INFERENCE_EPISODE_11",
+    "status": "COMPLETED_REQUIRES_GEOMETRY_REVIEW",
     "episodes": [
       11,
       29
@@ -115,7 +115,7 @@
     "gpu_results_pending": true,
     "independent_controller_running": false,
     "gpu_inference_started": true,
-    "checked_at_utc": "2026-11-06T04:07:22.025159+00:00",
+    "checked_at_utc": "2026-11-06T05:24:33.914537+00:00",
     "new_reproduction_results": false,
     "retry_prepared": true,
     "replacement_allocation_approval_pending": false,
@@ -130,7 +130,7 @@
     "replacement_allocation_approved": true,
     "current_controller": "longbot-t1-repro-controller-r2-20261106-003644",
     "current_controller_created_utc": "2026-11-06T03:25:02Z",
-    "gpu_worker_allocated": true,
+    "gpu_worker_allocated": false,
     "local_machine_required": false,
     "total_cap_includes_failed_attempt": true,
     "replacement_worker_and_controller_deleted": true,
@@ -139,7 +139,7 @@
     "targeted_repair_tests_passed": 14,
     "systemd_syntax_validation_passed": true,
     "targeted_repair_cloud_test_pending": true,
-    "next_recommendation": "Await Episode11/29 fresh-output comparisons",
+    "next_recommendation": "CPU geometry review and T1-02 Episode29 orientation audit, then remaining episode recipes",
     "further_allocation_launched": true,
     "startup_repair_cloud_validated": true,
     "additional_l4_allocation_prepared": true,
@@ -155,12 +155,21 @@
     "startup_fix_passed_on_gpu_vm": true,
     "archive_loaded_and_identity_verified": true,
     "payload_integrity_verified": true,
-    "current_episode": 11,
-    "current_stage": "fresh_perception_and_refinement",
-    "next_episode": 29,
-    "latest_temperature_c": 78,
-    "thermal_paused": false,
-    "final_reproduction_comparison_available": false
+    "current_stage": "completed_requires_review",
+    "final_reproduction_comparison_available": true,
+    "completed_utc": "2026-11-06T05:07:00Z",
+    "fresh_inference_completed": true,
+    "worker_running": false,
+    "worker_and_disk_deleted_confirmed": true,
+    "completed_episodes": [
+      11,
+      29
+    ],
+    "arrays_bit_exact": false,
+    "raw_video_reproduction_verified": false,
+    "recorded_max_temperature_c": 80,
+    "thermal_pause_samples": 0,
+    "review_details": "FRESH_VIDEO_PILOT_REVIEW.json"
   },
   "cpu_startup_preflight": {
     "status": "PASS",
