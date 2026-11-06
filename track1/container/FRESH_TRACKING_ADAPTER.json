@@ -187,7 +187,6 @@
     12
   ],
   "pilot_stages": 19,
-  "new_cap_approved_usd": 4,
   "payload_upload_approved": true,
   "gpu_pilot_launched": true,
   "all_30_adapter_implemented": false,
@@ -197,7 +196,6 @@
   "launch_status_checked_at_utc": "2026-11-06T06:26:58.918575+00:00",
   "worker": "longbot-t1-reproduce-20261106-061740",
   "worker_zone": null,
-  "fresh_total_cap_usd": 4,
   "worker_provider_delete_seconds": 10800,
   "local_machine_required": false,
   "payload_generation": "1793946133714935",

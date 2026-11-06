@@ -45,7 +45,6 @@
     "status": "STOPPED_RECEIPT_FORMAT_BUG_ARCHIVE_PRESERVED",
     "checked_at_utc": "2026-11-05T22:19:06.727118+00:00",
     "cpu_only": true,
-    "campaign_total_cap_usd": 8,
     "includes_all_three_previous_attempts": true,
     "maximum_hours_this_worker": 3,
     "automatic_deletion": true,
@@ -91,7 +90,6 @@
     "heartbeat_utc": "2026-11-06T00:36:13Z",
     "stage": "runtime_foundation_validation_passed",
     "independent_download_sha256_verified": true,
-    "campaign_total_cap_usd": 8,
     "maximum_hours": 2,
     "local_machine_required": false,
     "raw_video_reproduction_verified": false,
@@ -107,7 +105,6 @@
       11,
       29
     ],
-    "fresh_total_cap_usd": 4,
     "maximum_created_workers": 1,
     "maximum_hours": 3,
     "local_machine_required_after_launch": false,
@@ -119,7 +116,6 @@
     "new_reproduction_results": true,
     "retry_prepared": true,
     "replacement_allocation_approval_pending": false,
-    "existing_total_cap_usd_including_failed_attempt": 4,
     "cpu_repair_tests_passed": 11,
     "docker_config_validator_passed": true,
     "repair_cloud_test_pending": false,
@@ -132,7 +128,6 @@
     "current_controller_created_utc": "2026-11-06T03:25:02Z",
     "gpu_worker_allocated": false,
     "local_machine_required": false,
-    "total_cap_includes_failed_attempt": true,
     "replacement_worker_and_controller_deleted": true,
     "replacement_disks_deleted": true,
     "systemd_storage_driver_override_observed": true,
@@ -146,8 +141,6 @@
     "additional_l4_allocation_approval_pending": false,
     "additional_gpu_workers_authorized": 1,
     "total_gpu_allocations_authorized_including_prior": 3,
-    "campaign_total_cap_usd": 4,
-    "fresh_budget_added": false,
     "controller_deleted_confirmed": true,
     "worker": "longbot-t1-reproduce-r2-20261106-003644",
     "worker_zone": "us-central1-c",
@@ -202,7 +195,6 @@
     "final_attempt": "Pinned manifest lookup; full OCI integrity and offline execution passed",
     "gpu_workers_started_this_task": 0,
     "models_or_videos_downloaded": false,
-    "cpu_reservation_usd_inside_existing_4_total_cap": 0.1,
     "self_delete_requested": true,
     "boot_disk_deleted_confirmed": true,
     "instance_last_observed_state": "NOT_FOUND",
@@ -218,7 +210,6 @@
     "independent_controller": true,
     "worker": "longbot-t1-reproduce-20261106-061740",
     "worker_zone": "us-central1-a",
-    "fresh_total_cap_usd": 4,
     "maximum_successful_l4_allocations": 1,
     "provider_delete_seconds": 10800,
     "thermal": {
@@ -249,7 +240,6 @@
     "source_variation_requires_review": true,
     "special_original_workflows_gpu_retested": false,
     "result_details": "FRESH_TRACKING_PILOT_REVIEW.json",
-    "actual_billed_cost_known": false,
     "latest_prepared_adapter_commit": "4eddf61"
   }
 }

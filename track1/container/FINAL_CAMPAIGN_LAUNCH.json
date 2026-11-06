@@ -1,8 +1,6 @@
 {
   "updated_utc": "2026-11-06T10:55:58.324898+00:00",
   "status": "CLOUD_BUILD_RUNNING_L4_VALIDATIONS_QUEUED",
-  "approved_total_cap_usd": 8,
-  "actual_billed_cost_known": false,
   "payload": {
     "uri": "gs://v2d-track2-pilot-734433564803-us-central1/award_handoff/track1/final_overlay/20261106-102258/overlay.tar.gz",
     "generation": "1793961303973325",

@@ -10,8 +10,6 @@
   "unique_fresh_sequences_across_both_pilots": 4,
   "source_tooling_commit": "09f4da746c4190b44bb48e353df3dd084b9b4cf9",
   "all_pilot_instances_and_disks_deleted": true,
-  "same_fresh_total_cap_usd": 4,
-  "actual_billed_cost_known": false,
   "new_cloud_run_launched": false,
   "arrays_bit_exact": false,
   "frames_dtypes_mesh_bytes_match": true,

@@ -20,7 +20,6 @@
     "stage": "validation_partial_or_failed_requires_review",
     "utc": "2026-11-06T14:18:26Z",
     "raw_video_reproduction_verified": false,
-    "budget_usd": 8,
     "local_machine_required": false,
     "episode": 8,
     "attempts": [
@@ -79,8 +78,6 @@
   "gpu_allocations_used": 1,
   "gpu_allocations_authorized": 2,
   "episode5": "not_started_optional_test_deferred",
-  "approved_total_cap_usd": 8,
-  "actual_billed_cost_known": false,
   "controller_cause": "one-GPU quota plus acquisition-deadline bug",
   "controller_fix_prepared_not_deployed": true,
   "regression_tests_passed": 54,

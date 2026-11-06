@@ -207,8 +207,6 @@
       "max_power_limit_w": 60.0
     }
   },
-  "same_total_cap_usd_including_prior_attempts": 4,
-  "actual_billed_cost_known": false,
   "evidence_archive_generation": "1793941632653979",
   "evidence_archive_bytes": 30945266,
   "evidence_archive_sha256": "40a84560fab7e12e0f9cf58c2dfe67b1f2a1a863f5828fbe2b7b87f16b46305c",
@@ -217,7 +215,6 @@
     "Port the11later-profile corrections, keeping T1-10 human-B and T1-11 object-only branches distinct.",
     "Validate non-pilot recipes and diagnose the T1-02 Episode29 post-fit variation with retained stage evidence, then package final raw-video entry point and organizer-accessible archive."
   ],
-  "new_cloud_spending_authorized": false,
   "geometry_review": "CPU_GEOMETRY_REVIEW.json",
   "geometry_interpretation": {
     "human_scored_frame_mean_displacement_mm": {

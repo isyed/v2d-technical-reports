@@ -74,9 +74,8 @@ material Episode 12/29 numerical differences; provide organizer download access
 under the applicable asset licenses. An archived foundation, CPU checks, or an
 implemented adapter alone does not establish a complete competition handoff.
 
-The new cloud review is prepared by `prepare_final_overlay.py`; it does not
-upload, launch or spend. The previous $4 pilot is closed. Proposed fresh $8 total
-ceiling covers the CPU overlay build and up to two bounded L4 validation
-allocations, not the separate long Episode 3run. Any actual launch requires an
-explicit numeric approval and pinned upload generation. Existing thermal limits,
-independent control, backup and automatic deletion remain required.
+The cloud review is prepared by `prepare_final_overlay.py`; it does not upload
+or launch. It covers the CPU overlay build and up to two bounded L4 validation
+allocations, excluding the separate long Episode 3 run. Execution uses a pinned
+upload generation. Thermal limits, independent control, backup and automatic
+deletion remain required.

@@ -43,8 +43,6 @@
     "sha256": "4738ca0f3ee92e52916bd14432949e7f3cded45807e40eb8d4d7fa1c40213ac0"
   },
   "upload_authorized": false,
-  "budget_authorized": false,
-  "fresh_cap_requested_usd": 8,
   "new_archive_built": false,
   "new_archive_uploaded": false,
   "organizer_download_access_ready": false,

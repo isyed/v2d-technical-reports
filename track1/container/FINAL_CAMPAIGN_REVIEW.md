@@ -41,4 +41,4 @@ so the handoff must still distinguish artifact verification from fresh reproduct
 Episode 8 issue using existing evidence first, and arrange organizer access to
 the preserved archive with an accurate limitations report. Further GPU validation
 should target a demonstrated fix. One of the two approved L4 allocations remains
-unused under the existing $8 cap; the cap is not a statement of actual spending.
+unused.

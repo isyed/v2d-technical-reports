@@ -1,6 +1,6 @@
 # Final Track 1 container build and validation campaign
 
-The user approved the exact 132,632,976-byte payload and a fresh **$8 total cap**.
+The user approved the exact 132,632,976-byte payload.
 It is uploaded at its reviewed private destination, with generation
 `1793961303973325` and SHA-256
 `4738ca0f3ee92e52916bd14432949e7f3cded45807e40eb8d4d7fa1c40213ac0`.
@@ -24,9 +24,7 @@ The L4 limits remain 60 W, pause at 82°C, resume at 74°C and stop at 83°C. Ev
 compute worker has a three-hour provider DELETE limit and an auto-delete boot
 disk. The small controller has a six-hour fallback limit so it can cover the
 build, capacity retries and both workers. It deletes workers once their backup
-markers appear, then deletes itself. Its reservation is included in the same
-$8 cap; no extra spending allowance was introduced. Actual billed cost is not
-yet known.
+markers appear, then deletes itself.
 
 Automatic approval review rejected a new builder-scoped instance-admin binding.
 **No IAM binding was added.** The deployment instead uses the existing

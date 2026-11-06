@@ -59,9 +59,9 @@ differences, **not competition scores**. [Completed pilot review](FRESH_TRACKING
 [geometry](FRESH_TRACKING_GEOMETRY_REVIEW.json),
 [source-only diagnosis](EPISODE12_SOURCE_VARIATION.json).
 
-The pilot retained its **$4total cap**,60Wlimit and82C/74C/83C safeguards. Maximum
-recorded temperature was81C; no thermal pauses occurred. Actual billed cost is
-unknown. Its evidence is backed up; no new cloud run was launched during review.
+The pilot retained its 60 W power limit and 82°C/74°C/83°C safeguards. Maximum
+recorded temperature was 81°C; no thermal pauses occurred.
+Its evidence is backed up; no new cloud run was launched during review.
 
 All **30base reconstruction paths are now prepared**, including the special3/16
 workflows. A563KBsource-only snapshot in the private repository removes the
@@ -79,7 +79,7 @@ historical predictions or relaxing acceptance limits.
 **Next:** resolve the confirmed Episode 8 reproduction issue and provide organizer
 download access with the validation evidence. The final adapter archive is built;
 its full reproduction is not certified. Additional broad GPU testing and the
-separate long Episode 3 run are deferred. The $8 cap is a ceiling, not actual cost.
+separate long Episode 3 run are deferred.
 
 This is the stable handoff page supplied with the technical-report form. Archive identity and validation status are recorded below; an organizer-accessible download link and complete reproduction evidence remain pending.
 
