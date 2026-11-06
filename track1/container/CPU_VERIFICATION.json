@@ -112,7 +112,7 @@
     "gpu_results_pending": true,
     "independent_controller_running": false,
     "gpu_inference_started": false,
-    "checked_at_utc": "2026-11-06T02:19:43.037136+00:00",
+    "checked_at_utc": "2026-11-06T02:44:24.899895+00:00",
     "new_reproduction_results": false,
     "retry_prepared": true,
     "replacement_allocation_approval_pending": false,
@@ -135,7 +135,41 @@
     "targeted_repair_tests_passed": 14,
     "systemd_syntax_validation_passed": true,
     "targeted_repair_cloud_test_pending": true,
-    "next_recommendation": "CPU-only NGC startup preflight before another L4",
-    "further_allocation_launched": false
+    "next_recommendation": "L4 fresh-video pilot with CPU-validated startup, pending approval",
+    "further_allocation_launched": false,
+    "startup_repair_cloud_validated": true,
+    "additional_l4_allocation_prepared": true,
+    "additional_l4_allocation_approval_pending": true
+  },
+  "cpu_startup_preflight": {
+    "status": "PASS",
+    "checked_at_utc": "2026-11-06T02:44:24.899895+00:00",
+    "completed_utc": "2026-11-06T02:40:36Z",
+    "receipt": {
+      "same_ngc_image": "nvidia-gpu-cloud-vmi-base-2026-6-1-x86-64",
+      "cpu_only": true,
+      "docker_restart_passed": true,
+      "containerd_image_store_verified": true,
+      "nvidia_runtime_configuration_preserved": true,
+      "oci_import_and_layer_identity_passed": true,
+      "offline_readonly_container_execution_passed": true,
+      "models_or_dataset_downloaded": false,
+      "gpu_runtime_execution_tested": false,
+      "fresh_video_reproduction_verified": false,
+      "complete_competition_handoff": false,
+      "image_store_driver": "overlayfs"
+    },
+    "unit_tests_passed": 15,
+    "cpu_attempts": 3,
+    "first_attempt": "Exposed vendor systemd drop-in overriding earlier numeric drop-in",
+    "second_attempt": "Docker restart/store/runtimes/import passed; image enumeration did not expose untagged OCI image",
+    "final_attempt": "Pinned manifest lookup; full OCI integrity and offline execution passed",
+    "gpu_workers_started_this_task": 0,
+    "models_or_videos_downloaded": false,
+    "self_delete_requested": true,
+    "boot_disk_deleted_confirmed": true,
+    "instance_last_observed_state": "NOT_FOUND",
+    "next_recommendation": "Financial details omitted from public history.",
+    "instance_and_disks_deleted_confirmed": true
   }
 }

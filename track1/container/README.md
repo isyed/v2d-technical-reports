@@ -6,27 +6,25 @@ The separate CPU validation passed on November 5: archive download/SHA-256, OCI 
 
 The worker then requested automatic deletion. [Validation receipt](VALIDATION_RECEIPT.json).
 
-**Replacement pilot stopped before inference; no worker or controller is currently running.** An L4 was allocated in `us-central1-b` on November 5 at 8:45 p.m.
+**CPU startup preflight passed on the exact NGC VM image** on November 5 at 9:40 p.m.
 
 EST.
 
-Docker startup failed again; the worker/controller and their disks are confirmed deleted.
+Docker restart, containerd image storage, preserved NVIDIA runtime settings, OCI import/layer identity and offline read-only container execution all passed.
 
-No fresh-video results were produced.
+No GPU, model weights or videos were used.
 
-The replacement diagnostics expose a configuration conflict the prior fix did not cover: the NGC **systemd service command** forces `--storage-driver=overlay2`, separately from `daemon.json`.
+The receipt is backed up; the VM and its disk are confirmed deleted. [CPU startup receipt](CPU_STARTUP_PREFLIGHT_RECEIPT.json).
 
-The targeted repair now handles both locations, preserves NVIDIA runtime and other service options, and restores both original configurations on failure.
+The cloud tests resolved two issues: the systemd service replacement must sort after NGC's vendor override, and untagged OCI imports should be addressed by their exact manifest digest.
 
-**14 tests and systemd syntax validation pass; cloud validation is pending.**
+The suite now has **15 passing tests**.
 
-**Next recommendation:** test startup on a CPU-only VM using the same NGC image before allocating another L4.
+This verifies startup and CPU container execution; it does not verify GPU inference or fresh-video reproduction.
 
-No additional VM has been launched.
+**Next recommendation:** run one further L4 fresh-video pilot with the tested startup, existing archive and existing payload.
 
-Further allocation awaits approval.
-
-The verified foundation archive and previously uploaded payload remain reusable.
+No new L4 worker or capacity controller is running.
 
 This is the stable handoff page supplied with the technical-report form.
 
@@ -81,7 +79,7 @@ The loaded-image identity, all 24 official checks and both offline runtime impor
 
 The worker stopped because the receipt checker expected the raw API's `metadata` field, while `gcloud` reports it as `custom_fields`.
 
-The parser is corrected and tested, and a recovered receipt is saved with validation explicitly pending.
+The parser is corrected and tested, and a recovered receipt recorded validation as pending at that point.
 
 The validation-only worker checked the preserved archive successfully without rebuilding it.
 
