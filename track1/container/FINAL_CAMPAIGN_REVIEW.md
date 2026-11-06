@@ -42,3 +42,7 @@ Episode 8 issue using existing evidence first, and arrange organizer access to
 the preserved archive with an accurate limitations report. Further GPU validation
 should target a demonstrated fix. One of the two approved L4 allocations remains
 unused.
+
+## Subsequent source audit and delivery
+
+The source audit localizes Episode 8's material mismatch before the late corrections, but does not establish a numerical fix. The archive's limited-duration read-only download link has been tested anonymously; the temporary signing grant was removed. See [the audit](EPISODE8_REPRODUCTION_AUDIT.md) for supported findings, causal limits and exact archive identity. The signed bearer URL is kept out of Git.

@@ -1,0 +1,19 @@
+{
+  "signing_grant_removed": true,
+  "archive_uri": "gs://v2d-track2-pilot-734433564803-us-central1/award_handoff/track1/final_overlay/20261106-102258/longbot-track1-four-profile.oci.tar",
+  "generation": "1793966747550293",
+  "signed_utc": "2026-11-06T15:55:09.960074+00:00",
+  "expires_utc": "2026-11-07T03:55:09.960074+00:00",
+  "anonymous_http_status": 206,
+  "content_range": "bytes 0-1023/49107013120",
+  "downloaded_probe_bytes": 1024,
+  "anonymous_download_verified": true,
+  "checked_utc": "2026-11-06T15:56:43.062542+00:00",
+  "signed_url_published": false,
+  "bucket_made_public": false,
+  "archive_sha256": "9485c976b13c46b0529bd5296c43014afa4a3abbb7f3324bfd064ef8d36ffbec",
+  "archive_bytes": 49107013120,
+  "image_manifest_digest": "sha256:8db82172b032896f516373d8bbb3c89bbe81b098eec5eb8ee09477013df3a7db",
+  "complete_fresh_reproduction_certified": false,
+  "service_account_iam_bindings_match_before": true
+}

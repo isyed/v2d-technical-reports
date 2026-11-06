@@ -1,15 +1,17 @@
 # Track 1: final container handoff
 
-**Status: the 49.1 GB final archive is built and backed up, with all 24 official checks passed. Episode 8 completed T1-10 but failed T1-11's grasp/release guard and shows material numerical differences. No campaign VMs are running. The complete handoff remains pending.**
+**Status: the 49.1 GB archive is built and backed up; all 24 official stored-output checks passed. Organizer download access has been tested without login and the temporary signing grant removed. Episode 8's mismatch is localized but remains numerically unresolved. No campaign VMs are running.**
+
+[Episode 8 audit and explicit validation limitations](EPISODE8_REPRODUCTION_AUDIT.md). The download link is delivered privately and expires November 6 at 10:55 p.m. EST; its bearer token is not published here.
 
 Episode 5 was blocked by the project's one-GPU quota and is now deferred as
 optional branch coverage. Fresh reproduction of all 30 episodes is not required
-by the container guidance. The next step is a focused audit of Episode 8's
-confirmed issue using saved evidence, followed by organizer download access with
-accurate validation limitations. [Latest campaign review](FINAL_CAMPAIGN_REVIEW.md).
+by the container guidance. The source audit localizes Episode 8's issue upstream of the late corrections.
+The archive can be delivered with explicit fresh-reproduction limitations; this
+is not a claim that its fresh outputs match the counted submissions. [Latest campaign review](FINAL_CAMPAIGN_REVIEW.md).
 
 The 11 remaining late-profile cases now have executable correction adapters.
-**54 CPU tests and 14 new native-runtime import checks pass.** All 30 released
+**55 CPU tooling tests and 14 archived native-runtime import checks pass.** All 30 released
 video identities passed an offline check in the original runtime, which generated
 the full 243-stage T1-11 plan without executing models. A **132.6 MB** private
 validation payload was uploaded to private storage and pinned by generation and
@@ -76,12 +78,11 @@ historical predictions or relaxing acceptance limits.
 
 [Latest private adapter implementation](https://github.com/isyed/v2d-reconstruction/commit/700d840).
 
-**Next:** resolve the confirmed Episode 8 reproduction issue and provide organizer
-download access with the validation evidence. The final adapter archive is built;
-its full reproduction is not certified. Additional broad GPU testing and the
+**Next:** provide the privately delivered archive link together with the Episode 8
+audit and validation limitations. Its full numerical reproduction is not certified. Additional broad GPU testing and the
 separate long Episode 3 run are deferred.
 
-This is the stable handoff page supplied with the technical-report form. Archive identity and validation status are recorded below; an organizer-accessible download link and complete reproduction evidence remain pending.
+This is the stable handoff page supplied with the technical-report form. Archive identity and validation status are recorded below. A limited-duration organizer download link has been tested and delivered privately; complete numerical reproduction remains unverified.
 
 Team: longbot. Contact: syedim@gmail.com.
 
@@ -129,7 +130,7 @@ See [verification status](CPU_VERIFICATION.json),
 
 The implementation repository is private, with an invitation already issued to `Nvidia-V2D-Challenge`. Large artifacts and pretrained assets will be shared with the organizers without changing third-party licenses. This public page contains only documentation and non-secret provenance.
 
-The preserved foundation archive exists, with its digest in [archive status](ARCHIVE_STATUS.json). It is not yet certified as the complete raw-video handoff.
+The final four-profile archive exists, with its identity and anonymous download check in [access verification](ORGANIZER_ACCESS_VERIFICATION.json). Its read-only link was delivered privately and expires November 6, 2026 at 10:55 p.m. EST. The earlier foundation is a separate archive recorded in [archive status](ARCHIVE_STATUS.json). Full fresh reproduction remains unverified.
 
 ## Kaggle final-selection check
 
@@ -137,4 +138,4 @@ A subsequent authenticated read-only query using Kaggle’s selected-submission 
 
 ## Official kit
 
-The ZIP linked from the official competition page was downloaded again on November 4 at 7:01 p.m. EST. Its SHA-256 is `7e1fdd00b50189191b4f1bf03158607f4f1a7bb5bfb0bf867b14eb06270a77f0`. The checks above use its unmodified verifier. No complete handoff archive or raw-video reproduction result is claimed.
+The ZIP linked from the official competition page was downloaded again on November 4 at 7:01 p.m. EST. Its SHA-256 is `7e1fdd00b50189191b4f1bf03158607f4f1a7bb5bfb0bf867b14eb06270a77f0`. The checks above use its unmodified verifier. The final archive exists and download access has been tested. Complete matching fresh-video reproduction is not claimed.

@@ -1,6 +1,6 @@
 {
-  "checked_at_utc": "2026-11-06T14:50:33.495092+00:00",
-  "status": "ARCHIVE_BUILT_GPU8_PARTIAL_NO_ACTIVE_JOBS",
+  "checked_at_utc": "2026-11-06T16:00:08.475746+00:00",
+  "status": "ARCHIVE_DOWNLOAD_VERIFIED_EPISODE8_NUMERICAL_MISMATCH_UNRESOLVED",
   "archive": {
     "uri": "gs://v2d-track2-pilot-734433564803-us-central1/award_handoff/track1/final_overlay/20261106-102258/longbot-track1-four-profile.oci.tar",
     "bytes": 49107013120,
@@ -80,6 +80,10 @@
   "episode5": "not_started_optional_test_deferred",
   "controller_cause": "one-GPU quota plus acquisition-deadline bug",
   "controller_fix_prepared_not_deployed": true,
-  "regression_tests_passed": 54,
-  "complete_handoff_certified": false
+  "regression_tests_passed": 55,
+  "complete_handoff_certified": false,
+  "episode8_audit": "EPISODE8_REPRODUCTION_AUDIT.json",
+  "organizer_access": "ORGANIZER_ACCESS_VERIFICATION.json",
+  "signed_bearer_url_published": false,
+  "collector_fix_prepared_not_in_archived_image": true
 }

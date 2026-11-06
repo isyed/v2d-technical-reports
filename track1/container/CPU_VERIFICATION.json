@@ -241,5 +241,14 @@
     "special_original_workflows_gpu_retested": false,
     "result_details": "FRESH_TRACKING_PILOT_REVIEW.json",
     "latest_prepared_adapter_commit": "4eddf61"
+  },
+  "latest_handoff_status": {
+    "status": "ARCHIVE_DOWNLOAD_VERIFIED_FRESH_REPRODUCTION_EXCEPTION_REMAINS",
+    "official_stored_output_checks_passed": 24,
+    "fresh_reproduction_certified": false,
+    "episode8_audit": "EPISODE8_REPRODUCTION_AUDIT.json",
+    "organizer_access_verification": "ORGANIZER_ACCESS_VERIFICATION.json",
+    "cpu_tooling_tests_passed": 55,
+    "historical_sections_below_are_prior_attempt_records": true
   }
 }
