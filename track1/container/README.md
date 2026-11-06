@@ -1,6 +1,16 @@
 # Track 1: final container handoff
 
-**Status: Episodes 9/12 completed fresh GPU execution and CPU review. Material numerical variation and the full handoff remain unresolved.**
+**Status: all 30 episode paths and all four profile adapters are implemented. The final overlay build and GPU validation await a fresh cloud approval. The complete handoff is still pending.**
+
+The 11 remaining late-profile cases now have executable correction adapters.
+**46 CPU tests and 14 new native-runtime import checks pass.** All 30 released
+video identities passed an offline check in the original runtime, which generated
+the full 243-stage T1-11 plan without executing models. A **132.6 MB** private
+validation payload is prepared; it has not been uploaded or launched. These are
+implementation and CPU checks, not evidence that every fresh output reproduces
+its historical competition score. [Current adapter review](FINAL_ADAPTER_REVIEW.md),
+[machine-readable status](FINAL_ADAPTER_REVIEW.json),
+[native checks](LATE_NATIVE_RUNTIME_CHECKS.json).
 
 The runtime foundation passed an independent pinned download/hash check, OCI and
 loaded-image identity checks, all **24 official stored-output checks**, and both
@@ -50,17 +60,19 @@ workflows. A563KBsource-only snapshot in the private repository removes the
 dependency on an old local Docker tag for preparing the legacy code.
 Episode3 preserves the original legacy optimizer behavior and requires
 an explicit longer runtime: its historical refinement alone took about7hours.
-**35tests and24native CPU startup/namespace checks pass.** These checks do not
-certify GPU execution of the two special paths. The11later-profile correction
-cases remain unported, so T1-10/T1-11coverage remains19episodes. Unsupported
-profile selections fail before inference.
+The earlier 24 native base startup/namespace checks remain recorded separately.
+The two special paths have not been GPU-retested. The later-profile cases are now
+implemented, including distinct Episode 8 branches for T1-10 and T1-11. Changed
+conditional screening results stop with evidence instead of silently substituting
+historical predictions or relaxing acceptance limits.
 
-[Latest private adapter code](https://github.com/isyed/v2d-reconstruction/commit/4eddf61).
+[Latest private adapter implementation](https://github.com/isyed/v2d-reconstruction/commit/700d840).
 
-**Next:** finish the remaining profile corrections and numerical review, validate
-the special workflows with an appropriate resource plan, then package the final
-entry point and organizer-accessible archive. The existing archive is a verified
-foundation, not the complete handoff. [Adapter evidence](FRESH_TRACKING_ADAPTER.json).
+**Next:** build and independently verify the prepared overlay, validate late
+branches on GPU, resolve numerical acceptance and provide organizer download
+access. A fresh $8 total build/validation cap has been requested. Episode 3's
+original long refinement needs a separate runtime plan. The existing archive is
+a verified foundation, not the complete handoff.
 
 This is the stable handoff page supplied with the technical-report form. Archive identity and validation status are recorded below; an organizer-accessible download link and complete reproduction evidence remain pending.
 
@@ -98,10 +110,11 @@ These are stored-output checks. The runtime and model bundle has now been built 
 The development adapter genuinely reruns segmentation, depth/body/object motion,
 CoCoNet, refinement, export and the historical correction recipes for Episodes
 11/29. It does not feed stored final trajectories into inference. The remaining
-historical tracking and correction branches require their own portable adapters.
-The original artifact-check entry point continues to refuse unsupported raw-video
-reproduction. Counted files, producing commits and the official verifier remain
-unchanged. See [verification status](CPU_VERIFICATION.json),
+historical tracking and correction branches now have prepared portable adapters,
+with GPU execution still pending. The preserved foundation's entry point retains
+its original limitations; the prepared overlay adds the fresh-video command.
+Counted files, producing commits and the official verifier remain unchanged.
+See [verification status](CPU_VERIFICATION.json),
 [direct-export validation](DIRECT_EXPORT_VALIDATION.json) and
 [archive status](ARCHIVE_STATUS.json).
 
