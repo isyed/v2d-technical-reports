@@ -96,10 +96,11 @@
     "runtime_imports_verified": true,
     "loaded_rootfs_and_config_match_archive": true,
     "official_artifact_checks_passed": 24,
-    "validation_receipt": "VALIDATION_RECEIPT.json"
+    "validation_receipt": "VALIDATION_RECEIPT.json",
+    "worker_vm_and_disk_deleted_confirmed": true
   },
   "fresh_motion_pilot": {
-    "status": "APPROVED_PAYLOAD_UPLOADED",
+    "status": "UNATTENDED_CAPACITY_RETRIES_RUNNING",
     "episodes": [
       11,
       29
@@ -108,6 +109,9 @@
     "maximum_hours": 3,
     "local_machine_required_after_launch": false,
     "all_30_episode_support": false,
-    "gpu_results_pending": true
+    "gpu_results_pending": true,
+    "independent_controller_running": true,
+    "gpu_inference_started": false,
+    "checked_at_utc": "2026-11-06T00:57:11.185082+00:00"
   }
 }
