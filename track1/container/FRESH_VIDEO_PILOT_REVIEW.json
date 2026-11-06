@@ -1,0 +1,195 @@
+{
+  "status": "FRESH_INFERENCE_COMPLETED_REVIEW_PENDING",
+  "completed_utc": "2026-11-06T05:07:00Z",
+  "checked_at_utc": "2026-11-06T05:23:16.493594+00:00",
+  "episodes": [
+    11,
+    29
+  ],
+  "unique_fresh_inference_sequences": 2,
+  "comparison_profiles": [
+    "t1_02",
+    "t1_03",
+    "t1_10",
+    "t1_11"
+  ],
+  "all_worker_vms_and_disks_deleted": true,
+  "frame_counts_dtypes_and_reused_mesh_bytes_match": true,
+  "arrays_bit_exact": false,
+  "frozen_image_derived_mesh_priors_reused": true,
+  "mesh_generation_repeated": false,
+  "all_30_episode_support": false,
+  "decoded_human_geometry_review_complete": false,
+  "raw_video_reproduction_verified": false,
+  "complete_competition_handoff": false,
+  "metrics_are_differences_from_saved_outputs_not_competition_scores": true,
+  "scored_frame_comparisons": {
+    "t1_02": {
+      "11": {
+        "all_values_exact": false,
+        "all_dtypes_exact": true,
+        "frames": 803,
+        "object_translation_difference_cm": {
+          "mean": 0.26893467430701923,
+          "p95": 0.5537972640789556,
+          "max": 1.409544786234685
+        },
+        "object_rotation_difference_degrees": {
+          "mean": 0.46699239292295264,
+          "p95": 0.963729350953719,
+          "max": 2.099384580123164
+        },
+        "root_rotation_component_max_wrapped_difference_rad": 0.07006025314331055,
+        "root_translation_parameter_max_difference_native_units": 0.07867050170898438,
+        "other_pose_parameter_max_difference_native_units": 0.07509076595306396
+      },
+      "29": {
+        "all_values_exact": false,
+        "all_dtypes_exact": true,
+        "frames": 267,
+        "object_translation_difference_cm": {
+          "mean": 0.4561942231767455,
+          "p95": 0.818358477488858,
+          "max": 1.1361359353687377
+        },
+        "object_rotation_difference_degrees": {
+          "mean": 3.46031323310911,
+          "p95": 8.216392995478888,
+          "max": 12.720608182515718
+        },
+        "root_rotation_component_max_wrapped_difference_rad": 0.018500804901123047,
+        "root_translation_parameter_max_difference_native_units": 0.08810234069824219,
+        "other_pose_parameter_max_difference_native_units": 0.07447981834411621
+      }
+    },
+    "t1_03": {
+      "11": {
+        "all_values_exact": false,
+        "all_dtypes_exact": true,
+        "frames": 803,
+        "object_translation_difference_cm": {
+          "mean": 0.15476307089249886,
+          "p95": 0.31181834876299125,
+          "max": 1.4259787219937423
+        },
+        "object_rotation_difference_degrees": {
+          "mean": 0.23548625872661674,
+          "p95": 0.5241720518296857,
+          "max": 1.78492140236442
+        },
+        "root_rotation_component_max_wrapped_difference_rad": 0.07006025314331055,
+        "root_translation_parameter_max_difference_native_units": 0.07867050170898438,
+        "other_pose_parameter_max_difference_native_units": 0.07509076595306396
+      },
+      "29": {
+        "all_values_exact": false,
+        "all_dtypes_exact": true,
+        "frames": 267,
+        "object_translation_difference_cm": {
+          "mean": 0.43642753451047817,
+          "p95": 1.3387421705130103,
+          "max": 2.0379037262027304
+        },
+        "object_rotation_difference_degrees": {
+          "mean": 0.547106727405692,
+          "p95": 1.230427520751575,
+          "max": 2.000994284794568
+        },
+        "root_rotation_component_max_wrapped_difference_rad": 0.018500804901123047,
+        "root_translation_parameter_max_difference_native_units": 0.08810234069824219,
+        "other_pose_parameter_max_difference_native_units": 0.07447981834411621
+      }
+    },
+    "t1_10": {
+      "11": {
+        "all_values_exact": false,
+        "all_dtypes_exact": true,
+        "frames": 803,
+        "object_translation_difference_cm": {
+          "mean": 0.15476307089249886,
+          "p95": 0.31181834876299125,
+          "max": 1.4259787219937423
+        },
+        "object_rotation_difference_degrees": {
+          "mean": 0.23548625872661674,
+          "p95": 0.5241720518296857,
+          "max": 1.78492140236442
+        },
+        "root_rotation_component_max_wrapped_difference_rad": 0.07006025314331055,
+        "root_translation_parameter_max_difference_native_units": 0.07867050170898438,
+        "other_pose_parameter_max_difference_native_units": 0.07509076595306396
+      },
+      "29": {
+        "all_values_exact": false,
+        "all_dtypes_exact": true,
+        "frames": 267,
+        "object_translation_difference_cm": {
+          "mean": 0.43642753451047817,
+          "p95": 1.3387421705130103,
+          "max": 2.0379037262027304
+        },
+        "object_rotation_difference_degrees": {
+          "mean": 0.547106727405692,
+          "p95": 1.230427520751575,
+          "max": 2.000994284794568
+        },
+        "root_rotation_component_max_wrapped_difference_rad": 0.018500804901123047,
+        "root_translation_parameter_max_difference_native_units": 0.08810234069824219,
+        "other_pose_parameter_max_difference_native_units": 0.07447981834411621
+      }
+    },
+    "t1_11": {
+      "11": {
+        "all_values_exact": false,
+        "all_dtypes_exact": true,
+        "frames": 803,
+        "object_translation_difference_cm": {
+          "mean": 0.15476307089249886,
+          "p95": 0.31181834876299125,
+          "max": 1.4259787219937423
+        },
+        "object_rotation_difference_degrees": {
+          "mean": 0.23548625872661674,
+          "p95": 0.5241720518296857,
+          "max": 1.78492140236442
+        },
+        "root_rotation_component_max_wrapped_difference_rad": 0.07006025314331055,
+        "root_translation_parameter_max_difference_native_units": 0.07867050170898438,
+        "other_pose_parameter_max_difference_native_units": 0.07509076595306396
+      },
+      "29": {
+        "all_values_exact": false,
+        "all_dtypes_exact": true,
+        "frames": 267,
+        "object_translation_difference_cm": {
+          "mean": 0.43642753451047817,
+          "p95": 1.3387421705130103,
+          "max": 2.0379037262027304
+        },
+        "object_rotation_difference_degrees": {
+          "mean": 0.547106727405692,
+          "p95": 1.230427520751575,
+          "max": 2.000994284794568
+        },
+        "root_rotation_component_max_wrapped_difference_rad": 0.018500804901123047,
+        "root_translation_parameter_max_difference_native_units": 0.08810234069824219,
+        "other_pose_parameter_max_difference_native_units": 0.07447981834411621
+      }
+    }
+  },
+  "evidence_archive_generation": "1793941632653979",
+  "evidence_archive_bytes": 30945266,
+  "evidence_archive_sha256": "40a84560fab7e12e0f9cf58c2dfe67b1f2a1a863f5828fbe2b7b87f16b46305c",
+  "next_steps": [
+    "Decode and compare human geometry on CPU, handling root-angle wrapping.",
+    "Review T1-02 Episode29 orientation variation on scored frames.",
+    "Complete remaining28episode recipes and the final reproduction entry point, then finalize container access."
+  ],
+  "thermal_review": {
+    "samples": 1948,
+    "max_temperature_c": 80.0,
+    "paused_samples": 0,
+    "max_power_limit_w": 60.0
+  },
+  "human_pose_note": "Largest raw parameter difference is a root Euler-angle wrap; decoded human geometry remains to be compared."
+}
