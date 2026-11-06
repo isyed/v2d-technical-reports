@@ -1,21 +1,43 @@
 # Track 1: final container handoff
 
-**Status: fresh-video pilot completed; numerical/geometry review and the complete handoff remain pending.**
+**Status: two-sequence GPU pilot and CPU geometry review complete; full raw-video handoff remains incomplete.**
 
-The separate CPU validation passed on November 5: archive download/SHA-256, OCI identity, loaded filesystem/runtime settings, all **24 official checks**, and both SAM2/SAM3D offline imports. The worker then requested automatic deletion. [Validation receipt](VALIDATION_RECEIPT.json).
+The runtime foundation passed an independent pinned download/hash check, OCI and
+loaded-image identity checks, all **24 official stored-output checks**, and both
+offline model-runtime imports. [Validation receipt](VALIDATION_RECEIPT.json).
+The Docker startup repair also passed on the exact NGC image before the successful
+GPU run. [CPU startup receipt](CPU_STARTUP_PREFLIGHT_RECEIPT.json).
 
-**CPU startup preflight passed on the exact NGC VM image** on November 5 at 9:40 p.m. EST. Docker restart, containerd image storage, preserved NVIDIA runtime settings, OCI import/layer identity and offline read-only container execution all passed. No GPU, model weights or videos were used. The receipt is backed up; the VM and its disk are confirmed deleted. [CPU startup receipt](CPU_STARTUP_PREFLIGHT_RECEIPT.json).
+Fresh inference completed for **Episodes 11 and 29** on November 6 at 12:07 a.m.
+EST. All pilot VMs and disks are confirmed deleted; **there is no active cloud job**.
+The pilot reused frozen RGB-derived mesh priors and did not rerun mesh generation.
+It covered two independent sequences, compared across four historical profiles.
 
-The cloud tests resolved two issues: the systemd service replacement must sort after NGC's vendor override, and untagged OCI imports should be addressed by their exact manifest digest. The suite now has **15 passing tests**. This verifies startup and CPU container execution; it does not verify GPU inference or fresh-video reproduction.
+The completed CPU review decoded the native human geometry. On scored frames,
+mean corresponding human-vertex differences are **1.27 mm / 2.37 mm** for Episodes
+11/29. The root-angle wrap has negligible geometric effect. T1-11's object-vertex
+differences average **0.23 cm / 0.51 cm**, with maxima **2.86 cm / 2.79 cm**.
+These are differences from historical exports, **not competition scores**.
+[Geometry evidence](CPU_GEOMETRY_REVIEW.json), [pilot review](FRESH_VIDEO_PILOT_REVIEW.json).
 
-**The cloud pilot completed both Episodes 11 and 29** on November 6 at 12:07 a.m. EST. Results and logs are backed up; all pilot VMs and disks are confirmed deleted. There is no active cloud job.
+**T1-02's Episode 29 still has a material variation:** maximum object rotation
+12.72 degrees and corresponding-vertex displacement 11.68 cm. The larger variation
+occurs on its nonlinear post-fit path. The precise cause is unresolved because
+the completed pilot omitted fresh pre-correction intermediates from its backup.
+The tooling now retains compact stage evidence for subsequent tests.
 
-Fresh exports match the frame counts, float32 data types and reused object mesh bytes, but are **not bit exact** to the historical submissions. On scoring-frame indices, T1-11's mean object-position differences are **0.15 cm / 0.44 cm** for Episodes 11/29; mean rotation differences are **0.24° / 0.55°**. T1-02's Episode 29 has a larger maximum rotation difference of **12.72°**, requiring review. These are differences from saved outputs, not competition scores. [Pilot review](FRESH_VIDEO_PILOT_REVIEW.json).
+All **30 historical recipes are inventoried**: 21 episodes need tracking-repair
+stages, represented by 36 compute nodes; 11 have later profile corrections.
+Episodes 3 and 16 also used different refinement lengths. Every later changed
+episode maps to identified historical source stages. **The remaining adapters
+are not yet implemented or GPU-validated.** The focused CPU suite has **22 passes**.
+[Private implementation/evidence commit](https://github.com/isyed/v2d-reconstruction/commit/1c4cf92).
 
-The largest raw human-pose delta is a root Euler-angle wrap near 2 pi, rather than a six-radian physical jump. Decoded human geometry and remaining numerical differences still need comparison. GPU thermal logs recorded a maximum **80°C**, a **60 W** limit and no thermal pauses. The total campaign ceiling stayed at $4; actual billed cost is not yet known.
-
-**Next:** review decoded human/object geometry on CPU, investigate T1-02 Episode 29's orientation variation, then finish the remaining 28 episode recipes and the final raw-video entry point before completing container delivery. This pilot reused frozen RGB-derived mesh priors; it did not regenerate object meshes or implement all 30 episodes. No further cloud run has been launched.
-
+**Next:** port these stages into independent fresh workspaces, validate non-pilot
+episodes and investigate T1-02's variation, then complete the raw-video entry
+point and final organizer-accessible archive. No new cloud allocation or spending
+was started for this review. The archive below remains a verified foundation,
+not a complete raw-video reproduction container.
 
 This is the stable handoff page supplied with the technical-report form. Archive identity and validation status are recorded below; an organizer-accessible download link and complete reproduction evidence remain pending.
 
@@ -50,9 +72,15 @@ Packing uses the exact verified Python/NumPy environment separately from the ori
 
 These are stored-output checks. The runtime and model bundle has now been built and uploaded to private project storage as a **49,008,771,072-byte OCI image archive**. Its uploader-computed SHA-256 matches the finalized object's custom metadata. A separate worker has now downloaded the pinned generation and recomputed that SHA-256 successfully. The loaded-image identity, all 24 official checks and both offline runtime imports have also passed.
 
-The worker stopped because the receipt checker expected the raw API's `metadata` field, while `gcloud` reports it as `custom_fields`. The parser is corrected and tested, and a recovered receipt recorded validation as pending at that point. The validation-only worker checked the preserved archive successfully without rebuilding it. The original builder and disk remain deleted; the validator requested its own deletion after backing up evidence.
-
-A development fresh-motion adapter has been prepared and CPU-checked for Episodes 11 and 29. It reruns segmentation, depth/body/object motion, CoCoNet, refinement and the historical correction recipes, using the original frozen image-derived category mesh priors. It contains no stored final trajectories as inference inputs. The comparison tool passes known 1 cm translation and 90-degree rotation tests. Its GPU execution, mesh regeneration and support for the other 28 episodes remain unverified; a separate bounded GPU pilot has now been authorized and its private payload uploaded. The historical all-30 raw-video reproduction adapter remains unfinished. The artifact-check entry point continues to refuse raw-video reproduction until a real pipeline is supplied. Full competition handoff requires those checks and an organizer-accessible final archive link. See [verification status](CPU_VERIFICATION.json), [direct-export validation](DIRECT_EXPORT_VALIDATION.json) and [archive status](ARCHIVE_STATUS.json).
+The development adapter genuinely reruns segmentation, depth/body/object motion,
+CoCoNet, refinement, export and the historical correction recipes for Episodes
+11/29. It does not feed stored final trajectories into inference. The remaining
+historical tracking and correction branches require their own portable adapters.
+The original artifact-check entry point continues to refuse unsupported raw-video
+reproduction. Counted files, producing commits and the official verifier remain
+unchanged. See [verification status](CPU_VERIFICATION.json),
+[direct-export validation](DIRECT_EXPORT_VALIDATION.json) and
+[archive status](ARCHIVE_STATUS.json).
 
 ## Organizer access
 
