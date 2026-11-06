@@ -4,7 +4,7 @@
 
 The separate CPU validation passed on November 5: archive download/SHA-256, OCI identity, loaded filesystem/runtime settings, all **24 official checks**, and both SAM2/SAM3D offline imports. The worker then requested automatic deletion. [Validation receipt](VALIDATION_RECEIPT.json).
 
-A separate two-sequence GPU pilot is approved under a fresh $4 cap. Its reviewed 50.6 MB private payload is uploaded. The first allocation request met the regional disk quota while the CPU validator was still deleting; no GPU worker was created by that request. The pilot uses one bounded L4 worker, with 60 W / pause 82°C / resume 74°C / stop 83°C, backup and a three-hour deletion limit.
+The approved two-sequence GPU pilot is now behind a running independent capacity-retry controller. Its reviewed 50.6 MB private payload is uploaded. L4 stockouts have prevented inference so far; a provisional allocation was rolled back. The controller retries for at most 2.5 hours, with no laptop dependency, and launches at most one successful L4. Its small cost reserve is included in the same **$4 total cap**. The L4 retains 60 W / pause 82°C / resume 74°C / stop 83°C, evidence backup and its own three-hour deletion limit. No GPU reproduction result is claimed yet.
 
 
 This is the stable handoff page supplied with the technical-report form. Archive identity and validation status are recorded below; an organizer-accessible download link and complete reproduction evidence remain pending.
