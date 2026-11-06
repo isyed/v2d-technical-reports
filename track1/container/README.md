@@ -6,7 +6,15 @@ The separate CPU validation passed on November 5: archive download/SHA-256, OCI 
 
 The worker then requested automatic deletion. [Validation receipt](VALIDATION_RECEIPT.json).
 
-**GPU pilot: stopped before inference; no cloud worker is currently running.** The controller obtained an L4 in `us-central1-a` on November 5 at 8:02 p.m.
+The controller was created November 5 at 8:40 p.m.
+
+EST and is publishing capacity requests.
+
+It launches at most one replacement L4, with no laptop dependency, the existing thermal safeguards, backups and automatic deletion.
+
+No new inference result is available yet.
+
+Previous attempt: The controller obtained an L4 in `us-central1-a` on November 5 at 8:02 p.m.
 
 EST.
 
@@ -20,7 +28,7 @@ A replacement startup repair is prepared: normalize the storage settings while p
 
 All 11 CPU tests and `dockerd --validate` pass; the repair has not been cloud-validated.
 
-It reuses the existing archive and payload.
+Its independent controller is now running and reuses the existing archive and payload.
 
 Fresh-video reproduction and the complete handoff remain pending.
 

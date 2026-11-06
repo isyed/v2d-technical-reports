@@ -100,7 +100,7 @@
     "worker_vm_and_disk_deleted_confirmed": true
   },
   "fresh_motion_pilot": {
-    "status": "FAILED_DOCKER_STARTUP_BEFORE_INFERENCE",
+    "status": "REPLACEMENT_CONTROLLER_REQUESTING_L4_CAPACITY",
     "episodes": [
       11,
       29
@@ -110,16 +110,24 @@
     "local_machine_required_after_launch": false,
     "all_30_episode_support": false,
     "gpu_results_pending": true,
-    "independent_controller_running": false,
+    "independent_controller_running": true,
     "gpu_inference_started": false,
-    "checked_at_utc": "2026-11-06T01:33:47.890202+00:00",
+    "checked_at_utc": "2026-11-06T01:42:24.743760+00:00",
     "new_reproduction_results": false,
-    "worker_and_controller_deleted": true,
-    "worker_disks_deleted": true,
     "retry_prepared": true,
-    "replacement_allocation_approval_pending": true,
+    "replacement_allocation_approval_pending": false,
     "cpu_repair_tests_passed": 11,
     "docker_config_validator_passed": true,
-    "repair_cloud_test_pending": true
+    "repair_cloud_test_pending": true,
+    "previous_attempt": {
+      "worker_and_controller_deleted": true,
+      "worker_disks_deleted": true
+    },
+    "replacement_allocation_approved": true,
+    "current_controller": "longbot-t1-repro-controller-r1-20261106-003644",
+    "current_controller_created_utc": "2026-11-06T01:40:51Z",
+    "gpu_worker_allocated": false,
+    "local_machine_required": false,
+    "total_cap_includes_failed_attempt": true
   }
 }
