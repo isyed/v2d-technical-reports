@@ -1,0 +1,14 @@
+{
+  "same_ngc_image": "nvidia-gpu-cloud-vmi-base-2026-6-1-x86-64",
+  "cpu_only": true,
+  "docker_restart_passed": true,
+  "containerd_image_store_verified": true,
+  "nvidia_runtime_configuration_preserved": true,
+  "oci_import_and_layer_identity_passed": true,
+  "offline_readonly_container_execution_passed": true,
+  "models_or_dataset_downloaded": false,
+  "gpu_runtime_execution_tested": false,
+  "fresh_video_reproduction_verified": false,
+  "complete_competition_handoff": false,
+  "image_store_driver": "overlayfs"
+}
