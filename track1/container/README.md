@@ -1,16 +1,18 @@
 # Track 1: final container handoff
 
-**Status: all 30 episode paths and all four profile adapters are implemented. The final overlay build and GPU validation await a fresh cloud approval. The complete handoff is still pending.**
+**Status: the approved $8 final build/validation campaign is running. An independent controller will launch the Episode 5/8 L4 checks after the container build and backup. The complete handoff is still pending.**
 
 The 11 remaining late-profile cases now have executable correction adapters.
 **46 CPU tests and 14 new native-runtime import checks pass.** All 30 released
 video identities passed an offline check in the original runtime, which generated
 the full 243-stage T1-11 plan without executing models. A **132.6 MB** private
-validation payload is prepared; it has not been uploaded or launched. These are
+validation payload was uploaded to private storage and pinned by generation and
+SHA-256. A bounded CPU builder and independent controller are running. These are
 implementation and CPU checks, not evidence that every fresh output reproduces
 its historical competition score. [Current adapter review](FINAL_ADAPTER_REVIEW.md),
 [machine-readable status](FINAL_ADAPTER_REVIEW.json),
-[native checks](LATE_NATIVE_RUNTIME_CHECKS.json).
+[native checks](LATE_NATIVE_RUNTIME_CHECKS.json),
+[cloud launch and cleanup details](FINAL_CAMPAIGN_LAUNCH.json).
 
 The runtime foundation passed an independent pinned download/hash check, OCI and
 loaded-image identity checks, all **24 official stored-output checks**, and both
@@ -70,7 +72,7 @@ historical predictions or relaxing acceptance limits.
 
 **Next:** build and independently verify the prepared overlay, validate late
 branches on GPU, resolve numerical acceptance and provide organizer download
-access. A fresh $8 total build/validation cap has been requested. Episode 3's
+access. The fresh $8 total build/validation cap is approved and launched. Episode 3's
 original long refinement needs a separate runtime plan. The existing archive is
 a verified foundation, not the complete handoff.
 
