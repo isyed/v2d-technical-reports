@@ -1,8 +1,6 @@
 # Track 1: final container handoff
 
-**Status: all 30 episode paths and all four profile adapters are implemented.
-
-The final overlay build and GPU validation await a fresh cloud approval.
+An independent controller will launch the Episode 5/8 L4 checks after the container build and backup.
 
 The complete handoff is still pending.**
 
@@ -13,13 +11,17 @@ video identities passed an offline check in the original runtime, which generate
 the full 243-stage T1-11 plan without executing models.
 
 A **132.6 MB** private
-validation payload is prepared; it has not been uploaded or launched.
+validation payload was uploaded to private storage and pinned by generation and
+SHA-256.
+
+A bounded CPU builder and independent controller are running.
 
 These are
 implementation and CPU checks, not evidence that every fresh output reproduces
 its historical competition score. [Current adapter review](FINAL_ADAPTER_REVIEW.md),
 [machine-readable status](FINAL_ADAPTER_REVIEW.json),
-[native checks](LATE_NATIVE_RUNTIME_CHECKS.json).
+[native checks](LATE_NATIVE_RUNTIME_CHECKS.json),
+[cloud launch and cleanup details](FINAL_CAMPAIGN_LAUNCH.json).
 
 The runtime foundation passed an independent pinned download/hash check, OCI and
 loaded-image identity checks, all **24 official stored-output checks**, and both
