@@ -102,7 +102,7 @@
     "worker_vm_and_disk_deleted_confirmed": true
   },
   "fresh_motion_pilot": {
-    "status": "REPLACEMENT_CONTROLLER_REQUESTING_L4_CAPACITY",
+    "status": "REPLACEMENT_FAILED_SYSTEMD_STORAGE_OVERRIDE",
     "episodes": [
       11,
       29
@@ -113,9 +113,9 @@
     "local_machine_required_after_launch": false,
     "all_30_episode_support": false,
     "gpu_results_pending": true,
-    "independent_controller_running": true,
+    "independent_controller_running": false,
     "gpu_inference_started": false,
-    "checked_at_utc": "2026-11-06T01:42:24.743760+00:00",
+    "checked_at_utc": "2026-11-06T02:19:43.037136+00:00",
     "new_reproduction_results": false,
     "retry_prepared": true,
     "replacement_allocation_approval_pending": false,
@@ -132,6 +132,14 @@
     "current_controller_created_utc": "2026-11-06T01:40:51Z",
     "gpu_worker_allocated": false,
     "local_machine_required": false,
-    "total_cap_includes_failed_attempt": true
+    "total_cap_includes_failed_attempt": true,
+    "replacement_worker_and_controller_deleted": true,
+    "replacement_disks_deleted": true,
+    "systemd_storage_driver_override_observed": true,
+    "targeted_repair_tests_passed": 14,
+    "systemd_syntax_validation_passed": true,
+    "targeted_repair_cloud_test_pending": true,
+    "next_recommendation": "CPU-only NGC startup preflight before another L4",
+    "further_allocation_launched": false
   }
 }
