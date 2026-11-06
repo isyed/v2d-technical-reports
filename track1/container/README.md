@@ -1,12 +1,26 @@
 # Track 1: final container handoff
 
-An independent controller will launch the Episode 5/8 L4 checks after the container build and backup.
+**Status: the 49.1 GB final archive is built and backed up, with all 24 official checks passed.
 
-The complete handoff is still pending.**
+Episode 8 completed T1-10 but failed T1-11's grasp/release guard and shows material numerical differences.
+
+No campaign VMs are running.
+
+The complete handoff remains pending.**
+
+Episode 5 was blocked by the project's one-GPU quota and is now deferred as
+optional branch coverage.
+
+Fresh reproduction of all 30 episodes is not required
+by the container guidance.
+
+The next step is a focused audit of Episode 8's
+confirmed issue using saved evidence, followed by organizer download access with
+accurate validation limitations. [Latest campaign review](FINAL_CAMPAIGN_REVIEW.md).
 
 The 11 remaining late-profile cases now have executable correction adapters.
 
-**46 CPU tests and 14 new native-runtime import checks pass.** All 30 released
+**54 CPU tests and 14 new native-runtime import checks pass.** All 30 released
 video identities passed an offline check in the original runtime, which generated
 the full 243-stage T1-11 plan without executing models.
 
@@ -14,7 +28,7 @@ A **132.6 MB** private
 validation payload was uploaded to private storage and pinned by generation and
 SHA-256.
 
-A bounded CPU builder and independent controller are running.
+The builder and validation worker have completed and been deleted.
 
 These are
 implementation and CPU checks, not evidence that every fresh output reproduces
@@ -125,15 +139,14 @@ historical predictions or relaxing acceptance limits.
 
 [Latest private adapter implementation](https://github.com/isyed/v2d-reconstruction/commit/700d840).
 
-**Next:** build and independently verify the prepared overlay, validate late
-branches on GPU, resolve numerical acceptance and provide organizer download
-access.
+**Next:** resolve the confirmed Episode 8 reproduction issue and provide organizer
+download access with the validation evidence.
 
-Episode 3's
-original long refinement needs a separate runtime plan.
+The final adapter archive is built;
+its full reproduction is not certified.
 
-The existing archive is
-a verified foundation, not the complete handoff.
+Additional broad GPU testing and the
+separate long Episode 3 run are deferred.
 
 This is the stable handoff page supplied with the technical-report form.
 

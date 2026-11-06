@@ -1,0 +1,85 @@
+{
+  "checked_at_utc": "2026-11-06T14:50:33.495092+00:00",
+  "status": "ARCHIVE_BUILT_GPU8_PARTIAL_NO_ACTIVE_JOBS",
+  "archive": {
+    "uri": "PRIVATE_STORAGE/longbot-track1-four-profile.oci.tar",
+    "bytes": 49107013120,
+    "sha256": "9485c976b13c46b0529bd5296c43014afa4a3abbb7f3324bfd064ef8d36ffbec",
+    "image_manifest_digest": "sha256:8db82172b032896f516373d8bbb3c89bbe81b098eec5eb8ee09477013df3a7db",
+    "image_config_digest": "sha256:671ac7ed1ea74c94136bc8a8e4eed6ce97fc4228b72fece3aaa71e55bf812aa5",
+    "image_id": "sha256:8db82172b032896f516373d8bbb3c89bbe81b098eec5eb8ee09477013df3a7db",
+    "official_stored_output_checks_passed": 24,
+    "late_native_cpu_checks_passed": 14,
+    "raw_video_gpu_validation_complete": false,
+    "complete_competition_handoff": false,
+    "foundation_identity_verified": true,
+    "counted_outputs_or_verifier_modified": false,
+    "generation": "1793966747550293"
+  },
+  "gpu8": {
+    "stage": "validation_partial_or_failed_requires_review",
+    "utc": "2026-11-06T14:18:26Z",
+    "raw_video_reproduction_verified": false,
+    "local_machine_required": false,
+    "episode": 8,
+    "attempts": [
+      {
+        "label": "t1_10",
+        "episode": 8,
+        "exit_code": 0,
+        "seconds": 2412.4756537409994,
+        "fresh_root": "/output/t1_10_episode_000008"
+      },
+      {
+        "label": "t1_11",
+        "episode": 8,
+        "exit_code": 1,
+        "seconds": 3379.5896660300004,
+        "fresh_root": "/output/t1_11_episode_000008"
+      }
+    ],
+    "comparisons": {
+      "t1_02": {
+        "exit_code": 0,
+        "report": "t1_02_comparison.json"
+      },
+      "t1_03": {
+        "exit_code": 0,
+        "report": "t1_03_comparison.json"
+      },
+      "t1_10": {
+        "exit_code": 0,
+        "report": "t1_10_comparison.json"
+      }
+    },
+    "all_requested_profiles_completed": false,
+    "stored_final_trajectories_used_for_inference": false,
+    "mesh_generation_repeated": false,
+    "complete_competition_handoff": false,
+    "numerical_acceptance_review_required": true
+  },
+  "gpu8_evidence": {
+    "generation": "1793974732414057",
+    "bytes": 82572899,
+    "md5": "Yu5djSCriyahLBGGbCoE4g==",
+    "independent_local_md5_verified": true
+  },
+  "scored_frame_comparison_t1_10": {
+    "frames": 454,
+    "mean_object_translation_difference_cm": 4.5212415440152816,
+    "mean_object_rotation_difference_deg": 92.57836242858065,
+    "not_competition_scores": true
+  },
+  "gpu8_guard_failures": [
+    "grasp_worst_gap",
+    "release_separation"
+  ],
+  "active_campaign_vms": [],
+  "gpu_allocations_used": 1,
+  "gpu_allocations_authorized": 2,
+  "episode5": "not_started_optional_test_deferred",
+  "controller_cause": "one-GPU quota plus acquisition-deadline bug",
+  "controller_fix_prepared_not_deployed": true,
+  "regression_tests_passed": 54,
+  "complete_handoff_certified": false
+}
