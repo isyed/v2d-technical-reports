@@ -100,7 +100,7 @@
     "worker_vm_and_disk_deleted_confirmed": true
   },
   "fresh_motion_pilot": {
-    "status": "REPLACEMENT_FAILED_SYSTEMD_STORAGE_OVERRIDE",
+    "status": "RETRY2_CONTROLLER_REQUESTING_L4_CAPACITY",
     "episodes": [
       11,
       29
@@ -110,9 +110,9 @@
     "local_machine_required_after_launch": false,
     "all_30_episode_support": false,
     "gpu_results_pending": true,
-    "independent_controller_running": false,
+    "independent_controller_running": true,
     "gpu_inference_started": false,
-    "checked_at_utc": "2026-11-06T02:44:24.899895+00:00",
+    "checked_at_utc": "2026-11-06T03:27:05.540212+00:00",
     "new_reproduction_results": false,
     "retry_prepared": true,
     "replacement_allocation_approval_pending": false,
@@ -124,8 +124,8 @@
       "worker_disks_deleted": true
     },
     "replacement_allocation_approved": true,
-    "current_controller": "longbot-t1-repro-controller-r1-20261106-003644",
-    "current_controller_created_utc": "2026-11-06T01:40:51Z",
+    "current_controller": "longbot-t1-repro-controller-r2-20261106-003644",
+    "current_controller_created_utc": "2026-11-06T03:25:02Z",
     "gpu_worker_allocated": false,
     "local_machine_required": false,
     "total_cap_includes_failed_attempt": true,
@@ -135,11 +135,14 @@
     "targeted_repair_tests_passed": 14,
     "systemd_syntax_validation_passed": true,
     "targeted_repair_cloud_test_pending": true,
-    "next_recommendation": "L4 fresh-video pilot with CPU-validated startup, pending approval",
-    "further_allocation_launched": false,
+    "next_recommendation": "Await L4 capacity and fresh-video comparison results",
+    "further_allocation_launched": true,
     "startup_repair_cloud_validated": true,
     "additional_l4_allocation_prepared": true,
-    "additional_l4_allocation_approval_pending": true
+    "additional_l4_allocation_approval_pending": false,
+    "additional_gpu_workers_authorized": 1,
+    "total_gpu_allocations_authorized_including_prior": 3,
+    "fresh_budget_added": false
   },
   "cpu_startup_preflight": {
     "status": "PASS",

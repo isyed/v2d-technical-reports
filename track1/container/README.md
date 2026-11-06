@@ -22,9 +22,17 @@ The suite now has **15 passing tests**.
 
 This verifies startup and CPU container execution; it does not verify GPU inference or fresh-video reproduction.
 
-**Next recommendation:** run one further L4 fresh-video pilot with the tested startup, existing archive and existing payload.
+**Approved GPU pilot retry is now queued.** An independent controller was created November 5 at 10:25 p.m.
 
-No new L4 worker or capacity controller is running.
+EST and is publishing L4 capacity requests.
+
+It will launch at most one further L4 using the CPU-validated startup, existing archive and existing payload.
+
+The laptop can be off.
+
+Thermal safeguards, backup and three-hour worker deletion remain active.
+
+GPU inference has not started yet.
 
 This is the stable handoff page supplied with the technical-report form.
 
