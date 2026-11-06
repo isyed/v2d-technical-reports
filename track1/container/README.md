@@ -1,11 +1,13 @@
 # Track 1: final container handoff
 
-**Status: runtime archive uploaded privately; validation and complete handoff pending.**
+**Status: runtime foundation independently verified; fresh-video reproduction remains pending.**
 
-Latest cloud snapshot: the 49.0 GB runtime foundation archive was uploaded on November 5 at 4:05 p.m. EST. The worker stopped on a receipt-parsing bug after upload; the archive is preserved, and the VM and disk are deleted. Independent archive/runtime validation is next.
+The separate CPU validation passed on November 5: archive download/SHA-256, OCI identity, loaded filesystem/runtime settings, all **24 official checks**, and both SAM2/SAM3D offline imports. The worker then requested automatic deletion. [Validation receipt](VALIDATION_RECEIPT.json).
+
+A separate two-sequence GPU pilot is approved under a fresh $4 cap. Its reviewed 50.6 MB private payload is uploaded. The first allocation request met the regional disk quota while the CPU validator was still deleting; no GPU worker was created by that request. The pilot uses one bounded L4 worker, with 60 W / pause 82°C / resume 74°C / stop 83°C, backup and a three-hour deletion limit.
 
 
-This is the stable handoff page supplied with the technical-report form. It is not yet a downloadable, verified container. Download URLs, image identity, archive SHA-256 and reproduction results will be added here after packaging and verification.
+This is the stable handoff page supplied with the technical-report form. Archive identity and validation status are recorded below; an organizer-accessible download link and complete reproduction evidence remain pending.
 
 Team: longbot. Contact: syedim@gmail.com.
 
@@ -36,17 +38,17 @@ All four covered profiles now pass the official checks inside Docker with networ
 
 Packing uses the exact verified Python/NumPy environment separately from the original inference environment. This avoids a module-name collision and mesh-packing differences caused by runtime dependencies. No original submission, commit or verifier was changed.
 
-These are stored-output checks. The runtime and model bundle has now been built and uploaded to private project storage as a **49,008,771,072-byte OCI image archive**. Its uploader-computed SHA-256 matches the finalized object's custom metadata. This is upload evidence; independent download/hash verification and offline runtime validation of this archive have not run yet.
+These are stored-output checks. The runtime and model bundle has now been built and uploaded to private project storage as a **49,008,771,072-byte OCI image archive**. Its uploader-computed SHA-256 matches the finalized object's custom metadata. A separate worker has now downloaded the pinned generation and recomputed that SHA-256 successfully. The loaded-image identity, all 24 official checks and both offline runtime imports have also passed.
 
-The worker stopped because the receipt checker expected the raw API's `metadata` field, while `gcloud` reports it as `custom_fields`. The parser is corrected and tested, and a recovered receipt is saved with validation explicitly pending. No new worker is running. The next worker can load and validate the preserved archive without rebuilding it.
+The worker stopped because the receipt checker expected the raw API's `metadata` field, while `gcloud` reports it as `custom_fields`. The parser is corrected and tested, and a recovered receipt is saved with validation explicitly pending. The validation-only worker checked the preserved archive successfully without rebuilding it. The original builder and disk remain deleted; the validator requested its own deletion after backing up evidence.
 
-The historical raw-video reproduction adapter and sampled GPU reruns remain unfinished. The artifact-check entry point continues to refuse raw-video reproduction until a real pipeline is supplied. Full competition handoff requires those checks and an organizer-accessible final archive link. See [verification status](CPU_VERIFICATION.json), [direct-export validation](DIRECT_EXPORT_VALIDATION.json) and [archive status](ARCHIVE_STATUS.json).
+A development fresh-motion adapter has been prepared and CPU-checked for Episodes 11 and 29. It reruns segmentation, depth/body/object motion, CoCoNet, refinement and the historical correction recipes, using the original frozen image-derived category mesh priors. It contains no stored final trajectories as inference inputs. The comparison tool passes known 1 cm translation and 90-degree rotation tests. Its GPU execution, mesh regeneration and support for the other 28 episodes remain unverified; a separate bounded GPU pilot has now been authorized and its private payload uploaded. The historical all-30 raw-video reproduction adapter remains unfinished. The artifact-check entry point continues to refuse raw-video reproduction until a real pipeline is supplied. Full competition handoff requires those checks and an organizer-accessible final archive link. See [verification status](CPU_VERIFICATION.json), [direct-export validation](DIRECT_EXPORT_VALIDATION.json) and [archive status](ARCHIVE_STATUS.json).
 
 ## Organizer access
 
 The implementation repository is private, with an invitation already issued to `Nvidia-V2D-Challenge`. Large artifacts and pretrained assets will be shared with the organizers without changing third-party licenses. This public page contains only documentation and non-secret provenance.
 
-No final archive digest or download URL is listed until the artifact actually exists.
+The preserved foundation archive exists, with its digest in [archive status](ARCHIVE_STATUS.json). It is not yet certified as the complete raw-video handoff.
 
 ## Kaggle final-selection check
 
