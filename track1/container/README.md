@@ -1,6 +1,6 @@
 # Track 1: final container handoff
 
-**Status: the new Episodes 9/12 tracking-reproduction pilot is queued; its independent controller is retrying L4 capacity. Full raw-video handoff remains incomplete.**
+**Status: Episodes 9/12 completed fresh GPU execution and CPU review. Material numerical variation and the full handoff remain unresolved.**
 
 The runtime foundation passed an independent pinned download/hash check, OCI and
 loaded-image identity checks, all **24 official stored-output checks**, and both
@@ -10,8 +10,9 @@ GPU run. [CPU startup receipt](CPU_STARTUP_PREFLIGHT_RECEIPT.json).
 
 Fresh inference completed for **Episodes 11 and 29** on November 6 at 12:07 a.m.
 EST. Those earlier pilot VMs and disks are confirmed deleted. A separate approved
-Episodes9/12 pilot is waiting for L4 capacity. Its first round found stockouts
-in all five requested zones; the provisional VM was rolled back before startup.
+Episodes9/12 pilot subsequently completed on an L4 in `us-central1-a` at
+**November6,2:54:49a.m.EST**. Its controller, worker and boot disks are now confirmed
+deleted. There is no active Track1pilot cloud job.
 The pilot reused frozen RGB-derived mesh priors and did not rerun mesh generation.
 It covered two independent sequences, compared across four historical profiles.
 
@@ -28,34 +29,38 @@ occurs on its nonlinear post-fit path. The precise cause is unresolved because
 the completed pilot omitted fresh pre-correction intermediates from its backup.
 The tooling now retains compact stage evidence for subsequent tests.
 
-All **30 historical recipes are inventoried**. Portable code now covers the
-36 tracking-repair compute nodes for 21 episodes and the fresh base path for
-**28 episodes**. Historical sources for13/27 were recovered from their producing
-Git commit. Special original runs3/16 and the later-profile correction branches
-remain to be ported. Implemented coverage for T1-10/T1-11 is therefore19episodes;
-unsupported selections fail before inference.
+The Episodes9/12 tracking pilot completed19stages with no training or competition
+upload. On scored frames, the T1-11 object-position differences average
+**0.14cm / 0.78cm**. Mean rotations differ **0.31degrees / 4.34degrees**; Episode12's
+maximum is **25.96degrees**, a material gap already present before correction.
+At its peak frame219, fresh visible-mask IoU is0.879versus0.790for the historical
+pose. The pan handle is partly hidden. This source-only evidence supports pose
+ambiguity but does not certify3Daccuracy or equivalent leaderboard scores.
+Decoded human differences average **2.10mm / 1.84mm**. These are reproduction
+differences, **not competition scores**. [Completed pilot review](FRESH_TRACKING_PILOT_REVIEW.json),
+[geometry](FRESH_TRACKING_GEOMETRY_REVIEW.json),
+[source-only diagnosis](EPISODE12_SOURCE_VARIATION.json).
 
-**31 CPU tests and 13 native offline entry-point checks pass.** The latter check
-imports/CLI startup without GPU inference. An import-shadowing issue found during
-these checks was corrected by executing each native stage in its frozen source
-directory. [Adapter evidence](FRESH_TRACKING_ADAPTER.json),
-[native checks](FRESH_TRACKING_NATIVE_CHECKS.json),
-[private implementation commit](https://github.com/isyed/v2d-reconstruction/commit/09f4da746c4190b44bb48e353df3dd084b9b4cf9).
+The pilot retained its **$4total cap**,60Wlimit and82C/74C/83C safeguards. Maximum
+recorded temperature was81C; no thermal pauses occurred. Actual billed cost is
+unknown. Its evidence is backed up; no new cloud run was launched during review.
 
-The new pilot exercises translation-window recovery (Episode9) and independent
-anchor/bounded recovery (Episode12). It has a **fresh $4 total cap**, one L4
-allocation, an independent capacity controller, 60W, pause82C/resume74C/stop83C,
-backups and three-hour provider deletion. The approved118.6MBprivate payload is
-uploaded and pinned. The controller retries every120seconds for up to2.5hours and runs without the
-laptop or chat. Any successfully allocated worker is also independent.
-No training or competition upload is performed. **GPU inference results are not
-available yet.** This page records the last checked status; it is not a live cloud
-monitor. The local refresh tool and progress file are documented in the private repo.
+All **30base reconstruction paths are now prepared**, including the special3/16
+workflows. A563KBsource-only snapshot in the private repository removes the
+dependency on an old local Docker tag for preparing the legacy code.
+Episode3 preserves the original legacy optimizer behavior and requires
+an explicit longer runtime: its historical refinement alone took about7hours.
+**35tests and24native CPU startup/namespace checks pass.** These checks do not
+certify GPU execution of the two special paths. The11later-profile correction
+cases remain unported, so T1-10/T1-11coverage remains19episodes. Unsupported
+profile selections fail before inference.
 
-**Next:** evaluate this new tracking path, continue the remaining special/later
-correction adapters, then complete the raw-video entry point and final
-organizer-accessible archive. The archive below remains a verified foundation,
-not a complete raw-video reproduction container.
+[Latest private adapter code](https://github.com/isyed/v2d-reconstruction/commit/4eddf61).
+
+**Next:** finish the remaining profile corrections and numerical review, validate
+the special workflows with an appropriate resource plan, then package the final
+entry point and organizer-accessible archive. The existing archive is a verified
+foundation, not the complete handoff. [Adapter evidence](FRESH_TRACKING_ADAPTER.json).
 
 This is the stable handoff page supplied with the technical-report form. Archive identity and validation status are recorded below; an organizer-accessible download link and complete reproduction evidence remain pending.
 

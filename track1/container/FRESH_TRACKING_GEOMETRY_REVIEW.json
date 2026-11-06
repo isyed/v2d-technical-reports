@@ -1,0 +1,222 @@
+{
+  "schema": "longbot.track1.cpu_geometry_review.v1",
+  "meaning": "Corresponding vertex/native-joint displacement from saved exports in metres converted to cm; not competition scores. No scorer alignment applied.",
+  "model_sha256": "352e271a6c42729c68554ceaea0c955e866970160c31e35506d782dc0f7377bc",
+  "torch": "2.8.0+cu128",
+  "cpu_only": true,
+  "decoded_length_m_per_unit": 0.01,
+  "human": {
+    "9": {
+      "vertices_full_clip": {
+        "frames": 415,
+        "mean_displacement_cm": 0.20816429262778846,
+        "p95_frame_mean_displacement_cm": 0.46436426937580105,
+        "max_displacement_cm": 2.409337282180786,
+        "max_frame": 88
+      },
+      "vertices_scored_frames": {
+        "frames": 325,
+        "mean_displacement_cm": 0.2102826025394293,
+        "p95_frame_mean_displacement_cm": 0.4626593291759492,
+        "max_displacement_cm": 1.9203821420669556,
+        "max_frame": 99
+      },
+      "native_joints_full_clip": {
+        "frames": 415,
+        "mean_displacement_cm": 0.21489122233476984,
+        "p95_frame_mean_displacement_cm": 0.48573787808418206,
+        "max_displacement_cm": 2.3924386501312256,
+        "max_frame": 88
+      },
+      "native_joints_scored_frames": {
+        "frames": 325,
+        "mean_displacement_cm": 0.21867165669798852,
+        "p95_frame_mean_displacement_cm": 0.47826167345047,
+        "max_displacement_cm": 1.907632827758789,
+        "max_frame": 99
+      },
+      "root_wrap_frames": [],
+      "root_wrap_representation_max_vertex_effect_cm": 0
+    },
+    "12": {
+      "vertices_full_clip": {
+        "frames": 405,
+        "mean_displacement_cm": 0.16323256222186266,
+        "p95_frame_mean_displacement_cm": 0.4055382192134848,
+        "max_displacement_cm": 2.1200175285339355,
+        "max_frame": 293
+      },
+      "vertices_scored_frames": {
+        "frames": 209,
+        "mean_displacement_cm": 0.18396630811919437,
+        "p95_frame_mean_displacement_cm": 0.5193048357963561,
+        "max_displacement_cm": 1.8105449676513672,
+        "max_frame": 229
+      },
+      "native_joints_full_clip": {
+        "frames": 405,
+        "mean_displacement_cm": 0.1709162308248105,
+        "p95_frame_mean_displacement_cm": 0.4554973304271698,
+        "max_displacement_cm": 2.101771831512451,
+        "max_frame": 293
+      },
+      "native_joints_scored_frames": {
+        "frames": 209,
+        "mean_displacement_cm": 0.19276455599083855,
+        "p95_frame_mean_displacement_cm": 0.523446226119995,
+        "max_displacement_cm": 1.7793238162994385,
+        "max_frame": 229
+      },
+      "root_wrap_frames": [],
+      "root_wrap_representation_max_vertex_effect_cm": 0
+    }
+  },
+  "object": {
+    "t1_02": {
+      "9": {
+        "mesh_sha256": "ca0d5e51ef929f83336be93eda8ff809c793e8553b632efd1027f9e67923647f",
+        "full_clip": {
+          "frames": 415,
+          "mean_displacement_cm": 0.8908318732771444,
+          "p95_frame_mean_displacement_cm": 2.6757300015354164,
+          "max_displacement_cm": 9.41194757066222,
+          "max_frame": 245
+        },
+        "scored_frames": {
+          "frames": 325,
+          "mean_displacement_cm": 0.9496779776814983,
+          "p95_frame_mean_displacement_cm": 3.3078837572000963,
+          "max_displacement_cm": 9.41194757066222,
+          "max_frame": 245
+        }
+      },
+      "12": {
+        "mesh_sha256": "9752790912b2a7668d3777248452e1b4ea670296f213bded311ad66a7ea66e02",
+        "full_clip": {
+          "frames": 405,
+          "mean_displacement_cm": 2.5277684656131387,
+          "p95_frame_mean_displacement_cm": 7.854674507695246,
+          "max_displacement_cm": 30.231413156324173,
+          "max_frame": 144
+        },
+        "scored_frames": {
+          "frames": 209,
+          "mean_displacement_cm": 2.7886353259602106,
+          "p95_frame_mean_displacement_cm": 8.079879904368829,
+          "max_displacement_cm": 13.5534933836579,
+          "max_frame": 219
+        }
+      }
+    },
+    "t1_03": {
+      "9": {
+        "mesh_sha256": "f2d39072539f7e20181cc7456bf1f2b69d8812e5c9aef378aea3dca52632bf04",
+        "full_clip": {
+          "frames": 415,
+          "mean_displacement_cm": 0.2605673264972048,
+          "p95_frame_mean_displacement_cm": 0.4914826232192875,
+          "max_displacement_cm": 1.458485758657514,
+          "max_frame": 194
+        },
+        "scored_frames": {
+          "frames": 325,
+          "mean_displacement_cm": 0.26942912778394196,
+          "p95_frame_mean_displacement_cm": 0.5075943029683082,
+          "max_displacement_cm": 1.458485758657514,
+          "max_frame": 194
+        }
+      },
+      "12": {
+        "mesh_sha256": "9ac9053d63c205f03b60d0c4b9326d2b9dd3a268f8fdda30b1f9d2600f737557",
+        "full_clip": {
+          "frames": 405,
+          "mean_displacement_cm": 0.8727733822027346,
+          "p95_frame_mean_displacement_cm": 2.74723033588893,
+          "max_displacement_cm": 11.933124163504507,
+          "max_frame": 211
+        },
+        "scored_frames": {
+          "frames": 209,
+          "mean_displacement_cm": 1.0135957792048895,
+          "p95_frame_mean_displacement_cm": 2.980385824590822,
+          "max_displacement_cm": 11.933124163504507,
+          "max_frame": 211
+        }
+      }
+    },
+    "t1_10": {
+      "9": {
+        "mesh_sha256": "f2d39072539f7e20181cc7456bf1f2b69d8812e5c9aef378aea3dca52632bf04",
+        "full_clip": {
+          "frames": 415,
+          "mean_displacement_cm": 0.2605673264972048,
+          "p95_frame_mean_displacement_cm": 0.4914826232192875,
+          "max_displacement_cm": 1.458485758657514,
+          "max_frame": 194
+        },
+        "scored_frames": {
+          "frames": 325,
+          "mean_displacement_cm": 0.26942912778394196,
+          "p95_frame_mean_displacement_cm": 0.5075943029683082,
+          "max_displacement_cm": 1.458485758657514,
+          "max_frame": 194
+        }
+      },
+      "12": {
+        "mesh_sha256": "9ac9053d63c205f03b60d0c4b9326d2b9dd3a268f8fdda30b1f9d2600f737557",
+        "full_clip": {
+          "frames": 405,
+          "mean_displacement_cm": 0.8727733822027346,
+          "p95_frame_mean_displacement_cm": 2.74723033588893,
+          "max_displacement_cm": 11.933124163504507,
+          "max_frame": 211
+        },
+        "scored_frames": {
+          "frames": 209,
+          "mean_displacement_cm": 1.0135957792048895,
+          "p95_frame_mean_displacement_cm": 2.980385824590822,
+          "max_displacement_cm": 11.933124163504507,
+          "max_frame": 211
+        }
+      }
+    },
+    "t1_11": {
+      "9": {
+        "mesh_sha256": "f2d39072539f7e20181cc7456bf1f2b69d8812e5c9aef378aea3dca52632bf04",
+        "full_clip": {
+          "frames": 415,
+          "mean_displacement_cm": 0.2605673264972048,
+          "p95_frame_mean_displacement_cm": 0.4914826232192875,
+          "max_displacement_cm": 1.458485758657514,
+          "max_frame": 194
+        },
+        "scored_frames": {
+          "frames": 325,
+          "mean_displacement_cm": 0.26942912778394196,
+          "p95_frame_mean_displacement_cm": 0.5075943029683082,
+          "max_displacement_cm": 1.458485758657514,
+          "max_frame": 194
+        }
+      },
+      "12": {
+        "mesh_sha256": "9ac9053d63c205f03b60d0c4b9326d2b9dd3a268f8fdda30b1f9d2600f737557",
+        "full_clip": {
+          "frames": 405,
+          "mean_displacement_cm": 0.8727733822027346,
+          "p95_frame_mean_displacement_cm": 2.74723033588893,
+          "max_displacement_cm": 11.933124163504507,
+          "max_frame": 211
+        },
+        "scored_frames": {
+          "frames": 209,
+          "mean_displacement_cm": 1.0135957792048895,
+          "p95_frame_mean_displacement_cm": 2.980385824590822,
+          "max_displacement_cm": 11.933124163504507,
+          "max_frame": 211
+        }
+      }
+    }
+  },
+  "complete_competition_handoff": false,
+  "elapsed_seconds": 24.43
+}

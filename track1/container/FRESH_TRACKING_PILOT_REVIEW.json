@@ -1,0 +1,202 @@
+{
+  "status": "FRESH_TRACKING_COMPLETED_MATERIAL_NUMERICAL_VARIATION_REMAINS",
+  "completed_utc": "2026-11-06T07:54:49Z",
+  "reviewed_utc": "2026-11-06T09:07:26.564024+00:00",
+  "episodes": [
+    9,
+    12
+  ],
+  "unique_new_fresh_inference_sequences": 2,
+  "unique_fresh_sequences_across_both_pilots": 4,
+  "source_tooling_commit": "09f4da746c4190b44bb48e353df3dd084b9b4cf9",
+  "all_pilot_instances_and_disks_deleted": true,
+  "same_fresh_total_cap_usd": 4,
+  "actual_billed_cost_known": false,
+  "new_cloud_run_launched": false,
+  "arrays_bit_exact": false,
+  "frames_dtypes_mesh_bytes_match": true,
+  "scored_frame_comparisons": {
+    "t1_02": {
+      "9": {
+        "frames": 325,
+        "object_translation_difference_cm": {
+          "mean": 0.6809479227097608,
+          "p95": 2.167023393163544,
+          "max": 7.113294318948604
+        },
+        "object_rotation_difference_degrees": {
+          "mean": 0.8124523129074922,
+          "p95": 2.3921648028982587,
+          "max": 7.2164607395534945
+        }
+      },
+      "12": {
+        "frames": 209,
+        "object_translation_difference_cm": {
+          "mean": 2.7198202139710315,
+          "p95": 8.168944228293416,
+          "max": 10.786684132083307
+        },
+        "object_rotation_difference_degrees": {
+          "mean": 3.5407842792086353,
+          "p95": 17.002634067304196,
+          "max": 21.93501392037268
+        }
+      }
+    },
+    "t1_03": {
+      "9": {
+        "frames": 325,
+        "object_translation_difference_cm": {
+          "mean": 0.1431848767242599,
+          "p95": 0.31046550482586327,
+          "max": 0.5792231948591818
+        },
+        "object_rotation_difference_degrees": {
+          "mean": 0.30807907461107614,
+          "p95": 0.6120622719933464,
+          "max": 1.0309364429792343
+        }
+      },
+      "12": {
+        "frames": 209,
+        "object_translation_difference_cm": {
+          "mean": 0.7762140592334008,
+          "p95": 2.3981855922877626,
+          "max": 3.1688549110929976
+        },
+        "object_rotation_difference_degrees": {
+          "mean": 4.342412664974212,
+          "p95": 17.09707344440349,
+          "max": 25.96297130833935
+        }
+      }
+    },
+    "t1_10": {
+      "9": {
+        "frames": 325,
+        "object_translation_difference_cm": {
+          "mean": 0.1431848767242599,
+          "p95": 0.31046550482586327,
+          "max": 0.5792231948591818
+        },
+        "object_rotation_difference_degrees": {
+          "mean": 0.30807907461107614,
+          "p95": 0.6120622719933464,
+          "max": 1.0309364429792343
+        }
+      },
+      "12": {
+        "frames": 209,
+        "object_translation_difference_cm": {
+          "mean": 0.7762140592334008,
+          "p95": 2.3981855922877626,
+          "max": 3.1688549110929976
+        },
+        "object_rotation_difference_degrees": {
+          "mean": 4.342412664974212,
+          "p95": 17.09707344440349,
+          "max": 25.96297130833935
+        }
+      }
+    },
+    "t1_11": {
+      "9": {
+        "frames": 325,
+        "object_translation_difference_cm": {
+          "mean": 0.1431848767242599,
+          "p95": 0.31046550482586327,
+          "max": 0.5792231948591818
+        },
+        "object_rotation_difference_degrees": {
+          "mean": 0.30807907461107614,
+          "p95": 0.6120622719933464,
+          "max": 1.0309364429792343
+        }
+      },
+      "12": {
+        "frames": 209,
+        "object_translation_difference_cm": {
+          "mean": 0.7762140592334008,
+          "p95": 2.3981855922877626,
+          "max": 3.1688549110929976
+        },
+        "object_rotation_difference_degrees": {
+          "mean": 4.342412664974212,
+          "p95": 17.09707344440349,
+          "max": 25.96297130833935
+        }
+      }
+    },
+    "base": {
+      "9": {
+        "frames": 325,
+        "object_translation_difference_cm": {
+          "mean": 0.24033852986959398,
+          "p95": 0.4880658153162076,
+          "max": 1.0827670174525925
+        },
+        "object_rotation_difference_degrees": {
+          "mean": 0.30807907461107614,
+          "p95": 0.6120622719933464,
+          "max": 1.0309364429792343
+        }
+      },
+      "12": {
+        "frames": 209,
+        "object_translation_difference_cm": {
+          "mean": 0.9195298864517439,
+          "p95": 2.4915730890523258,
+          "max": 5.090594957502582
+        },
+        "object_rotation_difference_degrees": {
+          "mean": 4.342412664974212,
+          "p95": 17.09707344440349,
+          "max": 25.96297130833935
+        }
+      }
+    }
+  },
+  "geometry_details": "FRESH_TRACKING_GEOMETRY_REVIEW.json",
+  "source_variation_details": "EPISODE12_SOURCE_VARIATION.json",
+  "thermal": {
+    "samples": 1318,
+    "max_temperature_c": 81.0,
+    "power_limit_w": 60.0,
+    "paused_samples": 0
+  },
+  "evidence_archive": {
+    "generation": "1793951700075636",
+    "bytes": 29027380,
+    "sha256": "22a8f32c63db44b7689fca9cf47a7cae6798dd79dcc2d197ff4219743522fb20",
+    "download_md5_verified": true
+  },
+  "interpretation": {
+    "episode9_controlled_path_variation_small": true,
+    "episode12_material_rotation_variation_remains": true,
+    "episode12_rotation_variation_present_before_correction": true,
+    "episode12_peak_rotation_frame": 219,
+    "scored_frames_over_10_degrees": 26,
+    "source_proxy_at_peak": {
+      "frame": 219,
+      "scored": true,
+      "rotation_difference_deg": 25.96297130833935,
+      "old_base_source_mask_iou": 0.7896379525593009,
+      "fresh_base_source_mask_iou": 0.8788713007570543,
+      "target_pixels": 1296
+    },
+    "cause_isolated": false,
+    "caveat": "The turning pan has an occluded handle. Fresh pose has better silhouette overlap at the peak difference, but silhouette evidence cannot certify 3D pose or competition-score equivalence. Fresh mask file hashes differ; this does not establish different pixels because HDF5 serialization also affects file hashes."
+  },
+  "base_episode_paths_prepared": 30,
+  "later_profile_episode_paths_prepared": 19,
+  "special_original_workflows_gpu_retested": false,
+  "later_profile_corrections_still_to_port": 11,
+  "unit_tests_passed": 35,
+  "native_cpu_startup_checks_passed": 24,
+  "native_checks_are_not_gpu_inference": true,
+  "raw_video_reproduction_verified": false,
+  "all_30_profile_adapter_complete": false,
+  "complete_competition_handoff": false,
+  "latest_prepared_adapter_commit": "4eddf61"
+}

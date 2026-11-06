@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-06T06:26:27.064834+00:00",
+  "checked_at_utc": "2026-11-06T09:20:50.453196+00:00",
   "execution_context": "Actual Docker, --network none and --read-only; exact isolated Python 3.14 packing environment. Official verifier unchanged.",
   "profiles": {
     "t1_02": {
@@ -210,14 +210,14 @@
     "instance_and_disks_deleted_confirmed": true
   },
   "fresh_tracking_pilot": {
-    "status": "WAITING_FOR_L4_CAPACITY",
+    "status": "FRESH_TRACKING_COMPLETED_MATERIAL_NUMERICAL_VARIATION_REMAINS",
     "episodes": [
       9,
       12
     ],
     "independent_controller": true,
     "worker": "longbot-t1-reproduce-20261106-061740",
-    "worker_zone": null,
+    "worker_zone": "us-central1-a",
     "fresh_total_cap_usd": 4,
     "maximum_successful_l4_allocations": 1,
     "provider_delete_seconds": 10800,
@@ -227,9 +227,9 @@
       "resume_c": 74,
       "stop_c": 83
     },
-    "cpu_tests_passed": 31,
-    "native_cpu_entry_points_passed": 13,
-    "fresh_base_supported_episodes": 28,
+    "cpu_tests_passed": 35,
+    "native_cpu_entry_points_passed": 24,
+    "fresh_base_supported_episodes": 30,
     "later_profile_supported_episodes": 19,
     "gpu_execution_verified": false,
     "all_30_adapter_implemented": false,
@@ -242,6 +242,14 @@
     "first_round_all_five_zones_stockout": true,
     "provisional_instance_rolled_back": true,
     "retry_seconds": 120,
-    "maximum_capacity_retry_seconds": 9000
+    "maximum_capacity_retry_seconds": 9000,
+    "gpu_execution_completed": true,
+    "all_worker_controller_instances_and_disks_deleted": true,
+    "completed_utc": "2026-11-06T07:54:49Z",
+    "source_variation_requires_review": true,
+    "special_original_workflows_gpu_retested": false,
+    "result_details": "FRESH_TRACKING_PILOT_REVIEW.json",
+    "actual_billed_cost_known": false,
+    "latest_prepared_adapter_commit": "4eddf61"
   }
 }
