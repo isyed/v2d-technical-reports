@@ -82,6 +82,32 @@
     "verification_this_worker": "not run",
     "vm_and_disk_deleted_confirmed": true
   },
-  "archive_scope": "Runtime foundation only; independent download hash and runtime checks pending",
-  "archive_status_details": "ARCHIVE_STATUS.json"
+  "archive_scope": "Runtime foundation independently verified; raw-video reproduction remains pending",
+  "archive_status_details": "ARCHIVE_STATUS.json",
+  "independent_runtime_validation": {
+    "status": "PASS",
+    "instance": "longbot-t1-container-validate1-20261105",
+    "heartbeat_utc": "2026-11-06T00:36:13Z",
+    "stage": "runtime_foundation_validation_passed",
+    "independent_download_sha256_verified": true,
+    "maximum_hours": 2,
+    "local_machine_required": false,
+    "raw_video_reproduction_verified": false,
+    "runtime_imports_verified": true,
+    "loaded_rootfs_and_config_match_archive": true,
+    "official_artifact_checks_passed": 24,
+    "validation_receipt": "VALIDATION_RECEIPT.json"
+  },
+  "fresh_motion_pilot": {
+    "status": "APPROVED_PAYLOAD_UPLOADED",
+    "episodes": [
+      11,
+      29
+    ],
+    "maximum_created_workers": 1,
+    "maximum_hours": 3,
+    "local_machine_required_after_launch": false,
+    "all_30_episode_support": false,
+    "gpu_results_pending": true
+  }
 }

@@ -1,11 +1,20 @@
 # Track 1: final container handoff
 
-**Status: runtime archive uploaded privately; validation and complete handoff pending.**
+**Status: runtime foundation independently verified; fresh-video reproduction remains pending.**
 
-Latest cloud snapshot: the 49.0 GB runtime foundation archive was uploaded on November 5 at 4:05 p.m. EST. The worker stopped on a receipt-parsing bug after upload; the archive is preserved, and the VM and disk are deleted. Independent archive/runtime validation is next.
+The separate CPU validation passed on November 5: archive download/SHA-256, OCI identity, loaded filesystem/runtime settings, all **24 official checks**, and both SAM2/SAM3D offline imports.
 
+The worker then requested automatic deletion. [Validation receipt](VALIDATION_RECEIPT.json).
 
-This is the stable handoff page supplied with the technical-report form. It is not yet a downloadable, verified container. Download URLs, image identity, archive SHA-256 and reproduction results will be added here after packaging and verification.
+Its reviewed 50.6 MB private payload is uploaded.
+
+The first allocation request met the regional disk quota while the CPU validator was still deleting; no GPU worker was created by that request.
+
+The pilot uses one bounded L4 worker, with 60 W / pause 82°C / resume 74°C / stop 83°C, backup and a three-hour deletion limit.
+
+This is the stable handoff page supplied with the technical-report form.
+
+Archive identity and validation status are recorded below; an organizer-accessible download link and complete reproduction evidence remain pending.
 
 Team: longbot.
 
@@ -25,7 +34,11 @@ Exact submitted-file SHA-256: `395e4d7c6f001bcdc4472a92e9d6022c89d791499dfa64d65
 
 ## Verification scope
 
-All four covered profiles now pass the official checks inside Docker with networking disabled and a read-only filesystem: **24 passes, zero failures**. Each retains its original submitted file, producing Git commit and 30 stored reconstructions. A separate manifest is used for each producing commit; the official verifier is unchanged.
+All four covered profiles now pass the official checks inside Docker with networking disabled and a read-only filesystem: **24 passes, zero failures**.
+
+Each retains its original submitted file, producing Git commit and 30 stored reconstructions.
+
+A separate manifest is used for each producing commit; the official verifier is unchanged.
 
 | Profile | Producing commit | Metric-wise best coverage | Relevant Kaggle IDs |
 |---|---|---|---|
@@ -34,24 +47,86 @@ All four covered profiles now pass the official checks inside Docker with networ
 | T1-10 | `1529ad1af98aa4409e8a8d859cc2ee6654f9eca9` | ACC-H | 57547067 |
 | T1-11 | `8eb8b6346f3150edfb84b20c1d039b148697ce7a` | CD-O; designated in the report form | 57605528 |
 
-Packing uses the exact verified Python/NumPy environment separately from the original inference environment. This avoids a module-name collision and mesh-packing differences caused by runtime dependencies. No original submission, commit or verifier was changed.
+Packing uses the exact verified Python/NumPy environment separately from the original inference environment.
 
-These are stored-output checks. The runtime and model bundle has now been built and uploaded to private project storage as a **49,008,771,072-byte OCI image archive**. Its uploader-computed SHA-256 matches the finalized object's custom metadata. This is upload evidence; independent download/hash verification and offline runtime validation of this archive have not run yet.
+This avoids a module-name collision and mesh-packing differences caused by runtime dependencies.
 
-The worker stopped because the receipt checker expected the raw API's `metadata` field, while `gcloud` reports it as `custom_fields`. The parser is corrected and tested, and a recovered receipt is saved with validation explicitly pending. No new worker is running. The next worker can load and validate the preserved archive without rebuilding it.
+No original submission, commit or verifier was changed.
 
-The historical raw-video reproduction adapter and sampled GPU reruns remain unfinished. The artifact-check entry point continues to refuse raw-video reproduction until a real pipeline is supplied. Full competition handoff requires those checks and an organizer-accessible final archive link. See [verification status](CPU_VERIFICATION.json), [direct-export validation](DIRECT_EXPORT_VALIDATION.json) and [archive status](ARCHIVE_STATUS.json).
+These are stored-output checks.
+
+The runtime and model bundle has now been built and uploaded to private project storage as a **49,008,771,072-byte OCI image archive**.
+
+Its uploader-computed SHA-256 matches the finalized object's custom metadata.
+
+A separate worker has now downloaded the pinned generation and recomputed that SHA-256 successfully.
+
+The loaded-image identity, all 24 official checks and both offline runtime imports have also passed.
+
+The worker stopped because the receipt checker expected the raw API's `metadata` field, while `gcloud` reports it as `custom_fields`.
+
+The parser is corrected and tested, and a recovered receipt is saved with validation explicitly pending.
+
+The validation-only worker checked the preserved archive successfully without rebuilding it.
+
+The original builder and disk remain deleted; the validator requested its own deletion after backing up evidence.
+
+A development fresh-motion adapter has been prepared and CPU-checked for Episodes 11 and 29.
+
+It reruns segmentation, depth/body/object motion, CoCoNet, refinement and the historical correction recipes, using the original frozen image-derived category mesh priors.
+
+It contains no stored final trajectories as inference inputs.
+
+The comparison tool passes known 1 cm translation and 90-degree rotation tests.
+
+Its GPU execution, mesh regeneration and support for the other 28 episodes remain unverified; a separate bounded GPU pilot has now been authorized and its private payload uploaded.
+
+The historical all-30 raw-video reproduction adapter remains unfinished.
+
+The artifact-check entry point continues to refuse raw-video reproduction until a real pipeline is supplied.
+
+Full competition handoff requires those checks and an organizer-accessible final archive link.
+
+See [verification status](CPU_VERIFICATION.json), [direct-export validation](DIRECT_EXPORT_VALIDATION.json) and [archive status](ARCHIVE_STATUS.json).
 
 ## Organizer access
 
-The implementation repository is private, with an invitation already issued to `Nvidia-V2D-Challenge`. Large artifacts and pretrained assets will be shared with the organizers without changing third-party licenses. This public page contains only documentation and non-secret provenance.
+The implementation repository is private, with an invitation already issued to `Nvidia-V2D-Challenge`.
 
-No final archive digest or download URL is listed until the artifact actually exists.
+Large artifacts and pretrained assets will be shared with the organizers without changing third-party licenses.
+
+This public page contains only documentation and non-secret provenance.
+
+The preserved foundation archive exists, with its digest in [archive status](ARCHIVE_STATUS.json).
+
+It is not yet certified as the complete raw-video handoff.
 
 ## Kaggle final-selection check
 
-A subsequent authenticated read-only query using Kaggle’s selected-submission filter returned no explicit selected entries on the relevant boards. The IDs above are the files designated in the recorded Google form; this does not establish that they are manually selected on Kaggle. No Kaggle selections were changed. Track 1’s metric-wise best scores come from different historical files. The form designates T1-11 consistently across the five metrics. The current kit permits a separate manifest entry for every file that counts on a metric board. Container coverage must therefore include the metric-wise best files if no manual selection exists; this does not require resubmitting the Google form. A recorded report form does not itself change Kaggle selection.
+A subsequent authenticated read-only query using Kaggle’s selected-submission filter returned no explicit selected entries on the relevant boards.
+
+The IDs above are the files designated in the recorded Google form; this does not establish that they are manually selected on Kaggle.
+
+No Kaggle selections were changed.
+
+Track 1’s metric-wise best scores come from different historical files.
+
+The form designates T1-11 consistently across the five metrics.
+
+The current kit permits a separate manifest entry for every file that counts on a metric board.
+
+Container coverage must therefore include the metric-wise best files if no manual selection exists; this does not require resubmitting the Google form.
+
+A recorded report form does not itself change Kaggle selection.
 
 ## Official kit
 
-The ZIP linked from the official competition page was downloaded again on November 4 at 7:01 p.m. EST. Its SHA-256 is `7e1fdd00b50189191b4f1bf03158607f4f1a7bb5bfb0bf867b14eb06270a77f0`. The checks above use its unmodified verifier. No complete handoff archive or raw-video reproduction result is claimed.
+The ZIP linked from the official competition page was downloaded again on November 4 at 7:01 p.m.
+
+EST.
+
+Its SHA-256 is `7e1fdd00b50189191b4f1bf03158607f4f1a7bb5bfb0bf867b14eb06270a77f0`.
+
+The checks above use its unmodified verifier.
+
+No complete handoff archive or raw-video reproduction result is claimed.
