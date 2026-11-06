@@ -1,0 +1,54 @@
+{
+  "updated_utc": "2026-11-06T10:25:11.139348+00:00",
+  "status": "ALL_PROFILE_ADAPTERS_IMPLEMENTED_AWAITING_CLOUD_VALIDATION",
+  "implementation_commit": "700d8406edf7ed211a6d1e7e83d655c2c019b90a",
+  "profiles": [
+    "t1_02",
+    "t1_03",
+    "t1_10",
+    "t1_11"
+  ],
+  "base_episode_paths": 30,
+  "late_episode_paths": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    8,
+    15,
+    16,
+    17,
+    22
+  ],
+  "individual_profile_episode_plans_checked": 120,
+  "all30_profile11_native_plan_stages": 243,
+  "released_video_identities_checked": 30,
+  "unit_tests_passed": 46,
+  "new_native_cpu_import_checks_passed": 14,
+  "top_level_compute_scripts_compiled_only": 5,
+  "official_mesh_helper_cpu_execution_passed": true,
+  "fresh_gpu_sequences_previously_completed": [
+    11,
+    29,
+    9,
+    12
+  ],
+  "new_gpu_work_started": false,
+  "cloud_payload": {
+    "uri": "PRIVATE_STORAGE/overlay.tar.gz",
+    "generation": null,
+    "bytes": 132632976,
+    "sha256": "4738ca0f3ee92e52916bd14432949e7f3cded45807e40eb8d4d7fa1c40213ac0"
+  },
+  "upload_authorized": false,
+  "budget_authorized": false,
+  "new_archive_built": false,
+  "new_archive_uploaded": false,
+  "organizer_download_access_ready": false,
+  "complete_competition_handoff": false,
+  "material_numerical_variation_still_requires_acceptance": true,
+  "episode3_original_long_refinement_needs_separate_runtime": true,
+  "counted_outputs_producing_commits_and_official_verifier_changed": false
+}
