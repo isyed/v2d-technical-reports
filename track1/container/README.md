@@ -22,17 +22,17 @@ The suite now has **15 passing tests**.
 
 This verifies startup and CPU container execution; it does not verify GPU inference or fresh-video reproduction.
 
-**The approved L4 pilot is running in `us-central1-c`.** The startup repair passed on the actual GPU VM.
+**The L4 pilot is running fresh-video inference in `us-central1-c`.** At November 5, 11:05 p.m.
 
-At November 5, 10:28 p.m.
+EST, Episode 11 has completed segmentation/mask packing and is running perception/refinement; Episode 29 follows.
 
-EST, it is downloading the validated foundation archive; fresh-video inference has not started yet.
+Archive loading/identity and payload integrity checks passed.
 
-The independent controller has deleted itself after handoff.
+Latest temperature: **78°C**, with no thermal pause.
 
-The laptop can be off.
+No final comparison result is available yet.
 
-Thermal safeguards, backups and three-hour worker deletion remain configured.
+The independent controller is deleted.
 
 This is the stable handoff page supplied with the technical-report form.
 
