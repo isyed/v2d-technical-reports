@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-05T00:38:45.516515+00:00",
+  "checked_at_utc": "2026-11-06T05:51:33.663542+00:00",
   "execution_context": "Actual Docker, --network none and --read-only; exact isolated Python 3.14 packing environment. Official verifier unchanged.",
   "profiles": {
     "t1_02": {
@@ -100,7 +100,7 @@
     "worker_vm_and_disk_deleted_confirmed": true
   },
   "fresh_motion_pilot": {
-    "status": "COMPLETED_REQUIRES_GEOMETRY_REVIEW",
+    "status": "CPU_GEOMETRY_REVIEW_COMPLETE_ALL30_ADAPTER_PENDING",
     "episodes": [
       11,
       29
@@ -109,16 +109,16 @@
     "maximum_hours": 3,
     "local_machine_required_after_launch": false,
     "all_30_episode_support": false,
-    "gpu_results_pending": true,
+    "gpu_results_pending": false,
     "independent_controller_running": false,
     "gpu_inference_started": true,
     "checked_at_utc": "2026-11-06T05:24:33.914537+00:00",
-    "new_reproduction_results": false,
+    "new_reproduction_results": true,
     "retry_prepared": true,
     "replacement_allocation_approval_pending": false,
     "cpu_repair_tests_passed": 11,
     "docker_config_validator_passed": true,
-    "repair_cloud_test_pending": true,
+    "repair_cloud_test_pending": false,
     "previous_attempt": {
       "worker_and_controller_deleted": true,
       "worker_disks_deleted": true
@@ -134,8 +134,8 @@
     "systemd_storage_driver_override_observed": true,
     "targeted_repair_tests_passed": 14,
     "systemd_syntax_validation_passed": true,
-    "targeted_repair_cloud_test_pending": true,
-    "next_recommendation": "CPU geometry review and T1-02 Episode29 orientation audit, then remaining episode recipes",
+    "targeted_repair_cloud_test_pending": false,
+    "next_recommendation": "Port mapped historical tracking/correction stages; validate non-pilot recipes before final container delivery.",
     "further_allocation_launched": true,
     "startup_repair_cloud_validated": true,
     "additional_l4_allocation_prepared": true,
@@ -150,7 +150,7 @@
     "startup_fix_passed_on_gpu_vm": true,
     "archive_loaded_and_identity_verified": true,
     "payload_integrity_verified": true,
-    "current_stage": "completed_requires_review",
+    "current_stage": "cpu_geometry_review_complete_all30_adapter_pending",
     "final_reproduction_comparison_available": true,
     "completed_utc": "2026-11-06T05:07:00Z",
     "fresh_inference_completed": true,
@@ -164,7 +164,13 @@
     "raw_video_reproduction_verified": false,
     "recorded_max_temperature_c": 80,
     "thermal_pause_samples": 0,
-    "review_details": "FRESH_VIDEO_PILOT_REVIEW.json"
+    "review_details": "FRESH_VIDEO_PILOT_REVIEW.json",
+    "decoded_human_geometry_review_complete": true,
+    "geometry_review_details": "CPU_GEOMETRY_REVIEW.json",
+    "recipe_catalog_complete": true,
+    "all_30_adapter_implemented": false,
+    "unit_tests_passed": 22,
+    "geometry_and_recipe_tooling_commit": "https://github.com/isyed/v2d-reconstruction/commit/1c4cf92"
   },
   "cpu_startup_preflight": {
     "status": "PASS",
@@ -194,7 +200,7 @@
     "self_delete_requested": true,
     "boot_disk_deleted_confirmed": true,
     "instance_last_observed_state": "NOT_FOUND",
-    "next_recommendation": "Financial details omitted from public history.",
+    "next_recommendation": "Completed GPU pilot followed by CPU geometry review; see fresh_motion_pilot for current work.",
     "instance_and_disks_deleted_confirmed": true
   }
 }

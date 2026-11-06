@@ -1,0 +1,225 @@
+{
+  "schema": "longbot.track1.cpu_geometry_review.v1",
+  "meaning": "Corresponding vertex/native-joint displacement from saved exports in metres converted to cm; not competition scores. No scorer alignment applied.",
+  "model_sha256": "352e271a6c42729c68554ceaea0c955e866970160c31e35506d782dc0f7377bc",
+  "torch": "2.8.0+cu128",
+  "cpu_only": true,
+  "decoded_length_m_per_unit": 0.01,
+  "human": {
+    "11": {
+      "vertices_full_clip": {
+        "frames": 877,
+        "mean_displacement_cm": 0.1318794514754513,
+        "p95_frame_mean_displacement_cm": 0.26462758183479285,
+        "max_displacement_cm": 1.160000205039978,
+        "max_frame": 0
+      },
+      "vertices_scored_frames": {
+        "frames": 803,
+        "mean_displacement_cm": 0.12741916561046915,
+        "p95_frame_mean_displacement_cm": 0.25632067024707794,
+        "max_displacement_cm": 1.160000205039978,
+        "max_frame": 0
+      },
+      "native_joints_full_clip": {
+        "frames": 877,
+        "mean_displacement_cm": 0.13260312368849053,
+        "p95_frame_mean_displacement_cm": 0.271026849746704,
+        "max_displacement_cm": 1.0684480667114258,
+        "max_frame": 576
+      },
+      "native_joints_scored_frames": {
+        "frames": 803,
+        "mean_displacement_cm": 0.1280097443851669,
+        "p95_frame_mean_displacement_cm": 0.2619831383228302,
+        "max_displacement_cm": 1.0684480667114258,
+        "max_frame": 576
+      },
+      "root_wrap_frames": [
+        117,
+        236
+      ],
+      "root_wrap_representation_max_vertex_effect_cm": 9.834766387939453e-05
+    },
+    "29": {
+      "vertices_full_clip": {
+        "frames": 419,
+        "mean_displacement_cm": 0.189741995727959,
+        "p95_frame_mean_displacement_cm": 0.48040506243705744,
+        "max_displacement_cm": 2.328490734100342,
+        "max_frame": 117
+      },
+      "vertices_scored_frames": {
+        "frames": 267,
+        "mean_displacement_cm": 0.2365455087483599,
+        "p95_frame_mean_displacement_cm": 0.5297525823116301,
+        "max_displacement_cm": 2.328490734100342,
+        "max_frame": 117
+      },
+      "native_joints_full_clip": {
+        "frames": 419,
+        "mean_displacement_cm": 0.20799766346669993,
+        "p95_frame_mean_displacement_cm": 0.5609461247920989,
+        "max_displacement_cm": 2.311906099319458,
+        "max_frame": 117
+      },
+      "native_joints_scored_frames": {
+        "frames": 267,
+        "mean_displacement_cm": 0.26302661051910914,
+        "p95_frame_mean_displacement_cm": 0.6095147490501401,
+        "max_displacement_cm": 2.311906099319458,
+        "max_frame": 117
+      },
+      "root_wrap_frames": [],
+      "root_wrap_representation_max_vertex_effect_cm": 0
+    }
+  },
+  "object": {
+    "t1_02": {
+      "11": {
+        "mesh_sha256": "ca0d5e51ef929f83336be93eda8ff809c793e8553b632efd1027f9e67923647f",
+        "full_clip": {
+          "frames": 877,
+          "mean_displacement_cm": 0.4430146564052286,
+          "p95_frame_mean_displacement_cm": 0.8565346729246849,
+          "max_displacement_cm": 3.087094295132845,
+          "max_frame": 134
+        },
+        "scored_frames": {
+          "frames": 803,
+          "mean_displacement_cm": 0.4321370470704105,
+          "p95_frame_mean_displacement_cm": 0.8144016899970279,
+          "max_displacement_cm": 3.087094295132845,
+          "max_frame": 134
+        }
+      },
+      "29": {
+        "mesh_sha256": "507943a8dac0fb0ff5ac656884a9757da049f2ab4ea2826f958ace1818a1e086",
+        "full_clip": {
+          "frames": 419,
+          "mean_displacement_cm": 1.505262750655846,
+          "p95_frame_mean_displacement_cm": 3.6341066373758464,
+          "max_displacement_cm": 11.681117940534028,
+          "max_frame": 205
+        },
+        "scored_frames": {
+          "frames": 267,
+          "mean_displacement_cm": 1.767069371930038,
+          "p95_frame_mean_displacement_cm": 4.031600756389533,
+          "max_displacement_cm": 11.681117940534028,
+          "max_frame": 205
+        }
+      }
+    },
+    "t1_03": {
+      "11": {
+        "mesh_sha256": "f2d39072539f7e20181cc7456bf1f2b69d8812e5c9aef378aea3dca52632bf04",
+        "full_clip": {
+          "frames": 877,
+          "mean_displacement_cm": 0.22555720538328536,
+          "p95_frame_mean_displacement_cm": 0.4312626998822679,
+          "max_displacement_cm": 2.863758093067237,
+          "max_frame": 196
+        },
+        "scored_frames": {
+          "frames": 803,
+          "mean_displacement_cm": 0.2302741980385445,
+          "p95_frame_mean_displacement_cm": 0.4346386055756882,
+          "max_displacement_cm": 2.863758093067237,
+          "max_frame": 196
+        }
+      },
+      "29": {
+        "mesh_sha256": "d63b6be98b9c57248ff491e10573feb55af85cbf27616087d5db1d997307edeb",
+        "full_clip": {
+          "frames": 419,
+          "mean_displacement_cm": 0.40347817911719075,
+          "p95_frame_mean_displacement_cm": 1.1813404759293458,
+          "max_displacement_cm": 2.785546411875707,
+          "max_frame": 228
+        },
+        "scored_frames": {
+          "frames": 267,
+          "mean_displacement_cm": 0.5073932009501003,
+          "p95_frame_mean_displacement_cm": 1.3125003826956945,
+          "max_displacement_cm": 2.785546411875707,
+          "max_frame": 228
+        }
+      }
+    },
+    "t1_10": {
+      "11": {
+        "mesh_sha256": "f2d39072539f7e20181cc7456bf1f2b69d8812e5c9aef378aea3dca52632bf04",
+        "full_clip": {
+          "frames": 877,
+          "mean_displacement_cm": 0.22555720538328536,
+          "p95_frame_mean_displacement_cm": 0.4312626998822679,
+          "max_displacement_cm": 2.863758093067237,
+          "max_frame": 196
+        },
+        "scored_frames": {
+          "frames": 803,
+          "mean_displacement_cm": 0.2302741980385445,
+          "p95_frame_mean_displacement_cm": 0.4346386055756882,
+          "max_displacement_cm": 2.863758093067237,
+          "max_frame": 196
+        }
+      },
+      "29": {
+        "mesh_sha256": "d63b6be98b9c57248ff491e10573feb55af85cbf27616087d5db1d997307edeb",
+        "full_clip": {
+          "frames": 419,
+          "mean_displacement_cm": 0.40347817911719075,
+          "p95_frame_mean_displacement_cm": 1.1813404759293458,
+          "max_displacement_cm": 2.785546411875707,
+          "max_frame": 228
+        },
+        "scored_frames": {
+          "frames": 267,
+          "mean_displacement_cm": 0.5073932009501003,
+          "p95_frame_mean_displacement_cm": 1.3125003826956945,
+          "max_displacement_cm": 2.785546411875707,
+          "max_frame": 228
+        }
+      }
+    },
+    "t1_11": {
+      "11": {
+        "mesh_sha256": "f2d39072539f7e20181cc7456bf1f2b69d8812e5c9aef378aea3dca52632bf04",
+        "full_clip": {
+          "frames": 877,
+          "mean_displacement_cm": 0.22555720538328536,
+          "p95_frame_mean_displacement_cm": 0.4312626998822679,
+          "max_displacement_cm": 2.863758093067237,
+          "max_frame": 196
+        },
+        "scored_frames": {
+          "frames": 803,
+          "mean_displacement_cm": 0.2302741980385445,
+          "p95_frame_mean_displacement_cm": 0.4346386055756882,
+          "max_displacement_cm": 2.863758093067237,
+          "max_frame": 196
+        }
+      },
+      "29": {
+        "mesh_sha256": "d63b6be98b9c57248ff491e10573feb55af85cbf27616087d5db1d997307edeb",
+        "full_clip": {
+          "frames": 419,
+          "mean_displacement_cm": 0.40347817911719075,
+          "p95_frame_mean_displacement_cm": 1.1813404759293458,
+          "max_displacement_cm": 2.785546411875707,
+          "max_frame": 228
+        },
+        "scored_frames": {
+          "frames": 267,
+          "mean_displacement_cm": 0.5073932009501003,
+          "p95_frame_mean_displacement_cm": 1.3125003826956945,
+          "max_displacement_cm": 2.785546411875707,
+          "max_frame": 228
+        }
+      }
+    }
+  },
+  "complete_competition_handoff": false,
+  "elapsed_seconds": 46.81
+}

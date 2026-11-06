@@ -1,7 +1,7 @@
 {
-  "status": "FRESH_INFERENCE_COMPLETED_REVIEW_PENDING",
+  "status": "CPU_GEOMETRY_REVIEW_COMPLETE_ALL30_ADAPTER_PENDING",
   "completed_utc": "2026-11-06T05:07:00Z",
-  "checked_at_utc": "2026-11-06T05:23:16.493594+00:00",
+  "checked_at_utc": "2026-11-06T05:51:33.663542+00:00",
   "episodes": [
     11,
     29
@@ -19,7 +19,7 @@
   "frozen_image_derived_mesh_priors_reused": true,
   "mesh_generation_repeated": false,
   "all_30_episode_support": false,
-  "decoded_human_geometry_review_complete": false,
+  "decoded_human_geometry_review_complete": true,
   "raw_video_reproduction_verified": false,
   "complete_competition_handoff": false,
   "metrics_are_differences_from_saved_outputs_not_competition_scores": true,
@@ -177,19 +177,69 @@
       }
     }
   },
+  "parameter_and_thermal_review": {
+    "11": {
+      "pose_largest_delta_frame_and_column": [
+        236,
+        5
+      ],
+      "old_value": 3.146517753601074,
+      "fresh_value": -3.1364736557006836,
+      "raw_difference": -6.282991409301758,
+      "difference_mod_2pi": 0.00019389787782866442,
+      "values_above_3_native_units": 2
+    },
+    "29": {
+      "pose_largest_delta_frame_and_column": [
+        206,
+        2
+      ],
+      "old_value": -27.333093643188477,
+      "fresh_value": -27.42119598388672,
+      "raw_difference": -0.08810234069824219,
+      "difference_mod_2pi": -0.08810234069824217,
+      "values_above_3_native_units": 0
+    },
+    "thermal": {
+      "samples": 1948,
+      "max_temperature_c": 80.0,
+      "paused_samples": 0,
+      "max_power_limit_w": 60.0
+    }
+  },
   "evidence_archive_generation": "1793941632653979",
   "evidence_archive_bytes": 30945266,
   "evidence_archive_sha256": "40a84560fab7e12e0f9cf58c2dfe67b1f2a1a863f5828fbe2b7b87f16b46305c",
   "next_steps": [
-    "Decode and compare human geometry on CPU, handling root-angle wrapping.",
-    "Review T1-02 Episode29 orientation variation on scored frames.",
-    "Complete remaining28episode recipes and the final reproduction entry point, then finalize container access."
+    "Port the mapped21tracking-repair episodes and special3/16 schedules into independent fresh workspaces.",
+    "Port the11later-profile corrections, keeping T1-10 human-B and T1-11 object-only branches distinct.",
+    "Validate non-pilot recipes and diagnose the T1-02 Episode29 post-fit variation with retained stage evidence, then package final raw-video entry point and organizer-accessible archive."
   ],
-  "thermal_review": {
-    "samples": 1948,
-    "max_temperature_c": 80.0,
-    "paused_samples": 0,
-    "max_power_limit_w": 60.0
+  "geometry_review": "CPU_GEOMETRY_REVIEW.json",
+  "geometry_interpretation": {
+    "human_scored_frame_mean_displacement_mm": {
+      "11": 1.2741916561046915,
+      "29": 2.365455087483599
+    },
+    "root_angle_wrap_geometric_effect_negligible": true,
+    "t1_02_episode29_material_difference_remains": true,
+    "cause_isolated": false,
+    "reason_cause_not_isolated": "Fresh intermediate masks, pre-correction exports and correction reports were not retained by the completed pilot. New tooling preserves compact stage evidence on subsequent runs."
   },
-  "human_pose_note": "Largest raw parameter difference is a root Euler-angle wrap; decoded human geometry remains to be compared."
+  "recipe_catalog_summary": {
+    "episodes": 30,
+    "tracking_repair_episodes": 21,
+    "tracking_compute_nodes": 36,
+    "later_profile_correction_episodes": 11,
+    "special_original_refinement_schedules": {
+      "3": 300,
+      "16": 50
+    },
+    "source_assets": 69,
+    "source_asset_bytes": 186380718,
+    "fresh_gpu_sequences_completed": 2
+  },
+  "recipe_catalog_complete": true,
+  "all_30_adapter_implemented": false,
+  "unit_tests_passed": 22
 }
