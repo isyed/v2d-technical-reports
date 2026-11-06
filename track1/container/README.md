@@ -22,17 +22,17 @@ The suite now has **15 passing tests**.
 
 This verifies startup and CPU container execution; it does not verify GPU inference or fresh-video reproduction.
 
-**Approved GPU pilot retry is now queued.** An independent controller was created November 5 at 10:25 p.m.
+**The approved L4 pilot is running in `us-central1-c`.** The startup repair passed on the actual GPU VM.
 
-EST and is publishing L4 capacity requests.
+At November 5, 10:28 p.m.
 
-It will launch at most one further L4 using the CPU-validated startup, existing archive and existing payload.
+EST, it is downloading the validated foundation archive; fresh-video inference has not started yet.
+
+The independent controller has deleted itself after handoff.
 
 The laptop can be off.
 
-Thermal safeguards, backup and three-hour worker deletion remain active.
-
-GPU inference has not started yet.
+Thermal safeguards, backups and three-hour worker deletion remain configured.
 
 This is the stable handoff page supplied with the technical-report form.
 
