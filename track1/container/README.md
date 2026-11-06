@@ -4,7 +4,9 @@
 
 The separate CPU validation passed on November 5: archive download/SHA-256, OCI identity, loaded filesystem/runtime settings, all **24 official checks**, and both SAM2/SAM3D offline imports. The worker then requested automatic deletion. [Validation receipt](VALIDATION_RECEIPT.json).
 
-The approved two-sequence GPU pilot is now behind a running independent capacity-retry controller. Its reviewed 50.6 MB private payload is uploaded. L4 stockouts have prevented inference so far; a provisional allocation was rolled back. The controller retries for at most 2.5 hours, with no laptop dependency, and launches at most one successful L4. Its small cost reserve is included in the same **$4 total cap**. The L4 retains 60 W / pause 82°C / resume 74°C / stop 83°C, evidence backup and its own three-hour deletion limit. No GPU reproduction result is claimed yet.
+**GPU pilot: stopped before inference; no cloud worker is currently running.** The controller obtained an L4 in `us-central1-a` on November 5 at 8:02 p.m. EST. At 8:03 p.m., Docker failed to restart after the image-store configuration change. The worker and controller deleted themselves, and their disks are gone. The daemon journal was not captured, so the exact restart error remains undetermined; incompatible legacy storage settings are a suspected cause.
+
+A replacement startup repair is prepared: normalize the storage settings while preserving NVIDIA configuration, validate the Docker configuration, verify the image store, and capture daemon logs plus restore the original configuration on failure. All 11 CPU tests and `dockerd --validate` pass; the repair has not been cloud-validated. One replacement allocation within the **same $4 total ceiling**, including the failed attempt, awaits approval. It reuses the existing archive and payload. Fresh-video reproduction and the complete handoff remain pending.
 
 
 This is the stable handoff page supplied with the technical-report form. Archive identity and validation status are recorded below; an organizer-accessible download link and complete reproduction evidence remain pending.
