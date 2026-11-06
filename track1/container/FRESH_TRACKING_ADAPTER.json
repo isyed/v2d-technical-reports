@@ -1,0 +1,218 @@
+{
+  "status": "INDEPENDENT_CONTROLLER_RETRYING_L4_CAPACITY",
+  "cpu_tests_passed": 31,
+  "native_offline_entry_points_passed": 13,
+  "native_offline_entry_points_failed": 0,
+  "native_check_scope": "CPU imports and --help only; no model inference or GPU validation.",
+  "tracking_nodes_ported": 36,
+  "tracking_repair_episodes": 21,
+  "source_versions": {
+    "0ef6f21910a174779ef3369c72ed492daaf330f174d9e06fcdbb0618aa4268a3": {
+      "library": "sources/0ef6f21910a174779ef3369c72ed492daaf330f174d9e06fcdbb0618aa4268a3/lib",
+      "source": "artifacts/benchmark_artifacts/track1_first50/first10_submission/source/lib",
+      "files": 127
+    },
+    "1c9193d2311b012f992803935073ba427db3935ae97fdc030036ee2358ac4eb8": {
+      "library": "sources/1c9193d2311b012f992803935073ba427db3935ae97fdc030036ee2358ac4eb8/lib",
+      "source": "artifacts/benchmark_artifacts/track1_first50/correction_audit/remaining_audit_source_v2/lib",
+      "files": 127
+    },
+    "86c8a56c8875e2201f6b7d992a91b3043429566bc33339f921a8248343d21cb3": {
+      "library": "sources/86c8a56c8875e2201f6b7d992a91b3043429566bc33339f921a8248343d21cb3/lib",
+      "source": "runs/award_handoff/reproduction_pilot/fresh_replay_v3/recovered_sources/2bfa80d5086aa8c906ecb4363943bfdafb2b84da/lib",
+      "files": 127
+    },
+    "822fc247eaf8f8a962e3f17e6f3072a342959abeac943062678383911d5cfc0c": {
+      "library": "sources/822fc247eaf8f8a962e3f17e6f3072a342959abeac943062678383911d5cfc0c/lib",
+      "source": "artifacts/benchmark_artifacts/track1_first50/correction_audit/bounded_tracking_source/lib",
+      "files": 127
+    }
+  },
+  "recovered_source_commit_episodes": {
+    "13": "https://github.com/isyed/v2d-challenge-submissions/commit/2bfa80d5086aa8c906ecb4363943bfdafb2b84da",
+    "27": "https://github.com/isyed/v2d-challenge-submissions/commit/2bfa80d5086aa8c906ecb4363943bfdafb2b84da"
+  },
+  "coverage": {
+    "t1_02": {
+      "eligible": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "held": {
+        "3": "No inference started; unsupported historical stages: {\"3\": [\"Special original preparation/refinement schedule is not ported\"]}",
+        "16": "No inference started; unsupported historical stages: {\"16\": [\"Special original preparation/refinement schedule is not ported\"]}"
+      },
+      "stages": 233
+    },
+    "t1_03": {
+      "eligible": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "held": {
+        "3": "No inference started; unsupported historical stages: {\"3\": [\"Special original preparation/refinement schedule is not ported\"]}",
+        "16": "No inference started; unsupported historical stages: {\"16\": [\"Special original preparation/refinement schedule is not ported\"]}"
+      },
+      "stages": 234
+    },
+    "t1_10": {
+      "eligible": [
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        18,
+        19,
+        20,
+        21,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "held": {
+        "0": "No inference started; unsupported historical stages: {\"0\": [\"Later profile corrections are not ported: fixed_depth,hoop\"]}",
+        "1": "No inference started; unsupported historical stages: {\"1\": [\"Later profile corrections are not ported: fixed_depth,hoop\"]}",
+        "2": "No inference started; unsupported historical stages: {\"2\": [\"Later profile corrections are not ported: fixed_depth,hoop\"]}",
+        "3": "No inference started; unsupported historical stages: {\"3\": [\"Special original preparation/refinement schedule is not ported\", \"Later profile corrections are not ported: fixed_depth,orientation\"]}",
+        "4": "No inference started; unsupported historical stages: {\"4\": [\"Later profile corrections are not ported: orientation\"]}",
+        "5": "No inference started; unsupported historical stages: {\"5\": [\"Later profile corrections are not ported: refine29,orientation\"]}",
+        "8": "No inference started; unsupported historical stages: {\"8\": [\"Later profile corrections are not ported: human_b,iron_motion\"]}",
+        "15": "No inference started; unsupported historical stages: {\"15\": [\"Later profile corrections are not ported: block15\"]}",
+        "16": "No inference started; unsupported historical stages: {\"16\": [\"Special original preparation/refinement schedule is not ported\", \"Later profile corrections are not ported: fixed_depth,orientation\"]}",
+        "17": "No inference started; unsupported historical stages: {\"17\": [\"Later profile corrections are not ported: refine29,orientation\"]}",
+        "22": "No inference started; unsupported historical stages: {\"22\": [\"Later profile corrections are not ported: refine29\"]}"
+      },
+      "stages": 160
+    },
+    "t1_11": {
+      "eligible": [
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        18,
+        19,
+        20,
+        21,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "held": {
+        "0": "No inference started; unsupported historical stages: {\"0\": [\"Later profile corrections are not ported: fixed_depth,hoop\"]}",
+        "1": "No inference started; unsupported historical stages: {\"1\": [\"Later profile corrections are not ported: fixed_depth,hoop\"]}",
+        "2": "No inference started; unsupported historical stages: {\"2\": [\"Later profile corrections are not ported: fixed_depth,hoop\"]}",
+        "3": "No inference started; unsupported historical stages: {\"3\": [\"Special original preparation/refinement schedule is not ported\", \"Later profile corrections are not ported: fixed_depth,orientation\"]}",
+        "4": "No inference started; unsupported historical stages: {\"4\": [\"Later profile corrections are not ported: orientation\"]}",
+        "5": "No inference started; unsupported historical stages: {\"5\": [\"Later profile corrections are not ported: refine29,orientation\"]}",
+        "8": "No inference started; unsupported historical stages: {\"8\": [\"Later profile corrections are not ported: human_b,iron_motion\"]}",
+        "15": "No inference started; unsupported historical stages: {\"15\": [\"Later profile corrections are not ported: block15\"]}",
+        "16": "No inference started; unsupported historical stages: {\"16\": [\"Special original preparation/refinement schedule is not ported\", \"Later profile corrections are not ported: fixed_depth,orientation\"]}",
+        "17": "No inference started; unsupported historical stages: {\"17\": [\"Later profile corrections are not ported: refine29,orientation\"]}",
+        "22": "No inference started; unsupported historical stages: {\"22\": [\"Later profile corrections are not ported: refine29\"]}"
+      },
+      "stages": 160
+    }
+  },
+  "pilot_episodes": [
+    9,
+    12
+  ],
+  "pilot_stages": 19,
+  "payload_upload_approved": true,
+  "gpu_pilot_launched": true,
+  "all_30_adapter_implemented": false,
+  "complete_competition_handoff": false,
+  "package_shadowing_fix": "Execute each native stage with its frozen library/cari4d directory as cwd; PYTHONPATH alone allowed the image working directory to shadow the staged prep package.",
+  "source_tooling_commit": "09f4da746c4190b44bb48e353df3dd084b9b4cf9",
+  "launch_status_checked_at_utc": "2026-11-06T06:26:58.918575+00:00",
+  "worker": "longbot-t1-reproduce-20261106-061740",
+  "worker_zone": null,
+  "worker_provider_delete_seconds": 10800,
+  "local_machine_required": false,
+  "payload_generation": "1793946133714935",
+  "payload_sha256": "5e7fd254ef5286c88ae82803e99c7aeb299e548bed7cb1e0dca2fe7f3e9feb4e",
+  "gpu_inference_completed": false,
+  "gpu_worker_currently_allocated": false,
+  "first_capacity_round": {
+    "zones": [
+      "us-central1-c",
+      "us-central1-b",
+      "us-central1-a",
+      "us-east1-b",
+      "us-east1-c"
+    ],
+    "error_code": "ZONE_RESOURCE_POOL_EXHAUSTED_WITH_DETAILS",
+    "provisional_instance_rolled_back": true
+  },
+  "retry_seconds": 120,
+  "maximum_capacity_retry_seconds": 9000
+}

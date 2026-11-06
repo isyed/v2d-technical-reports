@@ -1,6 +1,8 @@
 # Track 1: final container handoff
 
-**Status: two-sequence GPU pilot and CPU geometry review complete; full raw-video handoff remains incomplete.**
+**Status: the new Episodes 9/12 tracking-reproduction pilot is queued; its independent controller is retrying L4 capacity.
+
+Full raw-video handoff remains incomplete.**
 
 The runtime foundation passed an independent pinned download/hash check, OCI and
 loaded-image identity checks, all **24 official stored-output checks**, and both
@@ -13,7 +15,13 @@ Fresh inference completed for **Episodes 11 and 29** on November 6 at 12:07 a.m.
 
 EST.
 
-All pilot VMs and disks are confirmed deleted; **there is no active cloud job**.
+Those earlier pilot VMs and disks are confirmed deleted.
+
+A separate approved
+Episodes9/12 pilot is waiting for L4 capacity.
+
+Its first round found stockouts
+in all five requested zones; the provisional VM was rolled back before startup.
 
 The pilot reused frozen RGB-derived mesh priors and did not rerun mesh generation.
 
@@ -44,21 +52,52 @@ the completed pilot omitted fresh pre-correction intermediates from its backup.
 
 The tooling now retains compact stage evidence for subsequent tests.
 
-All **30 historical recipes are inventoried**: 21 episodes need tracking-repair
-stages, represented by 36 compute nodes; 11 have later profile corrections.
+All **30 historical recipes are inventoried**.
 
-Episodes 3 and 16 also used different refinement lengths.
+Portable code now covers the
+36 tracking-repair compute nodes for 21 episodes and the fresh base path for
+**28 episodes**.
 
-Every later changed
-episode maps to identified historical source stages.
+Historical sources for13/27 were recovered from their producing
+Git commit.
 
-**The remaining adapters
-are not yet implemented or GPU-validated.** The focused CPU suite has **22 passes**.
-[Private implementation/evidence commit](https://github.com/isyed/v2d-reconstruction/commit/1c4cf92).
+Special original runs3/16 and the later-profile correction branches
+remain to be ported.
 
-**Next:** port these stages into independent fresh workspaces, validate non-pilot
-episodes and investigate T1-02's variation, then complete the raw-video entry
-point and final organizer-accessible archive.
+Implemented coverage for T1-10/T1-11 is therefore19episodes;
+unsupported selections fail before inference.
+
+**31 CPU tests and 13 native offline entry-point checks pass.** The latter check
+imports/CLI startup without GPU inference.
+
+An import-shadowing issue found during
+these checks was corrected by executing each native stage in its frozen source
+directory. [Adapter evidence](FRESH_TRACKING_ADAPTER.json),
+[native checks](FRESH_TRACKING_NATIVE_CHECKS.json),
+[private implementation commit](https://github.com/isyed/v2d-reconstruction/commit/09f4da746c4190b44bb48e353df3dd084b9b4cf9).
+
+The new pilot exercises translation-window recovery (Episode9) and independent
+anchor/bounded recovery (Episode12).
+
+The approved118.6MBprivate payload is
+uploaded and pinned.
+
+The controller retries every120seconds for up to2.5hours and runs without the
+laptop or chat.
+
+Any successfully allocated worker is also independent.
+
+No training or competition upload is performed.
+
+**GPU inference results are not
+available yet.** This page records the last checked status; it is not a live cloud
+monitor.
+
+The local refresh tool and progress file are documented in the private repo.
+
+**Next:** evaluate this new tracking path, continue the remaining special/later
+correction adapters, then complete the raw-video entry point and final
+organizer-accessible archive.
 
 The archive below remains a verified foundation,
 not a complete raw-video reproduction container.
