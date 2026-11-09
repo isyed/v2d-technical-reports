@@ -8,3 +8,7 @@ The implementation repositories are separate: [Track 1](https://github.com/isyed
 
  These reports contain no video, dataset, credential or model-weight files.
 
+Public report copies omit personal contact information. Their technical content,
+filenames and locations are unchanged. Private storage locations are omitted
+from public validation receipts; archive hashes and validation results are retained.
+
