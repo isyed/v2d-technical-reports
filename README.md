@@ -6,9 +6,9 @@
 
 The implementation repositories are separate: [Track 1](https://github.com/isyed/v2d-reconstruction), [Track 2](https://github.com/isyed/v2d-grounding), and [reusable modules](https://github.com/isyed/real2sim2real).
 
- These reports contain no video, dataset, credential or model-weight files.
+These reports contain no video, dataset, credential or model-weight files.
 
 Public report copies omit personal contact information. Their technical content,
-filenames and locations are unchanged. Private storage locations are omitted
-from public validation receipts; archive hashes and validation results are retained.
+filenames and locations are unchanged. Container handoff files, form records and
+validation attachments have been removed from this report-only repository.
 
