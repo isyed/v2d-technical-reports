@@ -70,10 +70,10 @@
       "mesh_bytes_exact": true
     }
   },
-  "upload_state": "private_draft_release_all_parts_verified",
-  "download_access": "GitHub sign-in with organizer write access",
-  "archive_release_url": "https://github.com/isyed/v2d-reconstruction/releases/tag/untagged-a0b01a010392f284e889",
-  "archive_release_draft": true,
+  "upload_state": "private_tagged_release_all_parts_verified",
+  "download_access": "GitHub sign-in with access to the private source repository",
+  "archive_release_url": "https://github.com/isyed/v2d-reconstruction/releases/tag/track1-container-rebuild-20261117",
+  "archive_release_draft": false,
   "archive_parts_verified": 26,
   "organizer_download_account": "Nvidia-V2D-Challenge",
   "organizer_repository_permission": "write",
@@ -119,5 +119,7 @@
       "metric": "pen"
     }
   ],
-  "award_reproduction_verified": false
+  "award_reproduction_verified": false,
+  "archive_release_published_at": "2026-11-18T04:03:18Z",
+  "archive_release_verified_at": "2026-11-18T04:03:20.172196+00:00"
 }

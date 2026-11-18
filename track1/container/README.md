@@ -22,10 +22,11 @@ their object poses differ materially from the stored reconstructions.
 These checksums identify the rebuilt archive. GitHub verified the size and
 SHA-256 of all 26 archive parts. Sign in as `Nvidia-V2D-Challenge` and download
 the numbered parts, `DELIVERY_MANIFEST.json`, and `restore_archive.py` from
-the [private draft release](https://github.com/isyed/v2d-reconstruction/releases/tag/untagged-a0b01a010392f284e889).
-The organizer account has write access to the implementation repository and can
-view draft releases. Run `python3 restore_archive.py --load` from the download
-directory to verify the parts and load the image.
+the [private Track 1 release](https://github.com/isyed/v2d-reconstruction/releases/tag/track1-container-rebuild-20261117).
+The organizer account already has access to the implementation repository. Run
+`python3 restore_archive.py --load` from the download directory to verify the
+parts and load the image. `RESTORE.md` in the release lists the download command
+and offline verification steps.
 
 See [checksums](CHECKSUMS.sha256), [rebuild status](REBUILD_STATUS.json), and
 [official verification reports](verification_20261117).
