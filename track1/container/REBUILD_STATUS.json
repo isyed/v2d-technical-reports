@@ -1,0 +1,123 @@
+{
+  "image": "longbot-v2d-track1:rebuilt-20261117",
+  "image_id": "sha256:bee40bbe3fc80407132f4031e86b3207268ac8f051297ce62ecde2e46a274113",
+  "image_manifest_digest": "sha256:bee40bbe3fc80407132f4031e86b3207268ac8f051297ce62ecde2e46a274113",
+  "image_config_digest": "sha256:9eb8412d29788cf359792d21da76002716def5f3942addfdfd91f8012542129a",
+  "archive_bytes": 50276077568,
+  "archive_sha256": "f3fc4d1b704435b9d26bb8f86d75341cac954194a8859cf3a5af310006028ae5",
+  "archive_format": "OCI image-layout tar with gzip-compressed layers",
+  "loaded_rootfs_and_config_match_archive": true,
+  "official_checks_passed": 24,
+  "native_cpu_checks_passed": 14,
+  "gpu_reproduction_verified": false,
+  "counted_artifacts_unchanged": true,
+  "form_container_url": "https://github.com/isyed/v2d-technical-reports/tree/main/track1/container",
+  "archive_exported": true,
+  "known_episode8_variation_unresolved": true,
+  "date": "2026-11-17",
+  "status": "offline_fresh_samples_complete_material_pose_differences",
+  "offline_runtime_imports_passed": 2,
+  "source_recipe_plan_check_passed": true,
+  "representative_validation_episodes": [
+    7,
+    20
+  ],
+  "download_available": true,
+  "archive_uploaded": true,
+  "historical_episode8_mismatch_unresolved": true,
+  "fresh_plan_cpu_stages_passed": 20,
+  "gpu_validation_status": "two_samples_completed_comparison_review_required",
+  "first_gpu_launch_rejected_before_container_start": true,
+  "gpu_selector_corrected_and_preflight_passed": true,
+  "fresh_gpu_validation": {
+    "state": "completed_with_material_differences",
+    "episodes": [
+      7,
+      20
+    ],
+    "measured_clock_cap_verified": true,
+    "fully_reproduced_yet": false
+  },
+  "fresh_inference_samples_completed": 2,
+  "fresh_outputs_match_saved_submissions": false,
+  "fresh_comparison_summary": {
+    "7": {
+      "frames": 777,
+      "object_translation_difference_cm": {
+        "mean": 8.182025679432348,
+        "p95": 35.93479545277608,
+        "max": 118.3009812275084
+      },
+      "object_rotation_difference_degrees": {
+        "mean": 73.48008909815388,
+        "p95": 176.77962955113395,
+        "max": 179.93312344132346
+      },
+      "mesh_bytes_exact": true
+    },
+    "20": {
+      "frames": 549,
+      "object_translation_difference_cm": {
+        "mean": 2.917405407885543,
+        "p95": 12.477353916977687,
+        "max": 15.65246247289475
+      },
+      "object_rotation_difference_degrees": {
+        "mean": 30.284851754102586,
+        "p95": 174.89948048813162,
+        "max": 179.74977037748465
+      },
+      "mesh_bytes_exact": true
+    }
+  },
+  "upload_state": "private_draft_release_all_parts_verified",
+  "download_access": "GitHub sign-in with organizer write access",
+  "archive_release_url": "https://github.com/isyed/v2d-reconstruction/releases/tag/untagged-a0b01a010392f284e889",
+  "archive_release_draft": true,
+  "archive_parts_verified": 26,
+  "organizer_download_account": "Nvidia-V2D-Challenge",
+  "organizer_repository_permission": "write",
+  "form_kaggle_submissions": [
+    {
+      "ref": 57605527,
+      "status": "SubmissionStatus.COMPLETE",
+      "fileName": "track1.parquet",
+      "publicScore": "15.47123",
+      "privateScore": "15.47123",
+      "metric": "cd-h"
+    },
+    {
+      "ref": 57605528,
+      "status": "SubmissionStatus.COMPLETE",
+      "fileName": "track1.parquet",
+      "publicScore": "24.21106",
+      "privateScore": "24.21106",
+      "metric": "cd-o"
+    },
+    {
+      "ref": 57605530,
+      "status": "SubmissionStatus.COMPLETE",
+      "fileName": "track1.parquet",
+      "publicScore": "0.27484",
+      "privateScore": "0.27484",
+      "metric": "acc-h"
+    },
+    {
+      "ref": 57605533,
+      "status": "SubmissionStatus.COMPLETE",
+      "fileName": "track1.parquet",
+      "publicScore": "0.49967",
+      "privateScore": "0.49967",
+      "metric": "acc-o"
+    },
+    {
+      "ref": 57605538,
+      "status": "SubmissionStatus.COMPLETE",
+      "fileName": "track1.parquet",
+      "publicScore": "0.00485",
+      "privateScore": "0.00485",
+      "metric": "pen"
+    }
+  ],
+  "award_reproduction_verified": false
+}

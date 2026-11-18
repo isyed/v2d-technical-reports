@@ -9,6 +9,9 @@ The implementation repositories are separate: [Track 1](https://github.com/isyed
 These reports contain no video, dataset, credential or model-weight files.
 
 Public report copies omit personal contact information. Their technical content,
-filenames and locations are unchanged. Container handoff files, form records and
-validation attachments have been removed from this report-only repository.
+filenames and locations are unchanged. Container handoff documentation and
+validation evidence are maintained separately below.
 
+## Track 1 container handoff
+
+- [Track 1 rebuilt container and validation](track1/container/)

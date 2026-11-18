@@ -1,0 +1,20 @@
+{
+  "direct_export": "PASS",
+  "docker_load": "PASS",
+  "rootfs_layers_identical": true,
+  "runtime_config_identical": true,
+  "official_checks_pass": 24,
+  "official_checks_fail": 0,
+  "source_image_id": "sha256:0fbe7e84b293bebdad69e7176a8bfd45a4b60b7e9e1370c71c7515fa01863618",
+  "archive_bytes": 16941733888,
+  "archive_sha256": "20bb763701aa60aa7580afcd312e5aaf0465e23add8dd5e2c151f9c59ae70622",
+  "archive_format": "OCI image-layout tar, gzip-compressed layers",
+  "elapsed_seconds": 484.84,
+  "all_models_runtime_foundation_tested": false,
+  "cloud_worker_launched": false,
+  "scope": "Existing 15.8 GiB four-profile artifact-check image; all-model runtime foundation remains untested",
+  "checked_at_utc": "2026-11-05T19:30:47.205178+00:00",
+  "raw_video_reproduction_verified": false,
+  "complete_competition_handoff": false,
+  "source_image_reported_size_bytes": 16941693290
+}
