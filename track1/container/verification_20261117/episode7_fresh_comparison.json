@@ -1,0 +1,97 @@
+{
+  "schema": "longbot.track1.reproduction_comparison.v1",
+  "meaning": "Differences from saved exports; not hidden-label competition scores or proof of fresh inference.",
+  "episodes": {
+    "7": {
+      "arrays": {
+        "object_rotation": {
+          "shape": [
+            777,
+            3,
+            3
+          ],
+          "reference_dtype": "float32",
+          "fresh_dtype": "float32",
+          "dtype_equal": true,
+          "values_exact": false,
+          "rmse_native_units": 0.6056127565421092,
+          "maximum_absolute_difference_native_units": 1.9900999069213867
+        },
+        "object_scale": {
+          "shape": [],
+          "reference_dtype": "float32",
+          "fresh_dtype": "float32",
+          "dtype_equal": true,
+          "values_exact": true,
+          "rmse_native_units": 0.0,
+          "maximum_absolute_difference_native_units": 0.0
+        },
+        "object_translation": {
+          "shape": [
+            777,
+            3
+          ],
+          "reference_dtype": "float32",
+          "fresh_dtype": "float32",
+          "dtype_equal": true,
+          "values_exact": false,
+          "rmse_native_units": 0.093627403379474,
+          "maximum_absolute_difference_native_units": 1.1299316883087158
+        },
+        "pose": {
+          "shape": [
+            777,
+            136
+          ],
+          "reference_dtype": "float32",
+          "fresh_dtype": "float32",
+          "dtype_equal": true,
+          "values_exact": false,
+          "rmse_native_units": 0.02080074955196938,
+          "maximum_absolute_difference_native_units": 6.280261993408203
+        },
+        "scales": {
+          "shape": [
+            68
+          ],
+          "reference_dtype": "float32",
+          "fresh_dtype": "float32",
+          "dtype_equal": true,
+          "values_exact": false,
+          "rmse_native_units": 3.927957564002205e-08,
+          "maximum_absolute_difference_native_units": 1.4901161193847656e-07
+        },
+        "shape": {
+          "shape": [
+            45
+          ],
+          "reference_dtype": "float32",
+          "fresh_dtype": "float32",
+          "dtype_equal": true,
+          "values_exact": false,
+          "rmse_native_units": 0.004652989956305594,
+          "maximum_absolute_difference_native_units": 0.01702958345413208
+        }
+      },
+      "all_values_exact": false,
+      "all_dtypes_exact": true,
+      "frames": 777,
+      "object_translation_difference_cm": {
+        "mean": 8.182025679432348,
+        "p95": 35.93479545277608,
+        "max": 118.3009812275084
+      },
+      "object_rotation_difference_degrees": {
+        "mean": 73.48008909815388,
+        "p95": 176.77962955113395,
+        "max": 179.93312344132346
+      },
+      "reference_npz_sha256": "96a9bc3904056a3a13d286767cec0733b557bcd8ae9aeb031efa08785fe540f8",
+      "fresh_npz_sha256": "75e18094db9defd7fa99fb80776fd3cf598780e57768a98cc6f83cae4f84cd89",
+      "reference_mesh_sha256": "ac39ff6bc5073b7c4c484e7ce77d91ae50b95151e793ef5ea7720f58cf829f45",
+      "fresh_mesh_sha256": "ac39ff6bc5073b7c4c484e7ce77d91ae50b95151e793ef5ea7720f58cf829f45",
+      "mesh_bytes_exact": true
+    }
+  },
+  "complete_competition_handoff": false
+}

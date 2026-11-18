@@ -1,0 +1,131 @@
+{
+  "cpu_only": true,
+  "gpu_execution_tested": false,
+  "model_inference_tested": false,
+  "checks": [
+    {
+      "argv": [
+        "-m",
+        "prep.refine_observed_object_tracks"
+      ],
+      "library": "/replay/sources/0ef6f21910a174779ef3369c72ed492daaf330f174d9e06fcdbb0618aa4268a3/lib",
+      "exit_code": 0,
+      "log": "check_00.log",
+      "status": "PASS"
+    },
+    {
+      "argv": [
+        "/replay/helpers/tracking/2bd96da94277e9b7e98b6de917d813aa97062aa92d3d63915a48cd5746fc4a25/recover_tracking_candidates.py"
+      ],
+      "library": "/replay/sources/0ef6f21910a174779ef3369c72ed492daaf330f174d9e06fcdbb0618aa4268a3/lib",
+      "exit_code": 0,
+      "log": "check_01.log",
+      "status": "PASS"
+    },
+    {
+      "argv": [
+        "/replay/helpers/tracking/80dd3e89c0c327526d6c6f1fe536ae2b4dc4a6e32921e848065fc93f69696762/recover_tracking_candidates.py"
+      ],
+      "library": "/replay/sources/0ef6f21910a174779ef3369c72ed492daaf330f174d9e06fcdbb0618aa4268a3/lib",
+      "exit_code": 0,
+      "log": "check_02.log",
+      "status": "PASS"
+    },
+    {
+      "argv": [
+        "/replay/helpers/tracking/a29f81cccdad8c7d2ad21cb90778648728a10cb0f675fee7780eee6d4970acb0/repair_translation_window.py"
+      ],
+      "library": "/replay/sources/0ef6f21910a174779ef3369c72ed492daaf330f174d9e06fcdbb0618aa4268a3/lib",
+      "exit_code": 0,
+      "log": "check_03.log",
+      "status": "PASS"
+    },
+    {
+      "argv": [
+        "/replay/helpers/tracking/a696da6c57cd4d3e88f31c4994508807ae8c1f9b2e66dff6e8d47dee2cb6dcc1/repair_translation_window.py"
+      ],
+      "library": "/replay/sources/0ef6f21910a174779ef3369c72ed492daaf330f174d9e06fcdbb0618aa4268a3/lib",
+      "exit_code": 0,
+      "log": "check_04.log",
+      "status": "PASS"
+    },
+    {
+      "argv": [
+        "-m",
+        "prep.refine_observed_object_tracks"
+      ],
+      "library": "/replay/sources/822fc247eaf8f8a962e3f17e6f3072a342959abeac943062678383911d5cfc0c/lib",
+      "exit_code": 0,
+      "log": "check_05.log",
+      "status": "PASS"
+    },
+    {
+      "argv": [
+        "/replay/sources/1c9193d2311b012f992803935073ba427db3935ae97fdc030036ee2358ac4eb8/lib/run_inference.py"
+      ],
+      "library": "/replay/sources/1c9193d2311b012f992803935073ba427db3935ae97fdc030036ee2358ac4eb8/lib",
+      "exit_code": 0,
+      "log": "check_06.log",
+      "status": "PASS"
+    },
+    {
+      "argv": [
+        "/replay/sources/86c8a56c8875e2201f6b7d992a91b3043429566bc33339f921a8248343d21cb3/lib/run_inference.py"
+      ],
+      "library": "/replay/sources/86c8a56c8875e2201f6b7d992a91b3043429566bc33339f921a8248343d21cb3/lib",
+      "exit_code": 0,
+      "log": "check_07.log",
+      "status": "PASS"
+    },
+    {
+      "argv": [
+        "/replay/sources/0ef6f21910a174779ef3369c72ed492daaf330f174d9e06fcdbb0618aa4268a3/lib/cari4d/tools/run_mhr_wild_inference.py"
+      ],
+      "library": "/replay/sources/0ef6f21910a174779ef3369c72ed492daaf330f174d9e06fcdbb0618aa4268a3/lib",
+      "exit_code": 0,
+      "log": "check_08.log",
+      "status": "PASS"
+    },
+    {
+      "argv": [
+        "-m",
+        "learning.training.mhr_opt_refineout"
+      ],
+      "library": "/replay/sources/0ef6f21910a174779ef3369c72ed492daaf330f174d9e06fcdbb0618aa4268a3/lib",
+      "exit_code": 0,
+      "log": "check_09.log",
+      "status": "PASS"
+    },
+    {
+      "argv": [
+        "/replay/helpers/correct_scored_submission.py"
+      ],
+      "library": "/replay/sources/0ef6f21910a174779ef3369c72ed492daaf330f174d9e06fcdbb0618aa4268a3/lib",
+      "exit_code": 0,
+      "log": "check_10.log",
+      "status": "PASS"
+    },
+    {
+      "argv": [
+        "/replay/helpers/prepare_controlled_temporal.py"
+      ],
+      "library": "/replay/sources/0ef6f21910a174779ef3369c72ed492daaf330f174d9e06fcdbb0618aa4268a3/lib",
+      "exit_code": 0,
+      "log": "check_11.log",
+      "status": "PASS"
+    },
+    {
+      "argv": [
+        "/replay/helpers/export_submission.py"
+      ],
+      "library": "/replay/sources/0ef6f21910a174779ef3369c72ed492daaf330f174d9e06fcdbb0618aa4268a3/lib",
+      "exit_code": 0,
+      "log": "check_12.log",
+      "status": "PASS"
+    }
+  ],
+  "passed": 13,
+  "failed": 0,
+  "all_30_adapter_implemented": false,
+  "complete_competition_handoff": false
+}

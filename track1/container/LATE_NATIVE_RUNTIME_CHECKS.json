@@ -1,0 +1,81 @@
+{
+  "native_python": "3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]",
+  "cpu_only": true,
+  "models_executed": false,
+  "gpu_validation_complete": false,
+  "checks": [
+    {
+      "module": "correct_scored_submission",
+      "exit_code": 0,
+      "log": "correct_scored_submission.log"
+    },
+    {
+      "module": "repair_fixed_depth_initialization",
+      "exit_code": 0,
+      "log": "repair_fixed_depth_initialization.log"
+    },
+    {
+      "module": "hoop_cloud.worker",
+      "exit_code": 0,
+      "log": "hoop_cloud_worker.log"
+    },
+    {
+      "module": "orientation_d.fit",
+      "exit_code": 0,
+      "log": "orientation_d_fit.log"
+    },
+    {
+      "module": "orientation_d.repair15",
+      "exit_code": 0,
+      "log": "orientation_d_repair15.log"
+    },
+    {
+      "module": "iron_sequence.prepare",
+      "exit_code": 0,
+      "log": "iron_sequence_prepare.log"
+    },
+    {
+      "module": "iron_sequence.fit",
+      "exit_code": 0,
+      "log": "iron_sequence_fit.log"
+    },
+    {
+      "module": "iron_sequence.review",
+      "exit_code": 0,
+      "log": "iron_sequence_review.log"
+    },
+    {
+      "module": "iron_sequence.fallback",
+      "exit_code": 0,
+      "log": "iron_sequence_fallback.log"
+    },
+    {
+      "module": "iron_sequence.representation_audit",
+      "exit_code": 0,
+      "log": "iron_sequence_representation_audit.log"
+    },
+    {
+      "module": "iron_motion.diagnose",
+      "exit_code": 0,
+      "log": "iron_motion_diagnose.log"
+    },
+    {
+      "module": "iron_motion.repair",
+      "exit_code": 0,
+      "log": "iron_motion_repair.log"
+    },
+    {
+      "module": "iron_motion.review",
+      "exit_code": 0,
+      "log": "iron_motion_review.log"
+    },
+    {
+      "module": "refine29_source",
+      "exit_code": 0,
+      "log": "refine29.log"
+    }
+  ],
+  "passed": 14,
+  "failed": 0,
+  "top_level_compute_scripts_compiled_only": 5
+}
